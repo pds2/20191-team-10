@@ -1,11 +1,11 @@
-#Projeto: Batalha Pokemon
+# Projeto: Batalha Pokemon
 
 Sistema de batalha em turnos, semelhante ao que vemos nos jogos da franquia Pokemon, com a possibilidade de diferentes
 modos de jogo (torneios,deathmatch,exploração?).
 
-##User Stories:
+## User Stories:
 
-###Story 1:
+### Story 1:
 
 Como jogador, eu gostaria de visualizar as habilidades,atributos e características especiais de meu pokemon 
 para decidir se ele é ou não efetivo contra outro pokemon.
