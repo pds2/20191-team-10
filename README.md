@@ -24,9 +24,9 @@ Como um Treinador Pokémon experiente, eu quero que as batalhas entre meus Poké
 
 Critérios para aceitação:
 
- Batalhas não muito demoradas;
- Batalhas com um nível de dificuldade considerável: nada muito fácil nem muito impossível;
- Os tipos de cada monstro precisam dar vantagens ou desvantagens quando forem lutar;
- No caso de batalhas competitivas, o vencedor receberá recompensas relativas à dificuldade;
- No caso de batalhas com monstrinhos selvagens, teremos a chance de captura-los;
- Possibilidade de usar itens durante as batalhas.
+ - Batalhas não muito demoradas;
+ - Batalhas com um nível de dificuldade considerável: nada muito fácil nem muito impossível;
+ - Os tipos de cada monstro precisam dar vantagens ou desvantagens quando forem lutar;
+ - No caso de batalhas competitivas, o vencedor receberá recompensas relativas à dificuldade;
+ - No caso de batalhas com monstrinhos selvagens, teremos a chance de captura-los;
+ - Possibilidade de usar itens durante as batalhas.
