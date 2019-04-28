@@ -16,7 +16,7 @@ Critérios de Aceitação:
 - Necessário uma funcionalidade que permita selecionar qual pokemon levar à batalha.
 - Cada Habilidade deve possuir uma descrição concisa.
 - Cada Característica Especial também  deve possuir uma descrição.
-- Necessário que o usuário tenha familiaridade com as mecânicas do jogo (talvez seja necessário um tutorial)
+- Necessário que o usuário tenha familiaridade com as mecânicas do jogo (talvez seja necessário um tutorial).
 
 ### Story 2:
 
@@ -41,3 +41,12 @@ Critérios para aceitação:
  - Implementação de estatísticas sobre a taxa de captura dos Pokémons;
  - Implementação de diferentes tipos de pokebolas.
  
+ ### Story 4:
+ 
+Como um admirador de jogos de RPG por turno, eu gostaria que fosse desenvolvido um sistema que se assemelhe bastante com as batalhas por turno representadas nos jogos oficiais de Pokémon, visto que os jogos da franquia são grandes símbolos do gênero. Além disso, quero que sejam mostradas descrições sobre os Pokémon e treinadores presentes na batalha.
+
+Critérios para aceitação:
+
+- Descrição sobre os acontecimentos da batalha, possíveis frases ligadas aos treinadores;
+- Opções nas batalhas semelhantes aos jogos como fugir de Pokémon selvagens;
+- Possibilidade de apelidar os Pokémon.
