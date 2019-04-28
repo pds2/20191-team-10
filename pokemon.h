@@ -12,6 +12,7 @@ class Pokemon{
 		char _ataque;
 		char _defesa;
 		char _agilidade;
+		int id;
 		
 		Pokemon(std::string,float,int,char,char,char); // Construtor: Nome, Crit, HP, ataque, defesa, agilidade
 		//~Pokemon();
