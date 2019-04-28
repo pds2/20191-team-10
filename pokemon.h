@@ -17,6 +17,7 @@ class Pokemon{
 		Pokemon(std::string,float,int,char,char,char); // Construtor: Nome, Crit, HP, ataque, defesa, agilidade
 		//~Pokemon();
 		
+		int get_id();
 		int get_ataque();
 		int get_defesa();
 		int get_agilidade();
