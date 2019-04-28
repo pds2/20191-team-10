@@ -30,3 +30,14 @@ Critérios para aceitação:
  - No caso de batalhas competitivas, o vencedor receberá recompensas relativas à dificuldade;
  - No caso de batalhas com monstrinhos selvagens, teremos a chance de capturá-los;
  - Possibilidade de usar itens durante as batalhas.
+ 
+ ### Story 3:
+
+Como um fã assíduo da série de jogos Pokémon, eu gostaria que fosse implantado um sistema que seja desafiador tanto para obter novos Pokémons, quanto para encontrar um Pokémon que realmente será útil em futuras batalhas. Além disso, quero possuir estatísticas sobre a minha taxa de captura de Pokémons e que pokebolas diferentes terão chances diferentes de capturar um Pokémon.
+
+Critérios para aceitação:
+
+ - Cada Pokémon deve possuir um valor individual (IV);
+ - Implementação de estatísticas sobre a taxa de captura dos Pokémons;
+ - Implementação de diferentes tipos de pokebolas.
+ 
