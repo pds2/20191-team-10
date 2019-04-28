@@ -80,3 +80,7 @@ int Pokemon::get_HP(){
 std::string Pokemon::get_nome(){
 	return _nome;
 }
+
+int Pokemon::get_id(){
+	return _id;
+}
