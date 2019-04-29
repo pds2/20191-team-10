@@ -50,3 +50,17 @@ Critérios para aceitação:
 - Descrição sobre os acontecimentos da batalha, possíveis frases ligadas aos treinadores;
 - Opções nas batalhas semelhantes aos jogos como fugir de Pokémon selvagens;
 - Possibilidade de apelidar os Pokémon.
+
+ ### Story 5:
+ 
+Como um crítico de jogos feitos em C++ e game tester que sou, gostaria de receber um programa fluido, limpo e coerente em sua programação; vericando que ele é livre de bugs, glitches ou inconsistências em seu sistema, permitindo assim a melhor experiência possível durante a jogatina. Principalmente, anseio que seja um bom jogo por turnos, com todos os aspectos que possam aproximá-lo mais do universo Pokémon, que é o que seus jogadores alvo gostariam.
+ 
+ 
+ Critérios para aceitação:
+
+ - O programa deve ser Consistente e livre de Bugs;
+ - Sistema justo, permitindo batalhas entre Pokémon de níveis semelhantes;
+ - Impossibilidade de trapaças, ou uso de glitches para rápida evolução in-game;
+ - Jogatina simples, porém agradável, sem deixar espaço para o "tédio" durante o jogo;
+ - Que seja um jogo justo porém imprevisível, com variáveis que permitam uma experiência diferente em cada batalha; 
+ 
