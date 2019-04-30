@@ -33,7 +33,7 @@ Critérios para aceitação:
  
  ### Story 3:
 
-Como um fã assíduo da série de jogos Pokémon, eu gostaria que fosse implantado um sistema que seja desafiador tanto para obter novos Pokémons, quanto para encontrar um Pokémon que realmente será útil em futuras batalhas. Além disso, quero possuir estatísticas sobre a minha taxa de captura de Pokémons e que pokebolas diferentes terão chances diferentes de capturar um Pokémon.
+Como um fã assíduo da série de jogos Pokémon, eu gostaria que fosse implantado um sistema que seja desafiador tanto para obter novos    Pokémons, quanto para encontrar um Pokémon que realmente será útil em futuras batalhas. Além disso, quero possuir estatísticas sobre a minha taxa de captura de Pokémons e que pokebolas diferentes terão chances diferentes de capturar um Pokémon.
 
 Critérios para aceitação:
 
@@ -55,12 +55,22 @@ Critérios para aceitação:
  
 Como um crítico de jogos feitos em C++ e game tester que sou, gostaria de receber um programa fluido, limpo e coerente em sua programação; vericando que ele é livre de bugs, glitches ou inconsistências em seu sistema, permitindo assim a melhor experiência possível durante a jogatina. Principalmente, anseio que seja um bom jogo por turnos, com todos os aspectos que possam aproximá-lo mais do universo Pokémon, que é o que seus jogadores alvo gostariam.
  
- 
  Critérios para aceitação:
 
  - O programa deve ser Consistente e livre de Bugs;
  - Sistema justo, permitindo batalhas entre Pokémon de níveis semelhantes;
- - Impossibilidade de trapaças, ou uso de glitches para rápida evolução in-game;
  - Jogatina simples, porém agradável, sem deixar espaço para o "tédio" durante o jogo;
  - Que seja um jogo justo porém imprevisível, com variáveis que permitam uma experiência diferente em cada batalha; 
+ 
+ ### Story 6:
+ 
+ Como um grande apreciador de jogos de estratégia e sua complexidade, o que mais gosto da série Pokémon é a variedade Pokémons e seus respectivos elementos. Seria muito interessante a implementação de Pokémons com os principais elementos contidos na série, onde cada um desses elementos possuem propriedades únicas que podem mudar o rumo de uma batalha através de estratégias. Ademais, não se esqueça de implementar a Pokédex para que eu possa verificar as minhas opções de batalhas e definir uma tática.
+ 
+  Critérios para aceitação:
+  
+  - Os principais elementos da série Pokémon devem ser implementados;
+  - Um elemento específico A deve ser efetivo contra algum outro elemento B, da mesma forma que esse elemento B deve ser efetivo contra um outro elemento C;
+  - A pokédex deve ser implementada.
+ 
+ 
  
