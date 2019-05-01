@@ -33,7 +33,7 @@ Critérios para aceitação:
  
  ### Story 3:
 
-Como um fã assíduo da série de jogos Pokémon, eu gostaria que fosse implantado um sistema que seja desafiador tanto para obter novos    Pokémons, quanto para encontrar um Pokémon que realmente será útil em futuras batalhas. Além disso, quero possuir estatísticas sobre a minha taxa de captura de Pokémons e que pokebolas diferentes terão chances diferentes de capturar um Pokémon.
+Como um fã assíduo da série de jogos Pokémon, eu gostaria que fosse implantado um sistema que seja desafiador para obter novos Pokémons que realmente serão úteis em futuras batalhas. Além disso, quero possuir estatísticas sobre a minha taxa de captura de Pokémons e que pokebolas diferentes terão chances diferentes de capturar um Pokémon.
 
 Critérios para aceitação:
 
