@@ -1,5 +1,5 @@
-#include "treinador.h"
-#include "pokemon.h"
+#include "../include/treinador.h"
+#include "../include/pokemon.h"
 
 #include <iostream>
 #include <string>
@@ -7,7 +7,7 @@
 
 Treinador::Treinador(std::string nome,int lideranca):
 	_jogador(nome), _lideranca(lideranca){};
-	
+
 std::string Treinador::get_jogador(){
 	return _jogador;
 }
@@ -23,5 +23,3 @@ void Treinador::set_lideranca(int x){
 void Treinador::add_pokemon(Pokemon novo_pokemon){
 	_lista_de_pokemons.push_back(novo_pokemon);
 }
-
-

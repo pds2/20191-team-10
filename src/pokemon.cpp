@@ -1,4 +1,4 @@
-#include "pokemon.h"
+#include "../include/pokemon.h"
 
 #include <iostream>
 #include <string>
