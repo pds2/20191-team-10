@@ -11,15 +11,12 @@ Treinador::Treinador(std::string nome,int lideranca):
 std::string Treinador::get_jogador(){
 	return _jogador;
 }
-
 int Treinador::get_lideranca(){
 	return _lideranca;
 }
-
 void Treinador::set_lideranca(int x){
 	_lideranca=x;
 }
-
-void Treinador::add_pokemon(Pokemon novo_pokemon){
+void Treinador::add_pokemon(Pokemon *novo_pokemon){
 	_lista_de_pokemons.push_back(novo_pokemon);
 }
