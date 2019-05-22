@@ -3,27 +3,36 @@
 
 #include <string>
 
+// Pokemon não será uma interface. Motivo : Ao refatorar o código percebi muita repetição desnecessária.
+
 class Pokemon{
-	protected:
-		std::string _nome; // Atributos são estáticos logo não devem ser alterados com a execução do jogo
+    protected:
+        std::string _nome;
+		char _tipo;
+        int _ataque;
+		int _defesa;
+		int _agilidade;
+		int _hp;
+		int _crit;
 	public:
-		float _crit;
-		int _HP;
-		char _ataque;
-		char _defesa;
-		char _agilidade;
-		int _id;
-		
-		Pokemon(std::string,float,int,char,char,char); // Construtor: Nome, Crit, HP, ataque, defesa, agilidade
-		//~Pokemon();
-		
-		int get_id();
-		int get_ataque();
-		int get_defesa();
-		int get_agilidade();
-		int get_HP();
-		int get_crit();
-		std::string get_nome();
+	    int current_hp; // Esse será o HP modificado durante as lutas. Logo deve ser público.
+
+	    Pokemon(std::string,char,int,int,int,int,int); // Construtor:
+                                                      // nome,tipo,ataque,defesa,agilidade,hp,crit
+
+        // Métodos Polimórficos :
+
+		virtual void atacar(Pokemon *) = 0;
+
+	// Métodos para manipulação do TAD :
+
+		virtual int get_ataque();
+		virtual int get_defesa();
+		virtual int get_agilidade();
+		virtual int get_hp();
+		virtual int get_crit();
+		virtual char get_tipo();
+		virtual std::string get_nome();
 };
 
-#endif
+#endif //POKEMON_H
