@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+Squirtle::Squirtle(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit):
+	PokemonAgua(nome, ataque, defesa, agilidade, hp, crit){};
 
 Squirtle::Squirtle(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit, std::vector<std::string> fraqueza, std::vector<std::string> resistencia, std::vector<std::string> imunidade):
 	PokemonAgua(nome, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia, imunidade){};
