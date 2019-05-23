@@ -17,7 +17,7 @@ class Pokemon{
 	  int current_hp; // Esse será o HP modificado durante as lutas. Logo deve ser público.
 
 	  Pokemon(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit); // Construtor:
-                                                  // nome,tipo,ataque,defesa,agilidade,hp,crit
+                                                  // nome,ataque,defesa,agilidade,hp,crit
 
   // Métodos Polimórficos :
 
@@ -30,7 +30,6 @@ class Pokemon{
 		virtual int get_agilidade();
 		virtual int get_hp();
 		virtual int get_crit();
-		virtual char get_tipo();
 		virtual std::string get_nome();
 };
 
