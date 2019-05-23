@@ -1,13 +1,14 @@
 #ifndef SQUIRTLE_H
 #define SQUIRTLE_H
 
-#include "pokemon.h"
+#include "pokemonAgua.h"
 
 #include <string>
 
-class Squirtle: public Pokemon{
+class Squirtle: public PokemonAgua{
 	public:
-		Squirtle(std::string,char,int,int,int,int,int);
+		Squirtle(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit,/
+		std::vector<std::string> fraqueza, std::vector<std::string> resistencia, std::vector<std::string> imunidade);
 
 		virtual void atacar(Pokemon *) override;
 
