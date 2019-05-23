@@ -6,21 +6,20 @@
 // Pokemon não será uma interface. Motivo : Ao refatorar o código percebi muita repetição desnecessária.
 
 class Pokemon{
-    protected:
-        std::string _nome;
-		char _tipo;
-        int _ataque;
+  protected:
+    std::string _nome;
+    int _ataque;
 		int _defesa;
 		int _agilidade;
 		int _hp;
 		int _crit;
 	public:
-	    int current_hp; // Esse será o HP modificado durante as lutas. Logo deve ser público.
+	  int current_hp; // Esse será o HP modificado durante as lutas. Logo deve ser público.
 
-	    Pokemon(std::string,char,int,int,int,int,int); // Construtor:
-                                                      // nome,tipo,ataque,defesa,agilidade,hp,crit
+	  Pokemon(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit); // Construtor:
+                                                  // nome,tipo,ataque,defesa,agilidade,hp,crit
 
-        // Métodos Polimórficos :
+  // Métodos Polimórficos :
 
 		virtual void atacar(Pokemon *) = 0;
 
