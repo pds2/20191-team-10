@@ -1,12 +1,13 @@
-#include "../include/pokemon.h"
+#include "../../include/pokemon_grama.h"
 #include "../../include/pokemon_include/bulbasauro.h"
 
-#include <string>
 #include <iostream>
 
+Bulbasauro::Bulbasauro(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit):
+	Pokemon_Agua(nome, ataque, defesa, agilidade, hp, crit){};
 
-Bulbasauro::Bulbasauro(std::string nome,char tipo,int ataque,int defesa,int agilidade,int hp, int crit):
-	Pokemon(nome,tipo,ataque,defesa,agilidade,hp,crit){};
+Bulbasauro::Bulbasauro(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit, std::vector<std::string> fraqueza, std::vector<std::string> resistencia, std::vector<std::string> imunidade):
+	Pokemon_Agua(nome, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia, imunidade){};
 
 // Métodos Polimórficos :
 

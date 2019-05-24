@@ -1,13 +1,14 @@
 #ifndef BULBASAURO_H
 #define BULBASAURO_H
 
-#include "pokemon.h"
+#include "../pokemon_grama.h"
 
 #include <string>
 
-class Bulbasauro: public Pokemon{
+class Bulbasauro : public Pokemon{
 	public:
-		Bulbasauro(std::string,char,int,int,int,int,int);
+		Bulbasauro(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit, std::vector<std::string> fraqueza, std::vector<std::string> resistencia, std::vector<std::string> imunidade);
+		Bulbasauro(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit);
 
 		virtual void atacar(Pokemon *) override;
 
