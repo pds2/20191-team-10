@@ -1,5 +1,5 @@
 #include "../include/pokemon.h"
-#include "../include/pokemon_include/bulbasauro.h"
+#include "../../include/pokemon_include/bulbasauro.h"
 
 #include <string>
 #include <iostream>

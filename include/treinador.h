@@ -2,6 +2,7 @@
 #define TREINADOR_H
 
 #include "pokemon.h"
+#include "pokemon_agua.h"
 
 #include <string>
 #include <vector>
@@ -14,7 +15,7 @@ class Treinador{
 
 		std::vector<Pokemon*> _lista_de_pokemons;
 
-		Treinador(std::string,int); // Construtor : Nome, Nível de lideranca
+		Treinador(std::string nome, int lideranca); // Construtor : Nome, Nível de lideranca
 
 		// Métodos para manipulação do TAD :
 

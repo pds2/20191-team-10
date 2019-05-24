@@ -1,11 +1,12 @@
 #include "../include/treinador.h"
 #include "../include/pokemon.h"
+#include "../include/pokemon_agua.h"
 
 #include <iostream>
 #include <string>
 #include <vector>
 
-Treinador::Treinador(std::string nome,int lideranca):
+Treinador::Treinador(std::string nome, int lideranca):
 	_jogador(nome), _lideranca(lideranca){};
 
 std::string Treinador::get_jogador(){
