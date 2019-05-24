@@ -1,7 +1,6 @@
 #include "../include/pokemon_agua.h"
 #include "../../include/pokemon_include/squirtle.h"
 
-#include <string>
 #include <iostream>
 
 Squirtle::Squirtle(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit):
