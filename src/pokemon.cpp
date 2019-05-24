@@ -4,7 +4,7 @@
 #include <iostream>
 
 Pokemon::Pokemon(std::string nome,int ataque,int defesa,int agilidade ,int hp,int crit):
-	_nome(nome),_ataque(ataque),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){};
+	_nome(nome),_ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){};
 
 int Pokemon::get_ataque(){
     return this->_ataque;
