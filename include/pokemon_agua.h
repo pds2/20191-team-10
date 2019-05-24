@@ -3,9 +3,6 @@
 
 #include "pokemon.h"
 
-#include <vector>
-
-
 class Pokemon_Agua : public Pokemon {
 protected:
   std::vector<std::string> _fraqueza = {"grama", "eletrico"};

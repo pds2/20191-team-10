@@ -2,6 +2,7 @@
 #define POKEMON_H
 
 #include <string>
+#include <vector>
 
 // Pokemon não será uma interface. Motivo : Ao refatorar o código percebi muita repetição desnecessária.
 
