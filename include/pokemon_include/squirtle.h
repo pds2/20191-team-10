@@ -1,7 +1,7 @@
 #ifndef SQUIRTLE_H
 #define SQUIRTLE_H
 
-#include "pokemonAgua.h"
+#include "../pokemonAgua.h"
 
 #include <string>
 
