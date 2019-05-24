@@ -1,13 +1,14 @@
 #ifndef CHARMANDER_H
 #define CHARMANDER_H
 
-#include "pokemon.h"
+#include "../pokemon_fogo.h"
 
 #include <string>
 
-class Charmander: public Pokemon{
+class Charmander : public Pokemon_Fogo {
 	public:
-		Charmander(std::string,char,int,int,int,int,int);
+		Charmander(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit, std::vector<std::string> fraqueza, std::vector<std::string> resistencia, std::vector<std::string> imunidade);
+		Charmander(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit);
 
 		virtual void atacar(Pokemon *) override;
 
