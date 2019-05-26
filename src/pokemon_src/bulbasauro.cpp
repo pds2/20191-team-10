@@ -6,7 +6,8 @@
 Bulbasauro::Bulbasauro(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit):
 	Pokemon_Grama(nome, ataque, defesa, agilidade, hp, crit){};
 
-Bulbasauro::Bulbasauro(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit, std::string fraqueza, std::string resistencia):
+Bulbasauro::Bulbasauro(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit, 
+					   std::string fraqueza, std::string resistencia):
 	Pokemon_Grama(nome, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia){};
 
 // Métodos Polimórficos :
