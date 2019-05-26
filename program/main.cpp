@@ -3,6 +3,7 @@
 #include "../include/pokemon_include/bulbasauro.h"
 #include "../include/pokemon_include/squirtle.h"
 #include "../include/treinador.h"
+#include "../include/excecoes.h"
 
 #include <iostream>
 #include <string>
