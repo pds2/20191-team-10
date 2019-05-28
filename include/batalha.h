@@ -13,6 +13,8 @@ int rola_dados();
 void encerrar_batalha(Pokemon *, Pokemon *); 
 // Encerra. Deve inclusive resetar o current_hp para o valor original.
 
+void set_current_hp(Pokemon *); //Função que seta a vida na hora da batalha
+
 void gera_oponente_facil(Pokemon *); //Função que gera um treinador inicial para batalhar.
 
 void batalha_x1(Treinador, Pokemon *, int); 

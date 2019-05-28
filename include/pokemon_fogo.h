@@ -6,7 +6,7 @@
 class Pokemon_Fogo : public Pokemon {
 protected:
   std::string _fraqueza = {"agua"};
-  std::string _resistencia = {"fogo"};
+  std::string _resistencia = {"grama"};
   //std::vector<std::string> _imunidade = {""};
 
 public:

@@ -12,8 +12,23 @@ Bulbasauro::Bulbasauro(std::string nome, int ataque, int defesa, int agilidade, 
 
 // Métodos Polimórficos :
 
-void Bulbasauro::atacar(Pokemon *adv){
-    std::cout<<"Dummy Function";
-}
+/*void Bulbasauro::atacar(Pokemon *adv){
+    if(this->_resistencia == adv->_tipo){
+		adv->current_hp -= this->get_ataque * AUMENTO - adv->get_defesa;
+	}else if(this->_fraqueza == adv->tipo){
+		adv->current_hp -= this->get_ataque * REDUCAO - adv->get_defesa;
+	}else{
+		adv->current_hp -= this->get_ataque - adv->get_defesa;
+	}
+}*/
 
+void Bulbasauro::atacar(Pokemon *adv){
+    if(adv->get_fraqueza() == "grama"){
+		adv->current_hp -= int (this->get_ataque() * AUMENTO) - adv->get_defesa();
+	}else if(adv->get_resistencia() == "grama"){
+		adv->current_hp -= int (this->get_ataque() * REDUCAO) - adv->get_defesa();
+	}else{
+		adv->current_hp -= this->get_ataque() - adv->get_defesa();
+	}
+}
 // Habilidades....

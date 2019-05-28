@@ -14,6 +14,9 @@ int main() {
 	Charmander foguin = Charmander("foguin",15,10,10,50,5);
 	Bulbasauro verdin = Bulbasauro("verdin",15,10,10,50,5);
 
+	std::cout << "Resistência: " << aguin.get_resistencia() << std::endl;
+	std::cout << "Fraqueza: " << aguin.get_fraqueza() << std::endl;
+
 	Treinador uno = Treinador("Leandro",4);
 
 	uno.add_pokemon(&aguin); // add_pokemon(x) adiciona o pokemon x ao vetor de Pokemons presente na classe Jogador

@@ -24,3 +24,4 @@ int Pokemon::get_crit(){
 std::string Pokemon::get_nome(){
     return this->_nome;
 }
+

@@ -8,8 +8,10 @@
 class Pokemon_Agua : public Pokemon {
 protected:
   std::string _fraqueza = {"grama"};
-  std::string _resistencia = {"agua"};
+  std::string _resistencia = {"fogo"};
   //std::vector<std::string> _imunidade = {""};
+/*_fraqueza = {"grama"};
+_resistencia = {"fogo"};*/
 
 public:
   Pokemon_Agua(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit);

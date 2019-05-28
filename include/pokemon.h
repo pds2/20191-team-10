@@ -4,6 +4,9 @@
 #include <string>
 #include <vector>
 
+#define AUMENTO 1.6
+#define REDUCAO 0.67
+
 // Pokemon não será uma interface. Motivo : Ao refatorar o código percebi muita repetição desnecessária.
 
 class Pokemon{
@@ -14,6 +17,8 @@ class Pokemon{
 		int _agilidade;
 		int _hp;
 		int _crit;
+		std::string _fraqueza;
+		std::string _resistencia;
 	public:
 	  int current_hp; // Esse será o HP modificado durante as lutas. Logo deve ser público.
 
@@ -23,6 +28,9 @@ class Pokemon{
   // Métodos Polimórficos :
 
 		virtual void atacar(Pokemon *) = 0;
+		
+		virtual std::string get_resistencia() = 0;
+		virtual std::string get_fraqueza() = 0;
 
 	// Métodos para manipulação do TAD :
 
@@ -32,6 +40,7 @@ class Pokemon{
 		virtual int get_hp();
 		virtual int get_crit();
 		virtual std::string get_nome();
+
 };
 
 #endif //POKEMON_H
