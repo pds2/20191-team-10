@@ -5,7 +5,7 @@
 #include <vector>
 
 #define AUMENTO 1.6
-#define REDUCAO 0.67
+#define REDUCAO 0.63
 
 // Pokemon não será uma interface. Motivo : Ao refatorar o código percebi muita repetição desnecessária.
 

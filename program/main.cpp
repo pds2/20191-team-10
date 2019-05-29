@@ -5,6 +5,7 @@
 #include "../include/pokemon_include/squirtle.h"
 #include "../include/treinador.h"
 #include "../include/excecoes.h"
+#include "../include/batalha.h"
 
 #include <iostream>
 #include <string>
@@ -27,14 +28,16 @@ int main() {
 
 	std::cout<<"Segue a lista dos pokemons desse treinador:\n";
 	for(int i=0; i < uno._lista_de_pokemons.size() ; i++){
-		std::cout<<uno._lista_de_pokemons.at(i)->get_nome()<<"\n"; // Imprima o nome do pokemon na posição 'i' da _lista_de_pokemon do treinador uno
+		//std::cout<<uno._lista_de_pokemons.at(i)->get_nome()<<"\n"; // Imprima o nome do pokemon na posição 'i' da _lista_de_pokemon do treinador uno
+		std::cout<<"\tO treinador "<<uno.get_jogador()<<" possui o pokemon : "<<uno._lista_de_pokemons.at(i)->get_nome()<<"\n";
 	}
 
-	std::cout<<"O treinador : "<<uno.get_jogador()<<", possui o pokemon : "<<uno._lista_de_pokemons.at(1)->get_nome()<<"\n";
 	std::cout<<"Atributos :\n";
 	std::cout<<"Ataque : = "<<uno._lista_de_pokemons.at(1)->get_ataque()<<"\n";
 	std::cout<<"Defesa : = "<<uno._lista_de_pokemons.at(1)->get_defesa()<<"\n";
 	std::cout<<"Agilidade : = "<<uno._lista_de_pokemons.at(1)->get_agilidade()<<"\n";
+
+	batalha_x1(uno, &aguin, 1);
 
 	return 0;
 }
