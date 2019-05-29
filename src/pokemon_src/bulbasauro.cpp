@@ -3,12 +3,12 @@
 
 #include <iostream>
 
-Bulbasauro::Bulbasauro(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit):
-	Pokemon_Grama(nome, ataque, defesa, agilidade, hp, crit){};
+Bulbasauro::Bulbasauro(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit):
+	Pokemon_Grama(apelido, ataque, defesa, agilidade, hp, crit){};
 
-Bulbasauro::Bulbasauro(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit, 
+Bulbasauro::Bulbasauro(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit,
 					   std::string fraqueza, std::string resistencia):
-	Pokemon_Grama(nome, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia){};
+	Pokemon_Grama(apelido, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia){};
 
 // Métodos Polimórficos :
 

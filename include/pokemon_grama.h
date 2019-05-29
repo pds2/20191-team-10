@@ -12,8 +12,8 @@ protected:
   _resistencia = {"agua"};*/
 
 public:
-  Pokemon_Grama(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit);
-  Pokemon_Grama(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit, 
+  Pokemon_Grama(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
+  Pokemon_Grama(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit,
                 std::string fraqueza, std::string resistencia);
 
   std::string get_fraqueza();

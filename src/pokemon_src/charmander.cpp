@@ -3,11 +3,11 @@
 
 #include <iostream>
 
-Charmander::Charmander(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit):
-	Pokemon_Fogo(nome, ataque, defesa, agilidade, hp, crit){};
+Charmander::Charmander(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit):
+	Pokemon_Fogo(apelido, ataque, defesa, agilidade, hp, crit){};
 
-Charmander::Charmander(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit, std::string fraqueza, std::string resistencia):
-	Pokemon_Fogo(nome, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia){};
+Charmander::Charmander(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit, std::string fraqueza, std::string resistencia):
+	Pokemon_Fogo(apelido, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia){};
 
 // Métodos Polimórficos :
 

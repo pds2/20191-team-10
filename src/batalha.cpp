@@ -32,7 +32,7 @@ int rola_dados(){
     }else{
         inimigo = new Squirtle("Squirtle", 15, 10, 10, 50, 5);
     }
-    std::cout << "Seu inimigo: " << inimigo->get_nome() << std::endl;
+    std::cout << "Seu inimigo: " << inimigo->get_apelido() << std::endl;
     std::cout << "Vida do inimigo: " << inimigo->current_hp << std::endl;
 }*/
 
@@ -49,7 +49,7 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
         gera_oponente_medio(inimigo);
     }else if(dificuldade== 3){
         gera_oponente_dificil(inimigo);
-    }*/ 
+    }*/
     //Não estou conseguindo passar o Pokémon criado na função acima para esta função
     int randomico= rola_dados();
     if((randomico<=4) && (randomico>0)){
@@ -86,12 +86,11 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     }
     //Fazer uma função para isto depois
     if(meu_poke->current_hp <= 0){
-        std::cout << meu_poke->get_nome() << " esta' fora de combate! O vencedor e' ";
-        std::cout << inimigo->get_nome() << std::endl;
+        std::cout << meu_poke->get_apelido() << " esta' fora de combate! O vencedor e' ";
+        std::cout << inimigo->get_apelido() << std::endl;
     }else{
-        std::cout << inimigo->get_nome() << " esta' fora de combate! O vencedor e' ";
-        std::cout << meu_poke->get_nome() << std::endl;
+        std::cout << inimigo->get_apelido() << " esta' fora de combate! O vencedor e' ";
+        std::cout << meu_poke->get_apelido() << std::endl;
     }
     delete inimigo;
 }
-

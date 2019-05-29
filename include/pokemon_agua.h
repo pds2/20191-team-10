@@ -14,8 +14,8 @@ protected:
 _resistencia = {"fogo"};*/
 
 public:
-  Pokemon_Agua(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit);
-  Pokemon_Agua(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit, 
+  Pokemon_Agua(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
+  Pokemon_Agua(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit,
                std::string fraqueza, std::string resistencia);
 
   std::string get_fraqueza();

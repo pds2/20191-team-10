@@ -12,6 +12,7 @@
 class Pokemon{
   protected:
     std::string _nome;
+    std::string _apelido;
     int _ataque;
 		int _defesa;
 		int _agilidade;
@@ -28,7 +29,7 @@ class Pokemon{
   // Métodos Polimórficos :
 
 		virtual void atacar(Pokemon *) = 0;
-		
+
 		virtual std::string get_resistencia() = 0;
 		virtual std::string get_fraqueza() = 0;
 
@@ -40,6 +41,8 @@ class Pokemon{
 		virtual int get_hp();
 		virtual int get_crit();
 		virtual std::string get_nome();
+    virtual void set_apelido();
+    virtual std::string get_apelido();
 
 };
 
