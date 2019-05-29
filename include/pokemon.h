@@ -40,8 +40,9 @@ class Pokemon{
 		virtual int get_agilidade();
 		virtual int get_hp();
 		virtual int get_crit();
+    virtual void set_nome(std::string nome);
 		virtual std::string get_nome();
-    virtual void set_apelido();
+    virtual void set_apelido(std::string apelido);
     virtual std::string get_apelido();
 
 };

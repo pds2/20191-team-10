@@ -3,8 +3,8 @@
 #include <string>
 #include <iostream>
 
-Pokemon::Pokemon(std::string nome,int ataque,int defesa,int agilidade ,int hp,int crit):
-	_nome(nome), _ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){};
+Pokemon::Pokemon(std::string apelido,int ataque,int defesa,int agilidade ,int hp,int crit):
+	_apelido(apelido), _ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){};
 
 int Pokemon::get_ataque(){
     return this->_ataque;
@@ -21,6 +21,11 @@ int Pokemon::get_hp(){
 int Pokemon::get_crit(){
     return this->_crit;
 }
+
+void Pokemon::set_nome(std::string nome){
+		this->_nome = nome;
+}
+
 std::string Pokemon::get_nome(){
   	return this->_nome;
 }
