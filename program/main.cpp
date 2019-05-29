@@ -1,5 +1,5 @@
 // #include "../include/pokemon.h"
-#include "../include/introducao.h"
+// #include "../include/introducao.h"
 #include "../include/pokemon_include/charmander.h"
 #include "../include/pokemon_include/bulbasauro.h"
 #include "../include/pokemon_include/squirtle.h"

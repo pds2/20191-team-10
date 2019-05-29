@@ -23,11 +23,7 @@ void introducao(Treinador jogador) {
     std::cout << "Qual será o seu nome de treinador?" << std::endl;
 
     std::getline(std::cin, nome);
-<<<<<<< HEAD
-    uno = Treinador(apelido, 1);
-=======
     jogador = Treinador(nome, 1);
->>>>>>> 0c08ded41b3e156511465cc6d227ca5172294906
 
     std::cout << "Pokemons para escolher: Bulbasauro, Squirtle e Charmander." << std::endl;
     std::cout << "Digite 1 para Bulbasauro, 2 para Squirtle e 3 para Charmander." << std::endl;
