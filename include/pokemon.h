@@ -23,8 +23,12 @@ class Pokemon{
 	public:
 	  int current_hp; // Esse será o HP modificado durante as lutas. Logo deve ser público.
 
-	  Pokemon(std::string nome, int ataque, int defesa, int agilidade, int hp, int crit); // Construtor:
-                                                  // nome,ataque,defesa,agilidade,hp,crit
+    //Construtor: apelido,ataque,defesa,agilidade,hp,crit
+	  Pokemon(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
+
+    //Construtor sem apelido como parametro
+    Pokemon(int ataque, int defesa, int agilidade, int hp, int crit);
+
 
   // Métodos Polimórficos :
 

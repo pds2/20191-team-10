@@ -6,6 +6,9 @@
 Pokemon::Pokemon(std::string apelido,int ataque,int defesa,int agilidade ,int hp,int crit):
 	_apelido(apelido), _ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){};
 
+Pokemon::Pokemon(int ataque, int defesa, int agilidade, int hp, int crit):
+	_ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){};
+
 int Pokemon::get_ataque(){
     return this->_ataque;
 }

@@ -1,5 +1,8 @@
 #include "../include/pokemon_fogo.h"
 
+Pokemon_Fogo::Pokemon_Fogo(int ataque, int defesa, int agilidade, int hp, int crit):
+  Pokemon(ataque, defesa, agilidade, hp, crit) {};
+
 Pokemon_Fogo::Pokemon_Fogo(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit):
   Pokemon(apelido, ataque, defesa, agilidade, hp, crit) {};
 

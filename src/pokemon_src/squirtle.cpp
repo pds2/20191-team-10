@@ -3,6 +3,9 @@
 
 #include <iostream>
 
+Squirtle::Squirtle(int ataque, int defesa, int agilidade, int hp, int crit):
+	Pokemon_Fogo(ataque, defesa, agilidade, hp, crit) {set_nome("squirtle");set_apelido("squirtle");};
+
 Squirtle::Squirtle(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit):
 	Pokemon_Agua(apelido, ataque, defesa, agilidade, hp, crit) {set_nome("squirtle");};
 

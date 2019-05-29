@@ -3,6 +3,9 @@
 
 #include <iostream>
 
+Bulbasauro::Bulbasauro(int ataque, int defesa, int agilidade, int hp, int crit):
+	Pokemon_Grama(ataque, defesa, agilidade, hp, crit) {set_nome("bulbasauro");set_apelido("bulbasauro");};
+
 Bulbasauro::Bulbasauro(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit):
 	Pokemon_Grama(apelido, ataque, defesa, agilidade, hp, crit) {set_nome("bulbasauro");};
 

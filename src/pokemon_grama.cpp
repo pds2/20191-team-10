@@ -1,5 +1,8 @@
 #include "../include/pokemon_grama.h"
 
+Pokemon_Grama::Pokemon_Grama(int ataque, int defesa, int agilidade, int hp, int crit):
+  Pokemon(ataque, defesa, agilidade, hp, crit) {};
+
 Pokemon_Grama::Pokemon_Grama(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit):
   Pokemon(apelido, ataque, defesa, agilidade, hp, crit) {};
 

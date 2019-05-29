@@ -7,9 +7,10 @@
 
 class Bulbasauro : public Pokemon_Grama {
 	public:
+		Bulbasauro(int ataque, int defesa, int agilidade, int hp, int crit);
+		Bulbasauro(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
 		Bulbasauro(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit,
 				   std::string fraqueza, std::string resistencia);
-		Bulbasauro(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
 
 		virtual void atacar(Pokemon *) override;
 
