@@ -4,10 +4,10 @@
 #include <iostream>
 
 Squirtle::Squirtle(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit):
-	Pokemon_Agua(apelido, ataque, defesa, agilidade, hp, crit){};
+	Pokemon_Agua(apelido, ataque, defesa, agilidade, hp, crit) {set_nome("squirtle");};
 
 Squirtle::Squirtle(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit, std::string fraqueza, std::string resistencia):
-	Pokemon_Agua(apelido, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia){};
+	Pokemon_Agua(apelido, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia) {set_nome("squirtle");};
 
 // Métodos Polimórficos :
 

@@ -4,10 +4,10 @@
 #include <iostream>
 
 Charmander::Charmander(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit):
-	Pokemon_Fogo(apelido, ataque, defesa, agilidade, hp, crit){};
+	Pokemon_Fogo(apelido, ataque, defesa, agilidade, hp, crit) {set_nome("charmander");};
 
 Charmander::Charmander(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit, std::string fraqueza, std::string resistencia):
-	Pokemon_Fogo(apelido, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia){};
+	Pokemon_Fogo(apelido, ataque, defesa, agilidade, hp, crit, fraqueza, resistencia) {set_nome("charmander");};
 
 // Métodos Polimórficos :
 
