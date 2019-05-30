@@ -1,10 +1,9 @@
 #include "../include/excecoes.h"
 #include "../include/pokemon.h"
 
-#include <iostream>
-
-void excpt_verificar_morto(Pokemon *poke){
-    if(poke->current_hp<=0){
-        throw std::out_of_range("Pokemon nocauteado!\n");
-    }
+void verificar_nocaute(Pokemon *meu_poke, Pokemon *inimigo){
+    if( (meu_poke->current_hp <= 0) || (inimigo->current_hp <= 0)  ){
+        Excpt_Nocaute KO;
+        throw KO;
+    };
 }

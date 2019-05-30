@@ -6,6 +6,7 @@
 #include "../include/treinador.h"
 #include "../include/excecoes.h"
 #include "../include/batalha.h"
+#include "../include/interface.h"
 
 #include <iostream>
 #include <string>
@@ -27,7 +28,7 @@ int main() {
 	//Abaixo temos um exemplo de como acessar elementos específicos dos pokemons pertencentes a um treinador
 
 	std::cout<<"Segue a lista dos pokemon desse treinador:\n";
-	uno.get_lista_pokemon();
+	uno.print_lista_pokemon();
 
 	std::cout<<"Atributos :\n";
 	std::cout<<"Ataque : = "<<uno._lista_de_pokemon.at(1)->get_ataque()<<"\n";

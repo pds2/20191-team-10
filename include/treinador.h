@@ -9,7 +9,7 @@
 
 class Treinador{
 	protected:
-		std::string _jogador;
+		std::string _treinador;
 	public:
 		int _lideranca; // Atributo Liderança do Treinador deve ser alterado logo está no escopo público
 
@@ -19,11 +19,13 @@ class Treinador{
 
 		// Métodos para manipulação do TAD :
 
+        std::string get_treinador();
+
 		int get_lideranca();
+
 		void set_lideranca(int);
 		void add_pokemon(Pokemon*);
-		std::string get_jogador();
-		void get_lista_pokemon();
+		void print_lista_pokemon();
 };
 
 #endif

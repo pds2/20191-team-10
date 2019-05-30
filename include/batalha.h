@@ -10,17 +10,18 @@
 int rola_dados();
 // Gera um número aleatório entre 1 e 10. Utilizado para calcular a chance de crit, por exemplo.
 
-void encerrar_batalha(Pokemon *, Pokemon *); 
-// Encerra. Deve inclusive resetar o current_hp para o valor original.
+void reset_current_hp(Pokemon *,Pokemon *);
+// Função que reseta a vida dos pokemons dados como parâmetro
 
-void set_current_hp(Pokemon *); //Função que seta a vida na hora da batalha
+void gera_oponente_facil(Pokemon *);
+// Função que gera um adversário para batalhar.
 
-void gera_oponente_facil(Pokemon *); //Função que gera um treinador inicial para batalhar.
+void encerrar_batalha(Pokemon *, Pokemon *);
+// Encerra a batalha e reseta o HP dos pokemons envolvidos (meu_poke,inimigo).
+// Sempre delete o inimigo após o uso dessa função caso ele não tiver mais serventia.
 
-int escolher_pokemon(Treinador); //Função que recebe um treinador e a partir desse treinado, escolhe um Pokémon.
-
-void batalha_x1(Treinador, Pokemon *, int); 
+void batalha_x1(Treinador, Pokemon *, int);
 // Função que faz dois Pokémon lutarem.
-//Recebe como parâmetro o jogador, seu Pokémon escolhido e a dificuldade.
+// Recebe como parâmetro o jogador, seu Pokémon escolhido e a dificuldade ( representada como inteiro).
 
 #endif // BATALHA_H

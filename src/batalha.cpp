@@ -1,5 +1,6 @@
 #include "../include/batalha.h"
 #include "../include/excecoes.h"
+#include "../include/interface.h"
 
 #include <iostream>
 #include <stdexcept>
@@ -13,14 +14,26 @@ int rola_dados(){
 	return(temp);
 }
 
-/*void encerrar_batalha(Pokemon *poke){
+void reset_current_hp(Pokemon *meu_poke, Pokemon *inimigo){
+    meu_poke->current_hp = meu_poke->get_hp();
+    inimigo->current_hp = inimigo->get_hp();
+}
+
+void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo){
     try{
-        excpt_verificar_morto(poke);
+        verificar_nocaute(meu_poke,inimigo);
     }
-    catch(std::out_of_range &e){
-        poke->current_hp=poke->get_hp();
+    catch(Excpt_Nocaute &KO){
+        if(meu_poke->current_hp <= 0){
+            std::cout << meu_poke->get_apelido() << " esta' fora de combate! O vencedor e' ";
+            std::cout << inimigo->get_apelido() << std::endl;
+        }else{
+            std::cout << inimigo->get_apelido() << " esta' fora de combate! O vencedor e' ";
+            std::cout << meu_poke->get_apelido() << std::endl;
+        }
+        reset_current_hp(meu_poke, inimigo);
     }
-}*/
+}
 
 /*void gera_oponente_facil(Pokemon *inimigo){
     int randomico= rola_dados();
@@ -36,35 +49,6 @@ int rola_dados(){
     std::cout << "Vida do inimigo: " << inimigo->current_hp << std::endl;
 }*/
 
-void set_current_hp(Pokemon *meu_poke, Pokemon *inimigo){
-    meu_poke->current_hp = meu_poke->get_hp();
-    inimigo->current_hp = inimigo->get_hp();
-}
-
-int escolher_pokemon(Treinador jogador){
-    std::cout << "Qual Poke'mon tu vai querer usar na batalha?";
-    std::cout << std::endl;
-    jogador.get_lista_pokemon();
-    std::string escolha, confirmacao;
-
-
- //Criar uma exceção aqui depois & pensar numa maneira de o código não crashar caso tenha apenas 2
-
-
-    do{
-        do{
-            std::cout << "Digite o numero correspondente: ";
-            std::cin >> escolha;
-        }while((escolha[0] != '1') && (escolha[0] != '2') && (escolha[0] != '3'));
-        std::cout << "Tem certeza que quer usar ";
-        std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
-        std::cin >> confirmacao;
-        if(confirmacao[0] != 'S' && confirmacao[0] != 's')
-            std::cout << std::endl << "Qual Poke'mon quer levar? ";
-    }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
-    return (escolha[0] - '0') - 1;
-}
-
 void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     Pokemon *inimigo;
     /*if(dificuldade== 1){
@@ -75,7 +59,7 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
         gera_oponente_dificil(inimigo);
     }*/
     //Não estou conseguindo passar o Pokémon criado na função acima para esta função
-    int randomico= rola_dados();
+    int randomico = rola_dados();
     if((randomico<=4) && (randomico>0)){
         inimigo = new Bulbasauro("Bulbasauro", 15, 10, 10, 50, 5);
     }else if((randomico<=7) && (randomico>4)){
@@ -83,7 +67,8 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     }else{
         inimigo = new Squirtle("Squirtle", 15, 10, 10, 50, 5);
     }
-    set_current_hp(meu_poke, inimigo); //Atualiza a vida atual para a batalha
+
+    reset_current_hp(meu_poke, inimigo); //Atualiza a vida atual para a batalha
 
     if((jogador.get_lideranca() * meu_poke->get_agilidade()) >= (dificuldade * inimigo->get_agilidade())){
         while(true){
@@ -109,16 +94,8 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
         }
     }
 
-
-//Fazer uma função para isto depois
-
-
-    if(meu_poke->current_hp <= 0){
-        std::cout << meu_poke->get_apelido() << " esta' fora de combate! O vencedor e' ";
-        std::cout << inimigo->get_apelido() << std::endl;
-    }else{
-        std::cout << inimigo->get_apelido() << " esta' fora de combate! O vencedor e' ";
-        std::cout << meu_poke->get_apelido() << std::endl;
-    }
+    encerrar_batalha(meu_poke,inimigo);
     delete inimigo;
+    // Gera warning devido ao delete : "deleting object of abstract class type 'Pokemon' which has non-virtual
+    // destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]|"
 }

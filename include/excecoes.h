@@ -22,6 +22,13 @@
 //		}
 //};
 
-void excpt_verificar_morto(Pokemon*);
+class Excpt_Nocaute : public std::exception{
+public:
+	const char *what(){
+		return "Pokemon Nocauteado!\n";
+	}
+};
+
+void verificar_nocaute(Pokemon*,Pokemon *);
 
 #endif // EXCECOES_H
