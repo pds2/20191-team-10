@@ -20,6 +20,10 @@ void encerrar_batalha(Pokemon *, Pokemon *);
 // Encerra a batalha e reseta o HP dos pokemons envolvidos (meu_poke,inimigo).
 // Sempre delete o inimigo após o uso dessa função caso ele não tiver mais serventia.
 
+int escolher_pokemon(Treinador); 
+//Função que recebe um treinador e a partir desse treinado, escolhe um Pokémon.
+
+
 void batalha_x1(Treinador, Pokemon *, int);
 // Função que faz dois Pokémon lutarem.
 // Recebe como parâmetro o jogador, seu Pokémon escolhido e a dificuldade ( representada como inteiro).
