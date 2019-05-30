@@ -26,18 +26,16 @@ int main() {
 
 	//Abaixo temos um exemplo de como acessar elementos específicos dos pokemons pertencentes a um treinador
 
-	std::cout<<"Segue a lista dos pokemons desse treinador:\n";
-	for(int i=0; i < uno._lista_de_pokemons.size() ; i++){
-		//std::cout<<uno._lista_de_pokemons.at(i)->get_nome()<<"\n"; // Imprima o nome do pokemon na posição 'i' da _lista_de_pokemon do treinador uno
-		std::cout<<"\tO treinador "<<uno.get_jogador()<<" possui o pokemon : "<<uno._lista_de_pokemons.at(i)->get_nome()<<"\n";
-	}
+	std::cout<<"Segue a lista dos pokemon desse treinador:\n";
+	uno.get_lista_pokemon();
 
 	std::cout<<"Atributos :\n";
-	std::cout<<"Ataque : = "<<uno._lista_de_pokemons.at(1)->get_ataque()<<"\n";
-	std::cout<<"Defesa : = "<<uno._lista_de_pokemons.at(1)->get_defesa()<<"\n";
-	std::cout<<"Agilidade : = "<<uno._lista_de_pokemons.at(1)->get_agilidade()<<"\n";
+	std::cout<<"Ataque : = "<<uno._lista_de_pokemon.at(1)->get_ataque()<<"\n";
+	std::cout<<"Defesa : = "<<uno._lista_de_pokemon.at(1)->get_defesa()<<"\n";
+	std::cout<<"Agilidade : = "<<uno._lista_de_pokemon.at(1)->get_agilidade()<<"\n";
 
-	batalha_x1(uno, &aguin, 1);
+	int escolha = escolher_pokemon(uno);
+	batalha_x1(uno, (uno._lista_de_pokemon.at(escolha)), 1);
 
 	return 0;
 }

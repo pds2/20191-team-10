@@ -13,7 +13,7 @@ class Treinador{
 	public:
 		int _lideranca; // Atributo Liderança do Treinador deve ser alterado logo está no escopo público
 
-		std::vector<Pokemon*> _lista_de_pokemons;
+		std::vector<Pokemon*> _lista_de_pokemon;
 
 		Treinador(std::string nome, int lideranca); // Construtor : Nome, Nível de lideranca
 
@@ -23,6 +23,7 @@ class Treinador{
 		void set_lideranca(int);
 		void add_pokemon(Pokemon*);
 		std::string get_jogador();
+		void get_lista_pokemon();
 };
 
 #endif

@@ -41,6 +41,30 @@ void set_current_hp(Pokemon *meu_poke, Pokemon *inimigo){
     inimigo->current_hp = inimigo->get_hp();
 }
 
+int escolher_pokemon(Treinador jogador){
+    std::cout << "Qual Poke'mon tu vai querer usar na batalha?";
+    std::cout << std::endl;
+    jogador.get_lista_pokemon();
+    std::string escolha, confirmacao;
+
+
+ //Criar uma exceção aqui depois & pensar numa maneira de o código não crashar caso tenha apenas 2
+
+
+    do{
+        do{
+            std::cout << "Digite o numero correspondente: ";
+            std::cin >> escolha;
+        }while((escolha[0] != '1') && (escolha[0] != '2') && (escolha[0] != '3'));
+        std::cout << "Tem certeza que quer usar ";
+        std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
+        std::cin >> confirmacao;
+        if(confirmacao[0] != 'S' && confirmacao[0] != 's')
+            std::cout << std::endl << "Qual Poke'mon quer levar? ";
+    }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    return (escolha[0] - '0') - 1;
+}
+
 void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     Pokemon *inimigo;
     /*if(dificuldade== 1){
@@ -84,7 +108,11 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
             }
         }
     }
-    //Fazer uma função para isto depois
+
+
+//Fazer uma função para isto depois
+
+
     if(meu_poke->current_hp <= 0){
         std::cout << meu_poke->get_apelido() << " esta' fora de combate! O vencedor e' ";
         std::cout << inimigo->get_apelido() << std::endl;

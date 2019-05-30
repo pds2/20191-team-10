@@ -19,5 +19,13 @@ void Treinador::set_lideranca(int x){
 	_lideranca=x;
 }
 void Treinador::add_pokemon(Pokemon *novo_pokemon){
-	_lista_de_pokemons.push_back(novo_pokemon);
+	_lista_de_pokemon.push_back(novo_pokemon);
+}
+
+void Treinador::get_lista_pokemon(){
+	for(int i=0; i < this->_lista_de_pokemon.size(); i++){
+		//std::cout<<uno._lista_de_pokemons.at(i)->get_nome()<<"\n"; // Imprima o nome do pokemon na posição 'i' da _lista_de_pokemon do treinador uno
+		//std::cout << "\tO treinador "<<this->_jogador<<" possui o pokemon : ";
+		std::cout << "\t" << i+1 << " - " << _lista_de_pokemon.at(i)->get_nome()<<"\n";
+	}
 }
