@@ -18,6 +18,7 @@ class Pokemon{
 		int _agilidade;
 		int _hp;
 		int _crit;
+    int _iv;
 		std::string _fraqueza;
 		std::string _resistencia;
 	public:
@@ -44,6 +45,7 @@ class Pokemon{
 		virtual int get_agilidade();
 		virtual int get_hp();
 		virtual int get_crit();
+    virtual int get_iv();
     virtual void set_nome(std::string nome);
 		virtual std::string get_nome();
     virtual void set_apelido(std::string apelido);

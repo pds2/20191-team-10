@@ -1,13 +1,21 @@
 #include "../include/pokemon.h"
 
+#include <time.h>
+#include <stdlib.h>
 #include <string>
 #include <iostream>
 
 Pokemon::Pokemon(std::string apelido,int ataque,int defesa,int agilidade ,int hp,int crit):
-	_apelido(apelido), _ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){};
+	_apelido(apelido), _ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){
+		srand(time(0));
+		this->_iv = (rand() % 100) + 1;
+	};
 
 Pokemon::Pokemon(int ataque, int defesa, int agilidade, int hp, int crit):
-	_ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){};
+	_ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){
+		srand(time(0));
+		this->_iv = (rand() % 100) + 1;
+	};
 
 int Pokemon::get_ataque(){
     return this->_ataque;
@@ -23,6 +31,9 @@ int Pokemon::get_hp(){
 }
 int Pokemon::get_crit(){
     return this->_crit;
+}
+int Pokemon::get_iv(){
+		return this->_iv;
 }
 
 void Pokemon::set_nome(std::string nome){
