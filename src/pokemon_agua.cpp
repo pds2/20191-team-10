@@ -17,6 +17,12 @@ std::string Pokemon_Agua::get_fraqueza() {
 std::string Pokemon_Agua::get_resistencia() {
   return this->_resistencia;
 }
+
+void Pokemon_Agua::print_habilidades(int lideranca){
+	for(int i=0; i<lideranca; i++){
+		std::cout << "\t" << i+1 << " - " << _habilidades[i] << std::endl;
+	}
+}
 /*
 std::vector<std::string> Pokemon_Agua::get_imunidade() {
   return this->_imunidade;

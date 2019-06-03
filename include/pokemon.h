@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
 
 #define AUMENTO 1.6
 #define REDUCAO 0.63
@@ -21,6 +22,7 @@ class Pokemon{
     int _iv;
 		std::string _fraqueza;
 		std::string _resistencia;
+		std::string _habilidades[4];
 	public:
 	  int current_hp; // Esse será o HP modificado durante as lutas. Logo deve ser público.
 
@@ -37,6 +39,8 @@ class Pokemon{
 
 		virtual std::string get_resistencia() = 0;
 		virtual std::string get_fraqueza() = 0;
+		
+		virtual void print_habilidades(int) = 0;
 
 	// Métodos para manipulação do TAD :
 

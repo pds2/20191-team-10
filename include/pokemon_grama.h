@@ -7,6 +7,7 @@ class Pokemon_Grama : public Pokemon {
 protected:
   std::string _fraqueza = {"fogo"};
   std::string _resistencia = {"agua"};
+  std::string _habilidades[4] = {"Investida", "Folha Navalha", "Chicote de Vinha", "Raio Solar"};
   //std::vector<std::string> _imunidade = {""};
   /*_fraqueza = {"fogo"};
   _resistencia = {"agua"};*/
@@ -19,6 +20,7 @@ public:
 
   std::string get_fraqueza();
   std::string get_resistencia();
+  virtual void print_habilidades(int) override;
   //std::vector<std::string> get_imunidade();
 };
 

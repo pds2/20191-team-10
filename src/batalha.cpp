@@ -72,6 +72,11 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
 
     if((jogador.get_lideranca() * meu_poke->get_agilidade()) >= (dificuldade * inimigo->get_agilidade())){
         while(true){
+
+            //Após escolher a habilidade, ela precisa passar para o método atacar
+            //Como implementar a IA?
+            escolher_habilidade(meu_poke, jogador.get_lideranca());
+
             meu_poke->atacar(inimigo);
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;

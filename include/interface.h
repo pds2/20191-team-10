@@ -10,13 +10,15 @@
 #include <string>
 #include <iostream>
 
-// Esse header tem como propósito armazenar funções relacionadas à interface.
-// Um bom critério para escolher se você deve ou não colocar um método nesse header
-// é pensar :
+// Esse header tem como propï¿½sito armazenar funï¿½ï¿½es relacionadas ï¿½ interface.
+// Um bom critï¿½rio para escolher se vocï¿½ deve ou nï¿½o colocar um mï¿½todo nesse header
+// ï¿½ pensar :
 
-// 1) Esse método está relacionado à funcionalidade de uma classe? Se não, o implemente aqui
-// 2) O número de prints e inputs utilizado pelo método é grande? Se sim, o implemente aqui.
+// 1) Esse mï¿½todo estï¿½ relacionado ï¿½ funcionalidade de uma classe? Se nï¿½o, o implemente aqui
+// 2) O nï¿½mero de prints e inputs utilizado pelo mï¿½todo ï¿½ grande? Se sim, o implemente aqui.
 
-int escolher_pokemon(Treinador); //Função que recebe um treinador e escolhe um de seus Pokémon.
+int escolher_pokemon(Treinador); //Funï¿½ï¿½o que recebe um treinador e escolhe um de seus Pokï¿½mon.
+
+int escolher_habilidade(Pokemon *, int);
 
 #endif // INTERFACE_H

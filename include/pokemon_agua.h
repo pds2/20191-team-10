@@ -3,12 +3,11 @@
 
 #include "pokemon.h"
 
-#include <string>
-
 class Pokemon_Agua : public Pokemon {
 protected:
   std::string _fraqueza = {"grama"};
   std::string _resistencia = {"fogo"};
+  std::string _habilidades[4] = {"Investida", "Bolhas", "Pistola D'agua", "Hidro Bomba"};
   //std::vector<std::string> _imunidade = {""};
 /*_fraqueza = {"grama"};
 _resistencia = {"fogo"};*/
@@ -21,6 +20,7 @@ public:
 
   std::string get_fraqueza();
   std::string get_resistencia();
+  virtual void print_habilidades(int) override;
   //std::vector<std::string> get_imunidade();
 
 };

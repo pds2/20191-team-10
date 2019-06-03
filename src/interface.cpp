@@ -4,13 +4,12 @@
 
 
 int escolher_pokemon(Treinador jogador){
-    std::cout << "Qual dos seus Pokemon sera levado a batalha?";
-    std::cout << std::endl;
+    std::cout << "Qual dos seus Pokemon sera levado a batalha?" << std::endl;
     jogador.print_lista_pokemon();
     std::string escolha, confirmacao;
 
 
- //Criar uma exceÁ„o aqui depois & pensar numa maneira de o cÛdigo n„o crashar caso tenha apenas 2
+ //Criar uma exceÔøΩÔøΩo aqui depois & pensar numa maneira de o cÔøΩdigo nÔøΩo crashar caso tenha apenas 2
 
 
     do{
@@ -27,4 +26,19 @@ int escolher_pokemon(Treinador jogador){
 
     }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
     return (escolha[0] - '0') - 1;
+}
+
+int escolher_habilidade(Pokemon *meu_poke, int lideranca){
+    std::string escolha;
+    std::cout << "Qual habilidade voc√™ deseja usar?" << std::endl;
+    meu_poke->print_habilidades(lideranca);
+
+    //Criar mais exce√ß√µes aqui.
+    //Al√©m disso, pensar numa forma de saber se est√° no n√≠vel de usar habilidades lvl alto
+
+    do{
+        std::cout << "Digite o numero correspondente: ";
+        std::cin >> escolha;
+    }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4');
+    return (escolha[0] - '0');
 }
