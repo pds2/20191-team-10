@@ -24,8 +24,4 @@ void batalha_x1(Treinador, Pokemon *, int);
 // Função que faz dois Pokémon lutarem.
 // Recebe como parâmetro o jogador, seu Pokémon escolhido e a dificuldade ( representada como inteiro).
 
-void capturar_pokemon(Treinador jogador, Pokemon *inimigo);
-// Função para capturar pokemon utilizando as pokebolas implementadas no treinador
-// Recebe um treinador como parametro e o pokemon inimigo ativo na batalha.
-
 #endif // BATALHA_H
