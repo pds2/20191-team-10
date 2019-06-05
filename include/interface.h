@@ -3,6 +3,7 @@
 
 #include "pokemon.h"
 #include "treinador.h"
+#include "pokebola.h"
 #include "../include/pokemon_include/charmander.h"
 #include "../include/pokemon_include/bulbasauro.h"
 #include "../include/pokemon_include/squirtle.h"
@@ -16,6 +17,7 @@
 
 // 1) Esse m�todo est� relacionado � funcionalidade de uma classe? Se n�o, o implemente aqui
 // 2) O n�mero de prints e inputs utilizado pelo m�todo � grande? Se sim, o implemente aqui.
+int escolher_pokebola(Treinador jogador, Pokemon *inimigo);
 
 int escolher_pokemon(Treinador); //Fun��o que recebe um treinador e escolhe um de seus Pok�mon.
 

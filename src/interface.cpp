@@ -2,6 +2,24 @@
 #include "../include/batalha.h"
 #include "../include/excecoes.h"
 
+int escolher_pokebola(Treinador jogador, Pokemon *inimigo){
+    int escolha;
+
+    std::cout << "Qual pokebola deseja utilizar para capturar esse pokemon?" << '\n';
+    if(jogador.get_pokeball() > POKEBOLA_INVALIDO)
+      std::cout << "\t1- Pokeball" << '\n';
+    if(jogador.get_greatball() > POKEBOLA_INVALIDO)
+      std::cout << "\t2- Greatball" << '\n';
+    if(jogador.get_masterball() > POKEBOLA_INVALIDO)
+      std::cout << "\t3- Masterball" << '\n';
+    if((jogador.get_pokeball() > POKEBOLA_INVALIDO)||(jogador.get_greatball() > POKEBOLA_INVALIDO)||(jogador.get_masterball() > POKEBOLA_INVALIDO)){
+      std::cout << "Digite o número correspondente a pokebola desejada: ";
+      std::cin >> escolha;
+      return escolha;
+    } else {
+      std::cout << "Você não possui nenhum tipo de pokebola. Jogue mais batalhas para conseguir novas pokebolas!" << '\n';
+    }
+}
 
 int escolher_pokemon(Treinador jogador){
     std::cout << "Qual dos seus Pokemon sera levado a batalha?" << std::endl;
