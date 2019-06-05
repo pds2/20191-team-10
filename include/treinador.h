@@ -8,13 +8,19 @@
 #include <vector>
 
 class Treinador{
-	protected:
+	private:
 		std::string _treinador;
-	public:
-		int _lideranca; // Atributo Liderança do Treinador deve ser alterado logo está no escopo público
 		int _pokeball;
 		int _greatball;
 		int _masterball;
+
+		//serão utilizadas para armazenar a taxa de captura dos treinadores.
+		int _capturas_efetivas;
+		int _capturas_totais;
+
+	public:
+		int _lideranca; // Atributo Liderança do Treinador deve ser alterado logo está no escopo público
+
 
 		std::vector<Pokemon*> _lista_de_pokemon;
 
@@ -34,6 +40,12 @@ class Treinador{
 
 		int get_masterball();
 		void set_masterball(int quantidade);
+
+		int get_capturas_efetivas();
+		void set_capturas_efetivas(int capturas);
+
+		int get_capturas_totais();
+		void set_capturas_totais(int capturas);
 
 		void add_pokemon(Pokemon*);
 		void print_lista_pokemon();
