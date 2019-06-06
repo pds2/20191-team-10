@@ -9,7 +9,7 @@
 #include "../include/interface.h"
 
 #include "../third_party/doctest.h"
-
+#include <string>
 
 //Sessão de testes relacionados a classe Pokemon: testes_pokemon
 
