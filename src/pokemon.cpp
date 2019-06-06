@@ -7,13 +7,11 @@
 
 Pokemon::Pokemon(std::string apelido,int ataque,int defesa,int agilidade ,int hp,int crit):
 	_apelido(apelido), _ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){
-		srand(time(0));
 		this->_iv = (rand() % 100) + 1;
 	};
 
 Pokemon::Pokemon(int ataque, int defesa, int agilidade, int hp, int crit):
 	_ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){
-		srand(time(0));
 		this->_iv = (rand() % 100) + 1;
 	};
 
