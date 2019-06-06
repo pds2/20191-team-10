@@ -1,13 +1,28 @@
 #include "../include/treinador.h"
 #include "../include/pokemon.h"
 #include "../include/pokemon_agua.h"
+#include "../include/excecoes.h"
+#include "../include/interface.h"
 
 #include <iostream>
 #include <string>
 #include <vector>
 
 Treinador::Treinador(std::string nome, int lideranca):
-	_treinador(nome), _lideranca(lideranca){set_pokeball(5);set_greatball(0);set_masterball(0);set_capturas_efetivas(0);set_capturas_totais(0);};
+	_treinador(nome), _lideranca(lideranca)
+	{
+	    set_pokeball(5);set_greatball(0);set_masterball(0);set_capturas_efetivas(0);set_capturas_totais(0);
+
+	    try{
+            verificar_lideranca_valida(lideranca);
+        }
+        catch(Excpt_Lideranca_Invalida &e){
+            std::cout<<e.what();
+            lideranca = tratamento_lideranca_invalida();
+            set_lideranca(lideranca);
+        }
+
+    };
 
 std::string Treinador::get_treinador(){
 	return _treinador;

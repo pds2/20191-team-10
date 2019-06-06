@@ -2,6 +2,8 @@
 #include "../include/batalha.h"
 #include "../include/excecoes.h"
 
+#include <stdlib.h>
+
 int escolher_pokebola(Treinador jogador, Pokemon *inimigo){
     int escolha;
 
@@ -31,10 +33,7 @@ int escolher_pokemon(Treinador jogador){
 
 
     do{
-        do{
-            std::cout << "Digite o numero correspondente: ";
-            std::cin >> escolha;
-        }while((escolha[0] != '1') && (escolha[0] != '2') && (escolha[0] != '3'));
+        escolha = escolha_um_a_tres();
 
         std::cout << "Tem certeza que quer usar ";
         std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
@@ -54,9 +53,61 @@ int escolher_habilidade(Pokemon *meu_poke, int lideranca){
     //Criar mais exceções aqui.
     //Além disso, pensar numa forma de saber se está no nível de usar habilidades lvl alto
 
+    if(lideranca == 1){
+        escolha = escolha_um_a_um();
+    }
+    else if(lideranca == 2){
+        escolha = escolha_um_a_dois();
+    }
+    else if(lideranca == 3){
+        escolha = escolha_um_a_tres();
+    }
+    else if(lideranca == 4){
+        escolha = escolha_um_a_quatro();
+    }
+
+    try{
+        verificar_habilidade_valida(escolha ,lideranca);
+    }
+    catch(Excpt_Habilidade_Invalida &e){
+        tratamento_habilidade_invalida(escolha, lideranca);
+    }
+
+    return (escolha[0] - '0');
+}
+
+std::string escolha_um_a_um(){
+    std::string escolha;
+    do{
+        std::cout << "Err.... digite o numero 1 meu chapa. ";
+        std::cin >> escolha;
+    }while(escolha[0] != '1');
+    return escolha;
+}
+
+std::string escolha_um_a_dois(){
+    std::string escolha;
+    do{
+        std::cout << "Digite o numero correspondente: ";
+        std::cin >> escolha;
+    }while(escolha[0] != '1' && escolha[0] != '2');
+    return escolha;
+}
+
+std::string escolha_um_a_tres(){
+    std::string escolha;
+    do{
+        std::cout << "Digite o numero correspondente: ";
+        std::cin >> escolha;
+    }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3');
+    return escolha;
+}
+
+std::string escolha_um_a_quatro(){
+    std::string escolha;
     do{
         std::cout << "Digite o numero correspondente: ";
         std::cin >> escolha;
     }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4');
-    return (escolha[0] - '0');
-}
+    return escolha;
+};
