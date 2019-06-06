@@ -12,8 +12,6 @@ class Charmander : public Pokemon_Fogo {
 		Charmander(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit,
 				   std::string fraqueza, std::string resistencia);
 
-		virtual void atacar(Pokemon *) override;
-
 		// Habilidades....
 };
 

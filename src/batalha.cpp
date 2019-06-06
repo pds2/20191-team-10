@@ -69,30 +69,30 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     }
 
     reset_current_hp(meu_poke, inimigo); //Atualiza a vida atual para a batalha
+    int habilidade_jogador= 1;
 
     if((jogador.get_lideranca() * meu_poke->get_agilidade()) >= (dificuldade * inimigo->get_agilidade())){
         while(true){
-
-            //Após escolher a habilidade, ela precisa passar para o método atacar
             //Como implementar a IA?
-            escolher_habilidade(meu_poke, jogador.get_lideranca());
+            habilidade_jogador= escolher_habilidade(meu_poke, jogador.get_lideranca());
 
-            meu_poke->atacar(inimigo);
+            meu_poke->atacar(inimigo, habilidade_jogador);
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }
-            inimigo->atacar(meu_poke);
+            inimigo->atacar(meu_poke, dificuldade);
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }
         }
     }else{
         while(true){
-            inimigo->atacar(meu_poke);
+            inimigo->atacar(meu_poke, dificuldade);
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }
-            meu_poke->atacar(inimigo);
+            habilidade_jogador= escolher_habilidade(meu_poke, jogador.get_lideranca());
+            meu_poke->atacar(inimigo, habilidade_jogador);
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }
@@ -100,6 +100,7 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     }
 
     encerrar_batalha(meu_poke,inimigo);
+    //Falta um destrutor virtual
     delete inimigo;
     // Gera warning devido ao delete : "deleting object of abstract class type 'Pokemon' which has non-virtual
     // destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]|"

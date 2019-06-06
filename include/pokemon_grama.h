@@ -21,6 +21,8 @@ public:
   std::string get_fraqueza();
   std::string get_resistencia();
   virtual void print_habilidades(int) override;
+
+	virtual void atacar(Pokemon *, int) override;
   //std::vector<std::string> get_imunidade();
 };
 
