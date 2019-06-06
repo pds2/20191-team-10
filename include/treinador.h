@@ -2,7 +2,6 @@
 #define TREINADOR_H
 
 #include "pokemon.h"
-#include "pokemon_agua.h"
 
 #include <string>
 #include <vector>

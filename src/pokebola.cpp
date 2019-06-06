@@ -83,7 +83,7 @@ void capturar_pokemon(Treinador jogador, Pokemon *inimigo) {
             utilizar_pokebola(jogador, inimigo, MASTERBALL_CHANCE);
             break;
           default:
-            std::cout << "Você não possui pokebolas! Jogue batalhas para conseguir pokebolas!";
+            std::cout << "Você não possui pokebolas! Jogue batalhas para conseguir pokebolas.";
             break;
         }
     }
