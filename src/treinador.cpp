@@ -7,7 +7,7 @@
 #include <vector>
 
 Treinador::Treinador(std::string nome, int lideranca):
-	_treinador(nome), _lideranca(lideranca){set_pokeball(5);set_capturas_efetivas(0);set_capturas_totais(0);};
+	_treinador(nome), _lideranca(lideranca){set_pokeball(5);set_greatball(0);set_masterball(0);set_capturas_efetivas(0);set_capturas_totais(0);};
 
 std::string Treinador::get_treinador(){
 	return _treinador;
@@ -47,6 +47,9 @@ int Treinador::get_capturas_totais(){
 }
 void Treinador::set_capturas_totais(int capturas){
 	this->_capturas_totais = capturas;
+}
+int Treinador::get_taxa_sucesso(){
+	return (_capturas_efetivas/_capturas_totais);
 }
 void Treinador::add_pokemon(Pokemon *novo_pokemon){
 	_lista_de_pokemon.push_back(novo_pokemon);

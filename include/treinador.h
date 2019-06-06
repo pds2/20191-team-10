@@ -19,8 +19,6 @@ class Treinador{
 
 	public:
 		int _lideranca; // Atributo Liderança do Treinador deve ser alterado logo está no escopo público
-
-
 		std::vector<Pokemon*> _lista_de_pokemon;
 
 		Treinador(std::string nome, int lideranca); // Construtor : Nome, Nível de lideranca
@@ -45,6 +43,8 @@ class Treinador{
 
 		int get_capturas_totais();
 		void set_capturas_totais(int capturas);
+
+		int get_taxa_sucesso();
 
 		void add_pokemon(Pokemon*);
 		void print_lista_pokemon();
