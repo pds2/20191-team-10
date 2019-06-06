@@ -13,34 +13,31 @@
 
 class Pokemon{
   protected:
+    int _ataque;
+    int _defesa;
+    int _agilidade;
+    int _hp;
+    int _crit;
+    int _iv;
+    std::string _fraqueza;
+    std::string _resistencia;
+    std::string _habilidades[4];
     std::string _nome;
     std::string _apelido;
-    int _ataque;
-		int _defesa;
-		int _agilidade;
-		int _hp;
-		int _crit;
-    int _iv;
-		std::string _fraqueza;
-		std::string _resistencia;
-		std::string _habilidades[4];
+
 	public:
 	  int current_hp; // Esse será o HP modificado durante as lutas. Logo deve ser público.
 
     //Construtor: apelido,ataque,defesa,agilidade,hp,crit
-	  Pokemon(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
+        Pokemon(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
 
-    //Construtor sem apelido como parametro
-    Pokemon(int ataque, int defesa, int agilidade, int hp, int crit);
+    //Métodos Polimórficos :
 
-
-  // Métodos Polimórficos :
-
-		virtual void atacar(Pokemon *, int) = 0;
+        virtual void atacar(Pokemon *, int) = 0;
 
 		virtual std::string get_resistencia() = 0;
 		virtual std::string get_fraqueza() = 0;
-		
+
 		virtual void print_habilidades(int) = 0;
 
 	// Métodos para manipulação do TAD :
@@ -50,11 +47,12 @@ class Pokemon{
 		virtual int get_agilidade();
 		virtual int get_hp();
 		virtual int get_crit();
-    virtual int get_iv();
-    virtual void set_nome(std::string nome);
+        virtual int get_iv();
+
+        virtual void set_nome(std::string nome);
 		virtual std::string get_nome();
-    virtual void set_apelido(std::string apelido);
-    virtual std::string get_apelido();
+        virtual void set_apelido(std::string apelido);
+        virtual std::string get_apelido();
 
 };
 

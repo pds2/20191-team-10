@@ -11,10 +11,7 @@ protected:
   //std::vector<std::string> _imunidade = {""};
 
 public:
-  Pokemon_Fogo(int ataque, int defesa, int agilidade, int hp, int crit);
   Pokemon_Fogo(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
-  Pokemon_Fogo(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit,
-               std::string fraqueza, std::string resistencia);
 
   std::string get_fraqueza();
   std::string get_resistencia();

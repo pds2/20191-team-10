@@ -15,9 +15,9 @@ std::string apelida_jogador() {
 }
 
 void introducao(Treinador *jogador) {
-    Bulbasauro *bulba = new Bulbasauro("Bulbasauro", 15, 10, 10, 50, 5);
-    Squirtle *squirtle = new Squirtle("Squirtle", 15, 10, 10, 50, 5);
-    Charmander *charmander = new Charmander("Charmander", 15, 10, 10, 50, 5);
+    Bulbasauro *bulba = new Bulbasauro("Bulbasauro");
+    Squirtle *squirtle = new Squirtle("Squirtle");
+    Charmander *charmander = new Charmander("Charmander");
     int p;
 
     std::cout << "Pokemons para escolher: Bulbasauro, Squirtle e Charmander." << std::endl;

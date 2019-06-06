@@ -13,16 +13,13 @@ protected:
   _resistencia = {"agua"};*/
 
 public:
-  Pokemon_Grama(int ataque, int defesa, int agilidade, int hp, int crit);
   Pokemon_Grama(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
-  Pokemon_Grama(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit,
-                std::string fraqueza, std::string resistencia);
 
   std::string get_fraqueza();
   std::string get_resistencia();
   virtual void print_habilidades(int) override;
 
-	virtual void atacar(Pokemon *, int) override;
+  virtual void atacar(Pokemon *, int) override;
   //std::vector<std::string> get_imunidade();
 };
 

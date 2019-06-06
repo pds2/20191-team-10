@@ -7,12 +7,7 @@
 
 class Charmander : public Pokemon_Fogo {
 	public:
-		Charmander(int ataque, int defesa, int agilidade, int hp, int crit);
-		Charmander(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
-		Charmander(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit,
-				   std::string fraqueza, std::string resistencia);
-
-		// Habilidades....
+		Charmander(std::string apelido);
 };
 
 #endif // CHARMANDER_H

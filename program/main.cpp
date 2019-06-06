@@ -14,9 +14,9 @@
 #include <string>
 
 int main() {
-	Squirtle aguin = Squirtle("aguin",15,10,10,50,5);
-	Charmander foguin = Charmander("foguin",15,10,10,50,5);
-	Bulbasauro verdin = Bulbasauro("verdin",15,10,10,50,5);
+	Squirtle aguin = Squirtle("aguin");
+	Charmander foguin = Charmander("foguin");
+	Bulbasauro verdin = Bulbasauro("verdin");
 
 	std::cout << "Resistência: " << aguin.get_resistencia() << std::endl;
 	std::cout << "Fraqueza: " << aguin.get_fraqueza() << std::endl;

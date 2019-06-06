@@ -7,6 +7,7 @@
 #include <exception>
 #include <ctime>
 #include <cstdlib>
+#include <memory>
 
 int rola_dados(){
     srand (time(NULL));
@@ -61,11 +62,11 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     //Não estou conseguindo passar o Pokémon criado na função acima para esta função
     int randomico = rola_dados();
     if((randomico<=4) && (randomico>0)){
-        inimigo = new Bulbasauro("Bulbasauro", 15, 10, 10, 50, 5);
+        inimigo = new Bulbasauro("Bulbasauro");
     }else if((randomico<=7) && (randomico>4)){
-        inimigo = new Charmander("Charmander", 15, 10, 10, 50, 5);
+        inimigo = new Charmander("Charmander");
     }else{
-        inimigo = new Squirtle("Squirtle", 15, 10, 10, 50, 5);
+        inimigo = new Squirtle("Squirtle");
     }
 
     reset_current_hp(meu_poke, inimigo); //Atualiza a vida atual para a batalha
@@ -101,7 +102,7 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
 
     encerrar_batalha(meu_poke,inimigo);
     //Falta um destrutor virtual
-    delete inimigo;
+    //delete inimigo;
     // Gera warning devido ao delete : "deleting object of abstract class type 'Pokemon' which has non-virtual
     // destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]|"
 }

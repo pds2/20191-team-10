@@ -10,11 +10,6 @@ Pokemon::Pokemon(std::string apelido,int ataque,int defesa,int agilidade ,int hp
 		this->_iv = (rand() % 100) + 1;
 	};
 
-Pokemon::Pokemon(int ataque, int defesa, int agilidade, int hp, int crit):
-	_ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){
-		this->_iv = (rand() % 100) + 1;
-	};
-
 int Pokemon::get_ataque(){
     return this->_ataque;
 }
@@ -35,7 +30,7 @@ int Pokemon::get_iv(){
 }
 
 void Pokemon::set_nome(std::string nome){
-		this->_nome = nome;
+    this->_nome = nome;
 }
 
 std::string Pokemon::get_nome(){
@@ -43,9 +38,9 @@ std::string Pokemon::get_nome(){
 }
 
 void Pokemon::set_apelido(std::string apelido){
-		this->_apelido = apelido;
+    this->_apelido = apelido;
 }
 
 std::string Pokemon::get_apelido(){
-		return this->_apelido;
+    return this->_apelido;
 }
