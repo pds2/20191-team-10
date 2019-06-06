@@ -10,7 +10,8 @@
 #include "../include/pokemon_grama.h"
 #include "../include/batalha.h"
 
-void introducao(Treinador *jogador, Squirtle *aguin, Charmander *foguin, Bulbasauro *verdin); // Texto introdutório do jogo
+std::string apelida_jogador();
+void introducao(Treinador *jogador); // Texto introdutório do jogo
 //void escolher_modo(Treinador jogador, Pokemon *meu_poke, int dificuldade); // Escolher modo batalha 1X1, 3X3 ou torneio
 
 #endif // INTRODUCAO_H
