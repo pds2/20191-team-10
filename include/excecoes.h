@@ -29,6 +29,26 @@ public:
 	}
 };
 
+class Excpt_Habilidade_Invalida : public std::exception{
+public:
+    const char *what(){
+        return "Seu treinador não tem liderança suficiente para usar essa habilidade\n";
+    }
+};
+
+class Excpt_Lideranca_Invalida : public std::exception{
+public:
+    const char *what(){
+        return "A liderança deve ser um valor entre 1 e 4\n";
+    }
+};
+
+void verificar_lideranca_valida(int);
+int tratamento_lideranca_invalida();
+
 void verificar_nocaute(Pokemon*,Pokemon *);
+
+void verificar_habilidade_valida(std::string,int);
+void tratamento_habilidade_invalida(std::string,int);
 
 #endif // EXCECOES_H
