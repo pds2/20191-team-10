@@ -7,6 +7,8 @@
 #include "../include/excecoes.h"
 #include "../include/batalha.h"
 #include "../include/interface.h"
+#include "../include/pokebola.h"
+#include "../include/pokedex.h"
 
 #include <iostream>
 #include <string>
@@ -37,6 +39,7 @@ int main() {
 
 	int escolha = escolher_pokemon(uno);
 	batalha_x1(uno, (uno._lista_de_pokemon.at(escolha)), 1);
+	treinador_info(uno);
 
 	return 0;
 }
