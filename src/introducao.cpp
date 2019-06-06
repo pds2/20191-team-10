@@ -7,7 +7,17 @@
 //Charmander foguin = Charmander("foguin",15,10,10,50,5);
 //Bulbasauro verdin = Bulbasauro("verdin",15,10,10,50,5);
 
-void introducao(Treinador *jogador, Squirtle *aguin, Charmander *foguin, Bulbasauro *verdin) {
+std::string apelida_jogador() {
+    std::string nome;
+    std::cout << "Bem-vindo ao mundo Pokemon! Qual o seu nome?" << std::endl;
+    std::getline(std::cin, nome);
+    return nome;
+}
+
+void introducao(Treinador *jogador) {
+    Bulbasauro *bulba = new Bulbasauro("Bulbasauro", 15, 10, 10, 50, 5);
+    Squirtle *squirtle = new Squirtle("Squirtle", 15, 10, 10, 50, 5);
+    Charmander *charmander = new Charmander("Charmander", 15, 10, 10, 50, 5);
     int p;
 
     std::cout << "Pokemons para escolher: Bulbasauro, Squirtle e Charmander." << std::endl;
@@ -15,13 +25,13 @@ void introducao(Treinador *jogador, Squirtle *aguin, Charmander *foguin, Bulbasa
     std::cin >> p;
     switch(p) {
         case 1:
-            jogador->add_pokemon(verdin);
+            jogador->add_pokemon(bulba);
             break;
         case 2:
-            jogador->add_pokemon(aguin);
+            jogador->add_pokemon(squirtle);
             break;
         case 3:
-            jogador->add_pokemon(foguin);
+            jogador->add_pokemon(charmander);
             break;
     }
 }
