@@ -1,5 +1,5 @@
 // #include "../include/pokemon.h"
-// #include "../include/introducao.h"
+#include "../include/introducao.h"
 #include "../include/pokemon_include/charmander.h"
 #include "../include/pokemon_include/bulbasauro.h"
 #include "../include/pokemon_include/squirtle.h"
@@ -31,10 +31,11 @@ int main() {
 	Bulbasauro verdin = Bulbasauro("Alpiste");
 
 	Treinador uno = Treinador("Leandro",4);
+	introducao(&uno);
 
-	uno.add_pokemon(&aguin); // add_pokemon(x) adiciona o pokemon x ao vetor de Pokemons presente na classe Jogador
-	uno.add_pokemon(&foguin);
-	uno.add_pokemon(&verdin);
+	//uno.add_pokemon(&aguin); // add_pokemon(x) adiciona o pokemon x ao vetor de Pokemons presente na classe Jogador
+	//uno.add_pokemon(&foguin);
+	//uno.add_pokemon(&verdin);
 
 	treinador_info(uno);
 	int escolha = escolher_pokemon(uno);
