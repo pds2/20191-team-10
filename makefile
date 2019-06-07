@@ -1,14 +1,45 @@
-all:
-		g++ -std=c++11 -o run_game src/pokemon.cpp src/introducao.cpp src/treinador.cpp src/pokebola.cpp src/pokedex.cpp src/interface.cpp src/batalha.cpp src/excecoes.cpp src/pokemon_agua.cpp src/pokemon_grama.cpp src/pokemon_fogo.cpp src/pokemon_src/bulbasauro.cpp src/pokemon_src/charmander.cpp src/pokemon_src/squirtle.cpp program/main.cpp
+CC := g++
+SRCDIR := src
+SRCDIR += src/pokemon_src
+TSTDIR := testes
+OBJDIR := build
+BINDIR := bin
 
-run_linux:
-		./run_game
+MAIN := program/main.cpp
+TESTER := program/tester.cpp
 
-run_win:
-		run_game.exe
+SRCEXT := cpp
+SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
+OBJECTS := $(patsubst $(SRCDIR)/%,$(OBJDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
+TSTSOURCES := $(shell find $(TSTDIR) -type f -name *.$(SRCEXT))
+
+CFLAGS := -g -Wall -O3 -std=c++11
+INC := -I include/ -I third_party/ -I include/pokemon_include
+
+$(OBJDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
+	@mkdir -p $(@D)
+	$(CC) $(CFLAGS) $(INC) -c -o $@ $<
+
+main: $(OBJECTS)
+	@mkdir -p $(BINDIR)
+	$(CC) $(CFLAGS) $(INC) $(MAIN) $^ -o $(BINDIR)/main
+	rm -rf src/*.o src/pokemon_src/*.o include/pokemon_include/*.o include/*.o
+
+tests: $(OBJECTS)
+	@mkdir -p $(BINDIR)
+	$(CC) $(CFLAGS) $(INC) $(TESTER) $(TSTSOURCES) $^ -o $(BINDIR)/tester
+	$(BINDIR)/tester
+	rm -rf src/*.o src/pokemon_src/*.o include/pokemon_include/*.o include/*.o
+
+valgrind: main
+	valgrind --leak-check=full --track-origins=yes $(BINDIR)/main
+
+all: main
+
+run: main
+	$(BINDIR)/main
 
 clean:
-		rm -rf *o run_game
+	$(RM) -r $(OBJDIR)/* $(BINDIR)/*
 
-old:
-	g++ -std=c++11 -o run_game src/pokemon.cpp src/treinador.cpp src/batalha.cpp src/excecoes.cpp src/pokemon_agua.cpp src/pokemon_grama.cpp src/pokemon_fogo.cpp src/pokemon_src/bulbasauro.cpp src/pokemon_src/charmander.cpp src/pokemon_src/squirtle.cpp program/main.cpp
+.PHONY: clean coverage
