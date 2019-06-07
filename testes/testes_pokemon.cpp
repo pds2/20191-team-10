@@ -48,13 +48,10 @@ TEST_CASE("Testando getters de Status do pokemon"){
 
     Celso.add_pokemon(&Leaf);
 
-    // Celso, arrumar o teste abaixo em vista das mudanças nos construtores
-    // obrigado :)
-
-    // CHECK(Celso._lista_de_pokemon.at(2)->get_ataque() == 15);
-    // CHECK(Celso._lista_de_pokemon.at(2)->get_defesa() == 10);
-    // CHECK(Celso._lista_de_pokemon.at(2)->get_agilidade() == 10);
-    // CHECK(Celso._lista_de_pokemon.at(2)->get_hp() == 50);
-    // CHECK(Celso._lista_de_pokemon.at(2)->get_crit() == 5);
+    CHECK(Celso._lista_de_pokemon.at(0)->get_ataque() == 15);
+    CHECK(Celso._lista_de_pokemon.at(0)->get_defesa() == 10);
+    CHECK(Celso._lista_de_pokemon.at(0)->get_agilidade() == 10);
+    CHECK(Celso._lista_de_pokemon.at(0)->get_hp() == 50);
+    CHECK(Celso._lista_de_pokemon.at(0)->get_crit() == 5);
 
 }

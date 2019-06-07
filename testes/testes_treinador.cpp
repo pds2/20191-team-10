@@ -54,11 +54,7 @@ TEST_CASE("Testando Métodos Pokemons"){
     Celso.add_pokemon(&Fire);
     Celso.add_pokemon(&Leaf);
 
-    // Ola dnv Celso encontrei outro erro também no final do teste dê uma olhada
-    // nesse bloco comentado
-    // obrigado 2 :)
-
-    // CHECK(Celso._lista_de_pokemon.at(0) == Ocean);
-    // CHECK(Celso._lista_de_pokemon.at(1) == Fire);
-    // CHECK(Celso._lista_de_pokemon.at(2) == Leaf);
+    CHECK(Celso._lista_de_pokemon.at(0)->get_apelido() == "Ocean");
+    CHECK(Celso._lista_de_pokemon.at(1)->get_apelido() == "Fire");
+    CHECK(Celso._lista_de_pokemon.at(2)->get_apelido() == "Leaf");
 }
