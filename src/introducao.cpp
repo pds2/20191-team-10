@@ -22,7 +22,16 @@ void introducao(Treinador *jogador) {
 
     std::cout << "Pokemons para escolher: Bulbasauro, Squirtle e Charmander." << std::endl;
     std::cout << "Digite 1 para Bulbasauro, 2 para Squirtle e 3 para Charmander." << std::endl;
-    std::cin >> p;
+
+    while (p <= 0 || p > 3) {
+        try {
+            std::cin >> p;
+            verifica_entrada(p);
+        } catch (Excpt_Entrada_Inicial &e) {
+                std::cout << e.what();
+        }
+    }
+    
     switch(p) {
         case 1:
             jogador->add_pokemon(bulba);
@@ -33,6 +42,13 @@ void introducao(Treinador *jogador) {
         case 3:
             jogador->add_pokemon(charmander);
             break;
+    }
+}
+
+void verifica_entrada(int p) {
+    if ((p != 1) || (p != 2) || (p != 3)) {
+        Excpt_Entrada_Inicial x;
+        throw x;
     }
 }
 
