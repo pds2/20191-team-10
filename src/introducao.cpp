@@ -18,6 +18,7 @@ void introducao(Treinador *jogador) {
     Bulbasauro *bulba = new Bulbasauro("Bulbasauro");
     Squirtle *squirtle = new Squirtle("Squirtle");
     Charmander *charmander = new Charmander("Charmander");
+    std::string escolha;
     int p;
 
     std::cout << "Pokemons para escolher: Bulbasauro, Squirtle e Charmander." << std::endl;
@@ -25,13 +26,17 @@ void introducao(Treinador *jogador) {
 
     while (p <= 0 || p > 3) {
         try {
-            std::cin >> p;
+            std::getline(std::cin, escolha);
+            p = std::stoi(escolha);
+            std::cout << p << std::endl;
             verifica_entrada(p);
         } catch (Excpt_Entrada_Inicial &e) {
                 std::cout << e.what();
+        } catch (std::invalid_argument &e) {
+                std::cout << "Entrada invalida! Digite 1, 2 ou 3!" << std::endl;
         }
     }
-    
+
     switch(p) {
         case 1:
             jogador->add_pokemon(bulba);
