@@ -19,8 +19,8 @@
 TEST_CASE("Batalha"){
     //Contrutores
     Treinador Celso = Treinador("Celso",4);
-    Squirtle Ocean = Squirtle("Ocean",15,10,10,50,5);
-    Charmander Fire = Charmander("Fire",15,10,10,50,5);
+    Squirtle Ocean = Squirtle("Ocean");
+    Charmander Fire = Charmander("Fire");
 
     Celso.add_pokemon(&Ocean);
     Celso.add_pokemon(&Fire);
