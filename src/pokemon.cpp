@@ -44,3 +44,10 @@ void Pokemon::set_apelido(std::string apelido){
 std::string Pokemon::get_apelido(){
     return this->_apelido;
 }
+
+void Pokemon::print_atributos(){
+    std::cout<<"HP: \t\t"<<this->get_hp()<<"\n";
+    std::cout<<"Ataque: \t"<<this->get_ataque()<<"\n";
+    std::cout<<"Defesa: \t"<<this->get_defesa()<<"\n";
+    std::cout<<"Agilidade: \t"<<this->get_agilidade()<<"\n";
+}

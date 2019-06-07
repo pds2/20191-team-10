@@ -12,6 +12,7 @@ protected:
 
 public:
   Pokemon_Fogo(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
+  virtual ~Pokemon_Fogo(){};
 
   std::string get_fraqueza();
   std::string get_resistencia();

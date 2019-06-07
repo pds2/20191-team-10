@@ -14,21 +14,9 @@
 #include <string>
 
 int main() {
-	Squirtle aguin = Squirtle("aguin");
-	Charmander foguin = Charmander("foguin");
-	Bulbasauro verdin = Bulbasauro("verdin");
-
-	std::cout << "Resistência: " << aguin.get_resistencia() << std::endl;
-	std::cout << "Fraqueza: " << aguin.get_fraqueza() << std::endl;
-
-	Treinador uno = Treinador("Leandro",4);
-
-	uno.add_pokemon(&aguin); // add_pokemon(x) adiciona o pokemon x ao vetor de Pokemons presente na classe Jogador
-	uno.add_pokemon(&foguin);
-	uno.add_pokemon(&verdin);
-
 	//Abaixo temos um exemplo de como acessar elementos específicos dos pokemons pertencentes a um treinador
 
+	/*
 	std::cout<<"Segue a lista dos pokemon desse treinador:\n";
 	uno.print_lista_pokemon();
 
@@ -36,10 +24,21 @@ int main() {
 	std::cout<<"Ataque : = "<<uno._lista_de_pokemon.at(1)->get_ataque()<<"\n";
 	std::cout<<"Defesa : = "<<uno._lista_de_pokemon.at(1)->get_defesa()<<"\n";
 	std::cout<<"Agilidade : = "<<uno._lista_de_pokemon.at(1)->get_agilidade()<<"\n";
+    */
 
+    Squirtle aguin = Squirtle("Tartaruga");
+	Charmander foguin = Charmander("Chama");
+	Bulbasauro verdin = Bulbasauro("Alpiste");
+
+	Treinador uno = Treinador("Leandro",4);
+
+	uno.add_pokemon(&aguin); // add_pokemon(x) adiciona o pokemon x ao vetor de Pokemons presente na classe Jogador
+	uno.add_pokemon(&foguin);
+	uno.add_pokemon(&verdin);
+
+	treinador_info(uno);
 	int escolha = escolher_pokemon(uno);
 	batalha_x1(uno, (uno._lista_de_pokemon.at(escolha)), 1);
-	treinador_info(uno);
 
 	return 0;
 }

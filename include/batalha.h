@@ -13,7 +13,7 @@ int rola_dados();
 void reset_current_hp(Pokemon *,Pokemon *);
 // Função que reseta a vida dos pokemons dados como parâmetro
 
-void gera_oponente_facil(Pokemon *);
+Pokemon *gera_oponente_facil();
 // Função que gera um adversário para batalhar.
 
 void encerrar_batalha(Pokemon *, Pokemon *);

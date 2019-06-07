@@ -26,56 +26,57 @@ void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo){
     }
     catch(Excpt_Nocaute &KO){
         if(meu_poke->current_hp <= 0){
-            std::cout << meu_poke->get_apelido() << " esta' fora de combate! O vencedor e' ";
-            std::cout << inimigo->get_apelido() << std::endl;
+            std::cout << meu_poke->get_apelido() << " esta' fora de combate!\n\n YOU LOSE!!!";
         }else{
-            std::cout << inimigo->get_apelido() << " esta' fora de combate! O vencedor e' ";
-            std::cout << meu_poke->get_apelido() << std::endl;
+            std::cout << inimigo->get_apelido() << " esta' fora de combate!\n\n YOU WIN!!!";
         }
         reset_current_hp(meu_poke, inimigo);
     }
 }
 
-/*void gera_oponente_facil(Pokemon *inimigo){
-    int randomico= rola_dados();
-    std::cout << "Dados: " << randomico << std::endl;
-    if((randomico<=4) && (randomico>0)){
-        inimigo = new Bulbasauro("Bulbasauro", 15, 10, 10, 50, 5);
-    }else if((randomico<=7) && (randomico>4)){
-        inimigo = new Charmander("Charmander", 15, 10, 10, 50, 5);
-    }else{
-        inimigo = new Squirtle("Squirtle", 15, 10, 10, 50, 5);
-    }
-    std::cout << "Seu inimigo: " << inimigo->get_apelido() << std::endl;
-    std::cout << "Vida do inimigo: " << inimigo->current_hp << std::endl;
-}*/
-
-void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
+Pokemon *gera_oponente_facil(){
     Pokemon *inimigo;
-    /*if(dificuldade== 1){
-        gera_oponente_facil(inimigo);
-    }else if(dificuldade== 2){
-        gera_oponente_medio(inimigo);
-    }else if(dificuldade== 3){
-        gera_oponente_dificil(inimigo);
-    }*/
-    //Não estou conseguindo passar o Pokémon criado na função acima para esta função
     int randomico = rola_dados();
     if((randomico<=4) && (randomico>0)){
-        inimigo = new Bulbasauro("Bulbasauro");
+        inimigo = new Bulbasauro("Wild Bulbasauro");
     }else if((randomico<=7) && (randomico>4)){
-        inimigo = new Charmander("Charmander");
+        inimigo = new Charmander("Wild Charmander");
     }else{
-        inimigo = new Squirtle("Squirtle");
+        inimigo = new Squirtle("Wild Squirtle");
     }
 
+    std::cout<<"SEU OPONENTE SERÁ... "<<inimigo->get_apelido()<<"!!!\n";
+    inimigo->print_atributos();
+
+    return inimigo;
+}
+
+void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
+    //system("cls");
+    Pokemon *inimigo;
+
+    if(dificuldade== 1){
+        inimigo = gera_oponente_facil();
+    }
+
+    /*
+    else if(dificuldade== 2){
+        gera_oponente_medio(inimigo);
+    }
+    else if(dificuldade== 3){
+        gera_oponente_dificil(inimigo);
+    }
+    */
+
     reset_current_hp(meu_poke, inimigo); //Atualiza a vida atual para a batalha
-    int habilidade_jogador= 1;
+    int habilidade_jogador = 1;
 
     if((jogador.get_lideranca() * meu_poke->get_agilidade()) >= (dificuldade * inimigo->get_agilidade())){
         while(true){
             //Como implementar a IA?
-            habilidade_jogador= escolher_habilidade(meu_poke, jogador.get_lideranca());
+            std::cout<<meu_poke->get_apelido()<<" esta com : "<<meu_poke->current_hp<<" de HP.\n";
+            std::cout<<inimigo->get_apelido()<<" esta com : "<<inimigo->current_hp<<" de HP.\n";
+            habilidade_jogador = escolher_habilidade(meu_poke, jogador.get_lideranca());
 
             meu_poke->atacar(inimigo, habilidade_jogador);
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
@@ -99,10 +100,6 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
             }
         }
     }
-
     encerrar_batalha(meu_poke,inimigo);
-    //Falta um destrutor virtual
-    //delete inimigo;
-    // Gera warning devido ao delete : "deleting object of abstract class type 'Pokemon' which has non-virtual
-    // destructor will cause undefined behavior [-Wdelete-non-virtual-dtor]|"
+    delete inimigo;
 }

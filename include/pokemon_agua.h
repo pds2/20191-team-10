@@ -14,6 +14,7 @@ _resistencia = {"fogo"};*/
 
 public:
   Pokemon_Agua(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
+  virtual ~Pokemon_Agua(){};
 
   std::string get_fraqueza();
   std::string get_resistencia();

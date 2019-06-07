@@ -20,6 +20,7 @@ int escolher_pokebola(Treinador jogador, Pokemon *inimigo){
       return escolha;
     } else {
       std::cout << "Você não possui nenhum tipo de pokebola. Jogue mais batalhas para conseguir novas pokebolas!" << '\n';
+      //Deveria retornar algum inteiro.
     }
 }
 
@@ -35,7 +36,7 @@ int escolher_pokemon(Treinador jogador){
     do{
         escolha = escolha_um_a_tres();
 
-        std::cout << "Tem certeza que quer usar ";
+        std::cout << "Tem certeza que quer usar o pokemon apelidado : ";
         std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
         std::cin >> confirmacao;
         if(confirmacao[0] != 'S' && confirmacao[0] != 's')

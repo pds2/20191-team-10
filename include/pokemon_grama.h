@@ -14,6 +14,7 @@ protected:
 
 public:
   Pokemon_Grama(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
+  virtual ~Pokemon_Grama(){};
 
   std::string get_fraqueza();
   std::string get_resistencia();
