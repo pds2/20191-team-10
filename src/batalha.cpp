@@ -51,18 +51,53 @@ Pokemon *gera_oponente_facil(){
     return inimigo;
 }
 
+Pokemon *gera_oponente_medio(){
+    Pokemon *inimigo;
+    int randomico = rola_dados();
+    if((randomico<=4) && (randomico>0)){
+        inimigo = new Ivysaur("Wild Ivysaur");
+    }else if((randomico<=7) && (randomico>4)){
+        inimigo = new Charmeleon("Wild Charmeleon");
+    }else{
+        inimigo = new Wartotle("Wild Wartotle");
+    }
+
+    std::cout<<"SEU OPONENTE SERÁ... "<<inimigo->get_apelido()<<"!!!\n";
+    inimigo->print_atributos();
+
+    return inimigo;
+}
+
+Pokemon *gera_oponente_dificil(){
+    Pokemon *inimigo;
+    int randomico = rola_dados();
+    if((randomico<=4) && (randomico>0)){
+        inimigo = new Venosauro("Wild Venosauro");
+    }else if((randomico<=7) && (randomico>4)){
+        inimigo = new Charizard("Wild Charizard");
+    }else{
+        inimigo = new Blastoise("Wild Blastoise");
+    }
+
+    std::cout<<"SEU OPONENTE SERÁ... "<<inimigo->get_apelido()<<"!!!\n";
+    inimigo->print_atributos();
+
+    return inimigo;
+}
+
 void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     system("cls||clear");
+
     Pokemon *inimigo;
     if(dificuldade== 1){
         inimigo = gera_oponente_facil();
-    }/*
+    }
     else if(dificuldade== 2){
-        gera_oponente_medio(inimigo);
+        inimigo = gera_oponente_medio();
     }
     else if(dificuldade== 3){
-        gera_oponente_dificil(inimigo);
-    }*/
+        inimigo = gera_oponente_dificil();
+    }
 
     reset_current_hp(meu_poke, inimigo); //Atualiza a vida atual para a batalha
     int habilidade_jogador = 1;
