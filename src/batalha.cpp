@@ -52,49 +52,61 @@ Pokemon *gera_oponente_facil(){
 }
 
 void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
-    //system("cls");
+    system("cls||clear");
     Pokemon *inimigo;
-
     if(dificuldade== 1){
         inimigo = gera_oponente_facil();
-    }
-
-    /*
+    }/*
     else if(dificuldade== 2){
         gera_oponente_medio(inimigo);
     }
     else if(dificuldade== 3){
         gera_oponente_dificil(inimigo);
-    }
-    */
+    }*/
 
     reset_current_hp(meu_poke, inimigo); //Atualiza a vida atual para a batalha
     int habilidade_jogador = 1;
+    int dano_meu_poke = inimigo->get_hp();
+    int dano_inimigo = meu_poke->get_hp();
 
-    if((jogador.get_lideranca() * meu_poke->get_agilidade()) >= (dificuldade * inimigo->get_agilidade())){
+    if((jogador.get_lideranca() + meu_poke->get_agilidade()) >= (dificuldade + inimigo->get_agilidade())){
+        std::cout << meu_poke->get_apelido() << " e' mais veloz e inicia a batalha!" << std::endl;
         while(true){
             //Como implementar a IA?
-            std::cout<<meu_poke->get_apelido()<<" esta com : "<<meu_poke->current_hp<<" de HP.\n";
-            std::cout<<inimigo->get_apelido()<<" esta com : "<<inimigo->current_hp<<" de HP.\n";
+            /*std::cout<<meu_poke->get_apelido()<<" esta com : "<<meu_poke->current_hp<<" de HP.\n";
+            std::cout<<inimigo->get_apelido()<<" esta com : "<<inimigo->current_hp<<" de HP.\n";*/
             habilidade_jogador = escolher_habilidade(meu_poke, jogador.get_lideranca());
 
             meu_poke->atacar(inimigo, habilidade_jogador);
+            dano_meu_poke -= inimigo->current_hp; //Para não mexermos com o método atacar, usamos esta artimanha
+            print_ataque(meu_poke->get_apelido(), inimigo->get_apelido(), dano_meu_poke, inimigo->current_hp);
+            dano_meu_poke= inimigo->current_hp;
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }
             inimigo->atacar(meu_poke, dificuldade);
+            dano_inimigo -= meu_poke->current_hp;
+            print_ataque(inimigo->get_apelido(), meu_poke->get_apelido(), dano_inimigo, meu_poke->current_hp);
+            dano_inimigo = meu_poke->current_hp;
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }
         }
     }else{
+        std::cout << inimigo->get_apelido() << " e' mais veloz e inicia a batalha!" << std::endl;
         while(true){
             inimigo->atacar(meu_poke, dificuldade);
+            dano_inimigo -= meu_poke->current_hp;
+            print_ataque(inimigo->get_apelido(), meu_poke->get_apelido(), dano_inimigo, meu_poke->current_hp);
+            dano_inimigo = meu_poke->current_hp;
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }
             habilidade_jogador= escolher_habilidade(meu_poke, jogador.get_lideranca());
             meu_poke->atacar(inimigo, habilidade_jogador);
+            dano_meu_poke -= inimigo->current_hp;
+            print_ataque(meu_poke->get_apelido(), inimigo->get_apelido(), dano_meu_poke, inimigo->current_hp);
+            dano_meu_poke = inimigo->current_hp;
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }

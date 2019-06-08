@@ -23,6 +23,9 @@ int escolher_pokemon(Treinador); //Fun��o que recebe um treinador e escolhe 
 
 int escolher_habilidade(Pokemon *, int);
 
+void print_ataque(std::string, std::string, int, int); //Printa quanto o dano de 1 foi tirado de 2. 
+                                                       //O primeiro int é o dano e o segundo é a vida atual.
+
 // Exemplo de programação defensiva :
 // As seguintes funções estão retornando string para evitar loops infinitos devido a entradas impróprias.
 

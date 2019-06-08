@@ -112,3 +112,13 @@ std::string escolha_um_a_quatro(){
     }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4');
     return escolha;
 };
+
+void print_ataque(std::string poke1, std::string poke2, int dano, int vida){
+    if(vida >= 0){
+        std::cout << poke1 << " inflige " << dano << " hit points em " << poke2 << "!" << std::endl;
+        std::cout << poke2 << " esta' com " << vida << " pontos de vida! \n\n" << std::endl;
+    }else{
+        std::cout << poke1 << " inflige " << dano << " hit points em " << poke2 << "!" << std::endl;
+        std::cout << poke2 << " esta' com 0 pontos de vida! \n\n" << std::endl;
+    }
+}
