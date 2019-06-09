@@ -10,8 +10,12 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
 
 int main() {
+	
+    srand (time(NULL));
+
 	//Abaixo temos um exemplo de como acessar elementos específicos dos pokemons pertencentes a um treinador
 
 	/*

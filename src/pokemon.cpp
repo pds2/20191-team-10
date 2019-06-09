@@ -51,3 +51,12 @@ void Pokemon::print_atributos(){
     std::cout<<"Defesa: \t"<<this->get_defesa()<<"\n";
     std::cout<<"Agilidade: \t"<<this->get_agilidade()<<"\n";
 }
+
+int Pokemon::critical_hit(){
+    if((this->_crit + (rand() % 100 + 1)) > 90){
+        std::cout << "DANO CRITICO!!" << std::endl;
+        return 2;
+    }else{
+        return 1;
+    }
+}

@@ -7,7 +7,7 @@
 
 #define AUMENTO 1.6
 #define REDUCAO 0.63
-#define DANO_HABILIDADE 10
+#define DANO_HABILIDADE 5
 
 // Pokemon não será uma interface. Motivo : Ao refatorar o código percebi muita repetição desnecessária.
 
@@ -36,6 +36,7 @@ class Pokemon{
 
         virtual void atacar(Pokemon *, int) = 0;
 		virtual void print_habilidades(int) = 0;
+        virtual std::string get_habilidade(int) = 0;
 		virtual std::string get_resistencia() = 0;
 		virtual std::string get_fraqueza() = 0;
 
@@ -47,6 +48,8 @@ class Pokemon{
 		virtual int get_hp();
 		virtual int get_crit();
         virtual int get_iv();
+
+        virtual int critical_hit();
 
         virtual void set_nome(std::string nome);
 		virtual std::string get_nome();

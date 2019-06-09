@@ -17,16 +17,21 @@ void Pokemon_Fogo::print_habilidades(int lideranca){
 		std::cout << "\t" << i+1 << " - " << _habilidades[i] << std::endl;
 	}
 }
+
+std::string Pokemon_Fogo::get_habilidade(int indice){
+	return _habilidades[indice-1];
+}
+
 void Pokemon_Fogo::atacar(Pokemon *adv, int habilidade){
 	if(habilidade == 1){
 		adv->current_hp -= this->get_ataque() - adv->get_defesa();
 	}else{
 		if(adv->get_fraqueza() == "fogo"){
-			adv->current_hp -= int ((this->get_ataque() + DANO_HABILIDADE * habilidade) * AUMENTO) - adv->get_defesa();
+			adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade)) * AUMENTO) - adv->get_defesa();
 		}else if(adv->get_resistencia() == "fogo"){
-			adv->current_hp -= int ((this->get_ataque() + DANO_HABILIDADE * habilidade) * REDUCAO) - adv->get_defesa();
+			adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade)) * REDUCAO) - adv->get_defesa();
 		}else{
-			adv->current_hp -= int ((this->get_ataque() + DANO_HABILIDADE * habilidade)) - adv->get_defesa();
+			adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade))) - adv->get_defesa();
 		}
 	}
 }

@@ -18,8 +18,8 @@ void introducao(Treinador *jogador) {
     std::string escolha;
     int p = 0;
 
-    std::cout << "Escolha seu Pokemon inicial! Bulbasauro, Squirtle ou Charmander." << std::endl;
-    std::cout << "Digite 1 para Bulbasauro, 2 para Squirtle e 3 para Charmander." << std::endl;
+    std::cout << "Escolha seu Pokemon inicial! Bulbasauro, Charmander ou Squirtle." << std::endl;
+    std::cout << "Digite 1 para Bulbasauro, 2 para Charmander e 3 para Squirtle." << std::endl;
 
     while (p <= 0 || p > 3) {
         try {
@@ -40,13 +40,13 @@ void introducao(Treinador *jogador) {
             break;
         }
         case 2: {
-            Squirtle *squirtle = new Squirtle("Squirtle");
-            jogador->add_pokemon(squirtle);
+            Charmander *charmander = new Charmander("Charmander");
+            jogador->add_pokemon(charmander);
             break;
         }
         case 3: {
-            Charmander *charmander = new Charmander("Charmander");
-            jogador->add_pokemon(charmander);
+            Squirtle *squirtle = new Squirtle("Squirtle");
+            jogador->add_pokemon(squirtle);
             break;
         }
     }

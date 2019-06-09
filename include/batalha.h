@@ -14,10 +14,10 @@
 #include "../include/pokemon_include/wartotle.h"
 #include "../include/pokemon_include/blastoise.h"
 
-int rola_dados();
-// Gera um número aleatório entre 1 e 10. Utilizado para calcular a chance de crit, por exemplo.
+int rola_dados(int);
+// Gera um número aleatório entre 1 e int. Utilizado para calcular a chance de crit, por exemplo.
 
-void reset_current_hp(Pokemon *,Pokemon *);
+void reset_current_hp(Pokemon *);
 // Função que reseta a vida dos pokemons dados como parâmetro
 
 Pokemon *gera_oponente_facil();

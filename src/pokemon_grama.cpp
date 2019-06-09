@@ -17,16 +17,20 @@ void Pokemon_Grama::print_habilidades(int lideranca){
 	}
 }
 
+std::string Pokemon_Grama::get_habilidade(int indice){
+	return _habilidades[indice-1];
+}
+
 void Pokemon_Grama::atacar(Pokemon *adv, int habilidade){
 	if(habilidade == 1){
 		adv->current_hp -= this->get_ataque() - adv->get_defesa();
 	}else{
 		if(adv->get_fraqueza() == "grama"){
-			adv->current_hp -= int ((this->get_ataque() + DANO_HABILIDADE * habilidade) * AUMENTO) - adv->get_defesa();
+			adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade)) * AUMENTO) - adv->get_defesa();
 		}else if(adv->get_resistencia() == "grama"){
-			adv->current_hp -= int ((this->get_ataque() + DANO_HABILIDADE * habilidade) * REDUCAO) - adv->get_defesa();
+			adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade)) * REDUCAO) - adv->get_defesa();
 		}else{
-			adv->current_hp -= int ((this->get_ataque() + DANO_HABILIDADE * habilidade)) - adv->get_defesa();
+			adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade))) - adv->get_defesa();
 		}
 	}
 }
