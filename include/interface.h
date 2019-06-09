@@ -24,7 +24,9 @@ bool check_pokebola(Treinador jogador); //verifica se o treinador tem pokebolas
 
 bool deseja_capturar(Pokemon *inimigo);
 
-int escolher_pos_batalha();
+int escolher_opcoes();
+// é auxiliar da função de interface escolher_pos_batalha (retorna o numero do
+// modo de jogo ou opção escolhida).
 
 int escolher_pokemon(Treinador); //Fun��o que recebe um treinador e escolhe um de seus Pok�mon.
 

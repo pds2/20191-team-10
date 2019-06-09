@@ -3,6 +3,7 @@
 
 #include "pokemon.h"
 #include "treinador.h"
+#include "interface.h"
 
 #include "../include/pokemon_include/charmander.h"
 #include "../include/pokemon_include/charmeleon.h"
@@ -19,6 +20,9 @@ int rola_dados(int);
 
 void reset_current_hp(Pokemon *);
 // Função que reseta a vida dos pokemons dados como parâmetro
+
+void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador);
+// Função para escolher o que fazer depois da batalha
 
 Pokemon *gera_oponente_facil();
 Pokemon *gera_oponente_medio();

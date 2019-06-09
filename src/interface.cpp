@@ -41,7 +41,7 @@ bool deseja_capturar(Pokemon *inimigo) {
   else return false;
 }
 
-int escolher_pos_batalha() {
+int escolher_opcoes() {
   int opcao_escolhida;
 
   std::cout << "\nO que deseja fazer agora? " << '\n';

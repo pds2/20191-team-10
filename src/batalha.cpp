@@ -18,6 +18,27 @@ void reset_current_hp(Pokemon *meu_poke, Pokemon *inimigo){
     inimigo->current_hp = inimigo->get_hp();
 }
 
+
+void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador) {
+	int exit;
+	exit = escolher_opcoes();
+	switch (exit) {
+		case 1:
+			if(check_pokebola(jogador)){
+				if(deseja_capturar(inimigo))
+					capturar_pokemon(jogador, inimigo);
+				else std::cout << "Saindo da batalha..." << '\n';
+			}
+			break;
+		case 2:
+			batalha_x1(jogador, meu_poke, 1);
+			break;
+		case 3:
+			treinador_info(jogador);
+			break;
+	}
+}
+
 void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador){
     try{
         verificar_nocaute(meu_poke,inimigo);
@@ -28,25 +49,8 @@ void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador){
         }else{
             std::cout << inimigo->get_apelido() << " esta' fora de combate!\n\n YOU WIN!!!\n" << std::endl;
         }
-				int exit;
-				exit = escolher_pos_batalha();
-				switch (exit) {
-					case 1:
-						if(check_pokebola(jogador)){
-							if(deseja_capturar(inimigo))
-								capturar_pokemon(jogador, inimigo);
-							else std::cout << "Saindo da batalha..." << '\n';
-						}
-						break;
-					case 2:
-						batalha_x1(jogador, meu_poke, 1);
-						break;
-					case 3:
-						treinador_info(jogador);
-						break;
-				}
-
-        reset_current_hp(meu_poke, inimigo);
+				reset_current_hp(meu_poke, inimigo);
+				escolher_pos_batalha(meu_poke, inimigo, jogador);
     }
 }
 
