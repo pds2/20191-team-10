@@ -33,12 +33,22 @@ bool check_pokebola(Treinador jogador){
 
 bool deseja_capturar(Pokemon *inimigo) {
   std::string escolha;
+  bool entrada_invalida = true;
 
   std::cout << "Deseja capturar " << inimigo->get_apelido() << "? (s/n)\n";
-  std::cin >> escolha;
-  if(escolha == "s")
-    return true;
-  else return false;
+  while(entrada_invalida) {
+    std::cout << "Digite s para sim e n para nao: ";
+    std::cin >> escolha;
+    if(escolha == "s") {
+      entrada_invalida = false;
+      return true;
+    }
+    else if(escolha == "n") {
+      entrada_invalida = false;
+    }
+    else
+      entrada_invalida = true;
+  }
 }
 
 int escolher_opcoes() {
