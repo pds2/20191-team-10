@@ -45,6 +45,7 @@ bool deseja_capturar(Pokemon *inimigo) {
     }
     else if(escolha == "n") {
       entrada_invalida = false;
+      return false;
     }
     else
       entrada_invalida = true;
