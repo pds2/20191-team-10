@@ -18,6 +18,9 @@ void introducao(Treinador *jogador) {
     std::string escolha;
     int p = 0;
 
+    print_ascii_art("intro");
+    print_ascii_art("blastoise+charizard");
+
     std::cout << "Escolha seu Pokemon inicial! Bulbasauro, Charmander ou Squirtle." << std::endl;
     std::cout << "Digite 1 para Bulbasauro, 2 para Charmander e 3 para Squirtle." << std::endl;
 
