@@ -1,6 +1,7 @@
 #include "../include/interface.h"
 #include "../include/batalha.h"
 #include "../include/excecoes.h"
+#include "../include/pokebola.h"
 
 #include <stdlib.h>
 
@@ -20,8 +21,38 @@ int escolher_pokebola(Treinador jogador, Pokemon *inimigo){
       return escolha;
     } else {
       std::cout << "Você não possui nenhum tipo de pokebola. Jogue mais batalhas para conseguir novas pokebolas!" << '\n';
-      //Deveria retornar algum inteiro.
+      return 0;
     }
+}
+
+bool check_pokebola(Treinador jogador){
+    if((jogador.get_pokeball() <= POKEBOLA_INVALIDO)&&(jogador.get_greatball() <= POKEBOLA_INVALIDO)&&(jogador.get_masterball() <= POKEBOLA_INVALIDO)){
+      return false;
+    } else return true;
+}
+
+bool deseja_capturar(Pokemon *inimigo) {
+  std::string escolha;
+
+  std::cout << "Deseja capturar " << inimigo->get_apelido() << "? (s/n)\n";
+  std::cin >> escolha;
+  if(escolha == "s")
+    return true;
+  else return false;
+}
+
+int escolher_pos_batalha() {
+  int opcao_escolhida;
+
+  std::cout << "\nO que deseja fazer agora? " << '\n';
+  std::cout << "1- Capturar pokemon" << '\n';
+  std::cout << "2- Jogar outra batalha" << '\n';
+  std::cout << "3- Consultar pokedex" << '\n';
+  do {
+    std::cin >> opcao_escolhida;
+  } while(opcao_escolhida < 1 && opcao_escolhida > 3);
+
+  return opcao_escolhida;
 }
 
 int escolher_pokemon(Treinador jogador){

@@ -2,6 +2,7 @@
 #define INTERFACE_H
 
 #include "pokemon.h"
+#include "pokedex.h"
 #include "treinador.h"
 #include "pokebola.h"
 #include "../include/pokemon_include/charmander.h"
@@ -18,6 +19,12 @@
 // 1) Esse m�todo est� relacionado � funcionalidade de uma classe? Se n�o, o implemente aqui
 // 2) O n�mero de prints e inputs utilizado pelo m�todo � grande? Se sim, o implemente aqui.
 int escolher_pokebola(Treinador jogador, Pokemon *inimigo);
+
+bool check_pokebola(Treinador jogador); //verifica se o treinador tem pokebolas
+
+bool deseja_capturar(Pokemon *inimigo);
+
+int escolher_pos_batalha();
 
 int escolher_pokemon(Treinador); //Fun��o que recebe um treinador e escolhe um de seus Pok�mon.
 

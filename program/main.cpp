@@ -13,7 +13,7 @@
 #include <ctime>
 
 int main() {
-	
+
     srand (time(NULL));
 
 	//Abaixo temos um exemplo de como acessar elementos específicos dos pokemons pertencentes a um treinador
@@ -47,7 +47,7 @@ int main() {
 	//uno.add_pokemon(&foguin2);
 	//uno.add_pokemon(&foguin3);
 	//uno.add_pokemon(&verdin);
-	//uno.add_pokemon(&verdin2);
+	// uno.add_pokemon(&verdin2);
 	//uno.add_pokemon(&verdin3);
 
 	Treinador uno = Treinador("Leandro",4);
