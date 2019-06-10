@@ -31,14 +31,24 @@ TEST_CASE("Testando definições do Treinador"){
 TEST_CASE("Testando getters e setters do Treinador"){
     Treinador Leandro = Treinador("Leandro",4);
 
+    CHECK(Leandro.get_treinador() == "Leandro");
     Leandro.set_lideranca(3);
     CHECK(Leandro.get_lideranca() == 3);
+    
+    //Pokebolas
     Leandro.set_pokeball(17);
     CHECK(Leandro.get_pokeball() == 17); //Quantidade predefinida no construtor
     Leandro.set_greatball(25);
     CHECK(Leandro.get_greatball() == 25);
     Leandro.set_masterball(31);
     CHECK(Leandro.get_masterball() == 31);
+
+    //Parametros de Captura
+    Leandro.set_capturas_efetivas(10);
+    CHECK(Leandro.get_capturas_efetivas() == 10);
+    Leandro.set_capturas_totais(10);
+    CHECK(Leandro.get_capturas_totais() == 10);
+    CHECK(Leandro.get_taxa_sucesso() == 1); // 10/10 = 1
 
 }
 
@@ -57,4 +67,12 @@ TEST_CASE("Testando Métodos Pokemons"){
     CHECK(Celso._lista_de_pokemon.at(0)->get_apelido() == "Ocean");
     CHECK(Celso._lista_de_pokemon.at(1)->get_apelido() == "Fire");
     CHECK(Celso._lista_de_pokemon.at(2)->get_apelido() == "Leaf");
+}
+
+TEST_CASE("Testando Método pokedex"){
+    //Contrutores
+    Treinador Celso = Treinador("Celso",4);
+
+    //Tal método nao retorna nada, somente faz prints...Por isso o "NOTHROW"
+    CHECK_NOTHROW(treinador_info(Celso));
 }
