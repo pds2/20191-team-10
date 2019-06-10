@@ -1,8 +1,10 @@
 #include "../include/excecoes.h"
 #include "../include/pokemon.h"
 #include "../include/interface.h"
+#include "../include/treinador.h"
 
 #include <string>
+#include <vector>
 
 void verificar_nocaute(Pokemon *meu_poke, Pokemon *inimigo){
     if( (meu_poke->current_hp <= 0) || (inimigo->current_hp <= 0)  ){
@@ -44,4 +46,17 @@ void verificar_lideranca_valida(int lideranca){
 int tratamento_lideranca_invalida(){
     std::string escolha = escolha_um_a_quatro();
     return (escolha[0] - '0');
+}
+
+void verificar_num_pokemon_valido(Treinador jogador){
+    if(jogador._lista_de_pokemon.size()>=3){
+        Excpt_Num_Pokemon_Invalido z;
+        throw z;
+	}
+}
+
+Treinador tratamento_num_pokemon_invalido(Treinador jogador){
+    int doacao = doar_pokemon(jogador);
+    jogador._lista_de_pokemon.erase(jogador._lista_de_pokemon.begin()+doacao);
+    return jogador;
 }

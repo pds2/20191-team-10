@@ -49,8 +49,8 @@ void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador){
         }else{
             std::cout << inimigo->get_apelido() << " esta' fora de combate!\n\n YOU WIN!!!\n" << std::endl;
         }
-				escolher_pos_batalha(meu_poke, inimigo, jogador);
-				reset_current_hp(meu_poke, inimigo);
+        escolher_pos_batalha(meu_poke, inimigo, jogador);
+        reset_current_hp(meu_poke, inimigo);
     }
 }
 

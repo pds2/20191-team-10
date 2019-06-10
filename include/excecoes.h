@@ -2,6 +2,7 @@
 #define EXCECOES_H
 
 #include "pokemon.h"
+#include "treinador.h"
 
 #include <stdexcept>
 #include <exception>
@@ -43,12 +44,22 @@ public:
     }
 };
 
+class Excpt_Num_Pokemon_Invalido : public std::exception{
+public:
+    const char *what(){
+        return "Você só pode ter 3 pokemon! ";
+    }
+};
+
 void verificar_lideranca_valida(int);
 int tratamento_lideranca_invalida();
 
-void verificar_nocaute(Pokemon*,Pokemon *);
+void verificar_nocaute(Pokemon*,Pokemon*);
 
 void verificar_habilidade_valida(std::string,int);
 void tratamento_habilidade_invalida(std::string,int);
+
+void verificar_num_pokemon_valido(Treinador);
+Treinador tratamento_num_pokemon_invalido(Treinador);
 
 #endif // EXCECOES_H

@@ -1,16 +1,31 @@
 #include "../include/pokebola.h"
+#include "../include/excecoes.h"
 
 void pokemon_capturado(Treinador jogador, Pokemon *inimigo, int tipo_chance){
   jogador.add_pokemon(inimigo);
+  try{
+    verificar_num_pokemon_valido(jogador);
+  }
+  catch(Excpt_Num_Pokemon_Invalido &e){
+        std::cout<<e.what();
+        Treinador copia = tratamento_num_pokemon_invalido(jogador);
+        jogador = copia;
+  }
   jogador.set_capturas_efetivas(jogador.get_capturas_efetivas() + 1);
   jogador.set_capturas_totais(jogador.get_capturas_totais() + 1);
 
-  if(tipo_chance == POKEBALL_CHANCE)
-    std::cout << "\nVocê utilizou uma Pokebola do tipo Pokeball com sucesso!" << '\n';
-  else if(tipo_chance == GREATBALL_CHANCE)
-    std::cout << "\nVocê utilizou uma Pokebola do tipo Greatball com sucesso!" << '\n';
-  else if(tipo_chance == MASTERBALL_CHANCE)
-    std::cout << "\nVocê utilizou uma Pokebola do tipo Masterball com sucesso!" << '\n';
+  if(tipo_chance == POKEBALL_CHANCE){
+    std::cout << "\nVocê utilizou uma Pokebola do tipo Pokeball com sucesso!\nVocê agora possui os pokemon : " << '\n';
+    jogador.print_lista_pokemon();
+  }
+  else if(tipo_chance == GREATBALL_CHANCE){
+    std::cout << "\nVocê utilizou uma Pokebola do tipo Greatball com sucesso!\nVocê agora possui os pokemon : " << '\n';
+    jogador.print_lista_pokemon();
+  }
+  else if(tipo_chance == MASTERBALL_CHANCE){
+    std::cout << "\nVocê utilizou uma Pokebola do tipo Masterball com sucesso!\nVocê agora possui os pokemon : " << '\n';
+    jogador.print_lista_pokemon();
+  }
 }
 
 void utilizar_pokebola(Treinador jogador, Pokemon *inimigo, int tipo_chance){
