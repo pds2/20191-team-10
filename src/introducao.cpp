@@ -16,19 +16,42 @@ std::string apelida_jogador() {
 
 void introducao(Treinador *jogador) {
     std::string escolha;
-    int p = 0;
 
-    print_ascii_art("intro");
-    print_ascii_art("blastoise+charizard");
+    std::cout << "Voce ganhou seus Pokemons iniciais! Bulbasauro, Charmander e Squirtle." << std::endl;
+    std::cout << "Deseja apelida-los? ";
+    std::cin >> escolha;
+    if (escolha[0] == 'S' || escolha[0] == 's') {
+        std::string bulbasaur, charm, squir;
 
-    std::cout << "Escolha seu Pokemon inicial! Bulbasauro, Charmander ou Squirtle." << std::endl;
-    std::cout << "Digite 1 para Bulbasauro, 2 para Charmander e 3 para Squirtle." << std::endl;
+        std::cout << "Apelido para Bulbasauro: ";
+        std::cin >> bulbasaur;
+        std::cout << "Apelido para Charmander: ";
+        std::cin >> charm;
+        std::cout << "Apelido para Squirtle: ";
+        std::cin >> squir;
 
-    while (p <= 0 || p > 3) {
+        Bulbasauro *bulba = new Bulbasauro(bulbasaur);
+        Charmander *charmander = new Charmander(charm);
+        Squirtle *squirtle = new Squirtle(squir);
+        
+        jogador->add_pokemon(bulba);
+        jogador->add_pokemon(charmander);
+        jogador->add_pokemon(squirtle);
+    }
+    else {
+        Bulbasauro *bulba = new Bulbasauro("Bulbasauro");
+        Charmander *charmander = new Charmander("Charmander");
+        Squirtle *squirtle = new Squirtle("Squirtle");
+
+        jogador->add_pokemon(bulba);
+        jogador->add_pokemon(charmander);
+        jogador->add_pokemon(squirtle);
+    }
+
+    /*while (escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3') {
         try {
-            std::getline(std::cin, escolha);
-            p = std::stoi(escolha);
-            verifica_entrada(p);
+            std::cin >> escolha;
+            verifica_entrada(escolha);
         } catch (Excpt_Entrada_Inicial &e) {
                 std::cout << e.what();
         } catch (std::invalid_argument &e) {
@@ -52,11 +75,11 @@ void introducao(Treinador *jogador) {
             jogador->add_pokemon(squirtle);
             break;
         }
-    }
+    }*/
 }
 
-void verifica_entrada(int p) {
-    if ((p != 1) || (p != 2) || (p != 3)) {
+void verifica_entrada(std::string p) {
+    if ((p[0] != '1') || (p[0] != '2') || (p[0] != '3')) {
         Excpt_Entrada_Inicial x;
         throw x;
     }
