@@ -18,7 +18,14 @@ int escolher_pokebola(Treinador jogador, Pokemon *inimigo){
     if((jogador.get_pokeball() > POKEBOLA_INVALIDO)||(jogador.get_greatball() > POKEBOLA_INVALIDO)||(jogador.get_masterball() > POKEBOLA_INVALIDO)){
       std::cout << "Digite o número correspondente a pokebola desejada: ";
       std::cin >> escolha;
-      return escolha;
+      if(escolha >= 1 && escolha <= 3)
+        return escolha;
+      else {
+        while (escolha < 1 || escolha > 3) {
+          std::cout << "Digite o número correspondente ao de uma das pokebolas acima: " << '\n';
+          std::cin >> escolha;
+        }
+      }
     } else {
       std::cout << "Você não possui nenhum tipo de pokebola. Jogue mais batalhas para conseguir novas pokebolas!" << '\n';
       return 0;
@@ -54,16 +61,27 @@ bool deseja_capturar(Pokemon *inimigo) {
 
 int escolher_opcoes() {
   int opcao_escolhida;
+  bool run_input = true;
 
   std::cout << "\nO que deseja fazer agora? " << '\n';
   std::cout << "1- Capturar pokemon" << '\n';
   std::cout << "2- Jogar outra batalha" << '\n';
   std::cout << "3- Consultar pokedex" << '\n';
-  do {
+  while (run_input) {
     std::cin >> opcao_escolhida;
-  } while(opcao_escolhida < 1 && opcao_escolhida > 3);
-
-  return opcao_escolhida;
+    if(opcao_escolhida >= 1 && opcao_escolhida <= 3) {
+      return opcao_escolhida;
+      run_input = false;
+    }
+    else {
+      std::cout << "Digite um número válido correspondente as opções mostradas acima: ";
+      std::cin >> opcao_escolhida;
+      if(opcao_escolhida >= 1 && opcao_escolhida <= 3) {
+        return opcao_escolhida;
+        run_input = false;
+      }
+    }
+  }
 }
 
 int doar_pokemon(Treinador jogador){
