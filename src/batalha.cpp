@@ -39,15 +39,17 @@ void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador
 	}
 }
 
-void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador){
+void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador, int dificuldade){
     try{
         verificar_nocaute(meu_poke,inimigo);
     }
     catch(Excpt_Nocaute &KO){
         if(meu_poke->current_hp <= 0){
             std::cout << meu_poke->get_apelido() << " esta' fora de combate!\n\n YOU LOSE!!!\n" << std::endl;
+						recompensar_treinador(meu_poke, jogador, dificuldade);
         }else{
             std::cout << inimigo->get_apelido() << " esta' fora de combate!\n\n YOU WIN!!!\n" << std::endl;
+						recompensar_treinador(meu_poke, jogador, dificuldade);
         }
         escolher_pos_batalha(meu_poke, inimigo, jogador);
         reset_current_hp(meu_poke, inimigo);
@@ -186,6 +188,6 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
             }
         }
     }
-    encerrar_batalha(meu_poke,inimigo,jogador);
+    encerrar_batalha(meu_poke,inimigo,jogador,dificuldade);
     delete inimigo;
 }

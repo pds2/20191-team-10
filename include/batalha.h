@@ -4,16 +4,17 @@
 #include "pokemon.h"
 #include "treinador.h"
 #include "interface.h"
+#include "pokebola.h"
 
-#include "../include/pokemon_include/charmander.h"
-#include "../include/pokemon_include/charmeleon.h"
-#include "../include/pokemon_include/charizard.h"
-#include "../include/pokemon_include/bulbasauro.h"
-#include "../include/pokemon_include/ivysaur.h"
-#include "../include/pokemon_include/venosauro.h"
-#include "../include/pokemon_include/squirtle.h"
-#include "../include/pokemon_include/wartotle.h"
-#include "../include/pokemon_include/blastoise.h"
+#include "pokemon_include/charmander.h"
+#include "pokemon_include/charmeleon.h"
+#include "pokemon_include/charizard.h"
+#include "pokemon_include/bulbasauro.h"
+#include "pokemon_include/ivysaur.h"
+#include "pokemon_include/venosauro.h"
+#include "pokemon_include/squirtle.h"
+#include "pokemon_include/wartotle.h"
+#include "pokemon_include/blastoise.h"
 
 int rola_dados(int);
 // Gera um número aleatório entre 1 e int. Utilizado para calcular a chance de crit, por exemplo.

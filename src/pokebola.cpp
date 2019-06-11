@@ -1,6 +1,42 @@
 #include "../include/pokebola.h"
 #include "../include/excecoes.h"
 
+void recompensar_treinador(Pokemon *meu_poke, Treinador jogador, int dificuldade){
+  if(meu_poke->current_hp <= 0) {
+    if (dificuldade == 1 || dificuldade == 2) {
+      std::cout << "\nVocê ganhou 2 pokebolas do tipo Pokeball!" << '\n';
+      jogador.set_pokeball(jogador.get_pokeball() + 2);
+    }
+    else if (dificuldade == 3) {
+      std::cout << "\nVocê ganhou 2 pokebolas do tipo Pokeball e uma do tipo Greatball!" << '\n';
+      jogador.set_pokeball(jogador.get_pokeball() + 2);
+      jogador.set_greatball(jogador.get_greatball() + 1);
+    }
+    else if (dificuldade == 4) {
+      std::cout << "\nVocê ganhou 3 pokebolas do tipo Pokeball e uma do tipo Greatball!" << '\n';
+      jogador.set_pokeball(jogador.get_pokeball() + 3);
+      jogador.set_greatball(jogador.get_greatball() + 1);
+
+    }
+  } else {
+    if (dificuldade == 1 || dificuldade == 2) {
+      std::cout << "\nVocê ganhou 5 pokebolas do tipo Pokeball!" << '\n';
+      jogador.set_pokeball(jogador.get_pokeball() + 5);
+    }
+    else if (dificuldade == 3) {
+      std::cout << "\nVocê ganhou 5 pokebolas do tipo Pokeball e duas do tipo Greatball!" << '\n';
+      jogador.set_pokeball(jogador.get_pokeball() + 5);
+      jogador.set_greatball(jogador.get_greatball() + 2);
+    }
+    else if (dificuldade == 4) {
+      std::cout << "\nVocê ganhou 5 pokebolas do tipo Pokeball, duas do tipo Greatball e uma MASTERBALL!!!" << '\n';
+      jogador.set_pokeball(jogador.get_pokeball() + 5);
+      jogador.set_greatball(jogador.get_greatball() + 2);
+      jogador.set_masterball(jogador.get_masterball() + 1);
+    }
+  }
+}
+
 void pokemon_capturado(Treinador jogador, Pokemon *inimigo, int tipo_chance){
   jogador.add_pokemon(inimigo);
   try{
