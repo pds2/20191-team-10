@@ -57,7 +57,7 @@ int main() {
 	introducao(&uno);
 	treinador_info(uno);
 	int escolha = escolher_pokemon(uno);
-	batalha_x1(uno, (uno._lista_de_pokemon.at(escolha)), 1);
+	batalha_x1(uno, (uno._lista_de_pokemon.at(escolha)), 2);
 
 	return 0;
 }

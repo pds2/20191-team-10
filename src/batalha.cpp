@@ -31,7 +31,7 @@ void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador
 			}
 			break;
 		case 2:
-			batalha_x1(jogador, meu_poke, 1);
+			batalha_x1(jogador, meu_poke, 2); //Mudei a dificuldade para testes
 			break;
 		case 3:
 			treinador_info(jogador);
@@ -123,6 +123,9 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     int dano_meu_poke = inimigo->get_hp();
     int dano_inimigo = meu_poke->get_hp();
 
+    short int limite_habilidade_jogador[4] = {100, 5, 3, 1};
+    short int limite_habilidade_inimigo[4] = {100, 5, 3, 1};
+
     if((jogador.get_lideranca() + meu_poke->get_agilidade()) >= (dificuldade + inimigo->get_agilidade())){
         std::cout << meu_poke->get_apelido() << " e' mais veloz e inicia a batalha!" << std::endl;
         while(true){
@@ -136,7 +139,15 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }
+            
+            if(dificuldade>1){
+                if(limite_habilidade_inimigo[dificuldade-1] == 0){
+                dificuldade--;
+                }
+            }
+
             inimigo->atacar(meu_poke, dificuldade);
+            limite_habilidade_inimigo[dificuldade-1]--;
             dano_inimigo -= meu_poke->current_hp;
             print_ataque(inimigo->get_apelido(), meu_poke->get_apelido(),
                          inimigo->get_habilidade(dificuldade), dano_inimigo, meu_poke->current_hp);
@@ -148,7 +159,15 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     }else{
         std::cout << inimigo->get_apelido() << " e' mais veloz e inicia a batalha!" << std::endl;
         while(true){
+
+            if(dificuldade>1){
+                if(limite_habilidade_inimigo[dificuldade-1] == 0){
+                dificuldade--;
+                }
+            }
+
             inimigo->atacar(meu_poke, dificuldade);
+            limite_habilidade_inimigo[dificuldade-1]--;
             dano_inimigo -= meu_poke->current_hp;
             print_ataque(inimigo->get_apelido(), meu_poke->get_apelido(),
                          inimigo->get_habilidade(dificuldade), dano_inimigo, meu_poke->current_hp);

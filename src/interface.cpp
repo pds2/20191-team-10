@@ -125,7 +125,7 @@ int escolher_habilidade(Pokemon *meu_poke, int lideranca){
     }
 
     try{
-        verificar_habilidade_valida(escolha ,lideranca);
+        verificar_habilidade_valida(escolha, lideranca);
     }
     catch(Excpt_Habilidade_Invalida &e){
         tratamento_habilidade_invalida(escolha, lideranca);
@@ -156,7 +156,7 @@ void confirmar_escolha(Treinador jogador,std::string escolha,std::string confirm
 std::string escolha_um_a_um(){
     std::string escolha;
     do{
-        std::cout << "Err.... digite o numero 1 meu chapa. ";
+        std::cout << "Err.... digite o numero 1, meu chapa. ";
         std::cin >> escolha;
     }while(escolha[0] != '1');
     return escolha;

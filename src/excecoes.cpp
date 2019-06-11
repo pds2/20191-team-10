@@ -13,7 +13,7 @@ void verificar_nocaute(Pokemon *meu_poke, Pokemon *inimigo){
     };
 }
 
-void verificar_habilidade_valida(std::string escolha,int lideranca){
+void verificar_habilidade_valida(std::string escolha, int lideranca){
     int a = (escolha[0] - '0');
     if(a>lideranca){
         Excpt_Habilidade_Invalida z;
@@ -23,15 +23,15 @@ void verificar_habilidade_valida(std::string escolha,int lideranca){
 
 void tratamento_habilidade_invalida(std::string escolha, int lideranca){
     if(lideranca == 3){
-        std::cout << "Você só tem liderança o suficiente para ter acesso às habilidades 1,2 e 3.\n";
+        std::cout << "Vocï¿½ sï¿½ tem lideranï¿½a o suficiente para ter acesso ï¿½s habilidades 1,2 e 3.\n";
         escolha = escolha_um_a_tres();
     }
     if(lideranca == 2){
-        std::cout << "Você só tem liderança o suficiente para ter acesso às habilidades 1 e 2.\n";
+        std::cout << "Vocï¿½ sï¿½ tem lideranï¿½a o suficiente para ter acesso ï¿½s habilidades 1 e 2.\n";
         escolha = escolha_um_a_dois();
     }
     else{
-        std::cout << "Você é um novato! Só consegue utilizar a primeira habilidade.\n";
+        std::cout << "Vocï¿½ ï¿½ um novato! Sï¿½ consegue utilizar a primeira habilidade.\n";
         escolha = escolha_um_a_um();
     }
 }
