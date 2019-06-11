@@ -9,7 +9,7 @@
 
 std::string apelida_jogador() {
     std::string nome;
-    std::cout << "Bem-vindo ao mundo Pokemon! Qual o seu nome?" << std::endl;
+    std::cout << "Bem-vindo ao mundo Pokemon!\nQual o seu nome? ";
     std::getline(std::cin, nome);
     return nome;
 }
@@ -19,16 +19,16 @@ void introducao(Treinador *jogador) {
 
     std::cout << "Voce ganhou seus Pokemons iniciais! Bulbasauro, Charmander e Squirtle." << std::endl;
     std::cout << "Deseja apelida-los? ";
-    std::cin >> escolha;
+    std::getline(std::cin, escolha);
     if (escolha[0] == 'S' || escolha[0] == 's') {
         std::string bulbasaur, charm, squir;
 
         std::cout << "Apelido para Bulbasauro: ";
-        std::cin >> bulbasaur;
+        std::getline(std::cin, bulbasaur);
         std::cout << "Apelido para Charmander: ";
-        std::cin >> charm;
+        std::getline(std::cin, charm);
         std::cout << "Apelido para Squirtle: ";
-        std::cin >> squir;
+        std::getline(std::cin, squir);
 
         Bulbasauro *bulba = new Bulbasauro(bulbasaur);
         Charmander *charmander = new Charmander(charm);

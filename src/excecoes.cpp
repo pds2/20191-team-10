@@ -50,7 +50,7 @@ void tratamento_limite_habilidade(std::string &escolha, short int *limite){
     do{
         do{
         std::cout << "A habilidade escolhida esgotou! Escolha outra: ";
-        std::cin >> escolha;
+        std::getline(std::cin, escolha);
         }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4');
     }while(limite[(escolha[0]-'0')-1]<=0);
 }
