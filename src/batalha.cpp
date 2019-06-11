@@ -21,7 +21,7 @@ void reset_current_hp(Pokemon *meu_poke, Pokemon *inimigo){
 
 void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador) {
 	int exit;
-	exit = escolher_opcoes();
+	exit = escolher_opcoes(meu_poke);
 	switch (exit) {
 		case 1:
 			if(check_pokebola(jogador)){
@@ -139,7 +139,7 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }
-            
+
             if(dificuldade>1){
                 if(limite_habilidade_inimigo[dificuldade-1] == 0){
                 dificuldade--;
