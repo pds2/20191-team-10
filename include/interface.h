@@ -22,6 +22,8 @@ int escolher_pokebola(Treinador jogador, Pokemon *inimigo);
 
 bool check_pokebola(Treinador jogador); //verifica se o treinador tem pokebolas
 
+void deseja_apelidar(Pokemon *inimigo);
+
 bool deseja_capturar(Pokemon *inimigo);
 
 int escolher_opcoes(Pokemon *meu_poke);

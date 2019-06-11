@@ -39,6 +39,30 @@ bool check_pokebola(Treinador jogador){
     } else return true;
 }
 
+void deseja_apelidar(Pokemon *inimigo) {
+  std::string escolha;
+  std::string apelido;
+  bool entrada_invalida = true;
+
+  std::cout << "\nVocê quer apelidar " << inimigo->get_apelido() << "? (s/n)\n";
+  while(entrada_invalida) {
+    std::cout << "Digite s para sim e n para nao: ";
+    std::cin >> escolha;
+    if(escolha == "s") {
+      entrada_invalida = false;
+      std::cout << "\nDigite o apelido desejado: ";
+      std::cin >> apelido;
+      inimigo->set_apelido(apelido);
+    }
+    else if(escolha == "n") {
+      entrada_invalida = false;
+      std::cout << "Como você não deseja apelidar " << inimigo->get_apelido() << ", o apelido dele ficará assim mesmo...";
+    }
+    else
+      entrada_invalida = true;
+  }
+}
+
 bool deseja_capturar(Pokemon *inimigo) {
   std::string escolha;
   bool entrada_invalida = true;
@@ -49,6 +73,7 @@ bool deseja_capturar(Pokemon *inimigo) {
     std::cin >> escolha;
     if(escolha == "s") {
       entrada_invalida = false;
+      deseja_apelidar(inimigo);
       return true;
     }
     else if(escolha == "n") {
