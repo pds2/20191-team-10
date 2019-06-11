@@ -60,3 +60,20 @@ Treinador tratamento_num_pokemon_invalido(Treinador jogador){
     jogador._lista_de_pokemon.erase(jogador._lista_de_pokemon.begin()+doacao);
     return jogador;
 }
+
+int verifica_inteiro(std::string enunciado){
+  int escolha;
+  while (true) {
+    std::cout << enunciado;
+    std::cin >> escolha;
+    if(!std::cin) {
+       std::cin.clear();
+       std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+       std::cout << "\nPor favor, digite um número inteiro!\n\n";
+       continue;
+    } else {
+        return escolha;
+        break;
+    }
+  }
+}

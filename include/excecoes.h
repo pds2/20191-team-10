@@ -6,6 +6,8 @@
 
 #include <stdexcept>
 #include <exception>
+#include <limits>
+#include <sstream>
 
 // As funções que desse .h simplesmente verificam casos de exceção e jogam o tipo de exceção específica
 // O tratamento específico para cada exceção será tratato em outras funcões
@@ -61,5 +63,7 @@ void tratamento_habilidade_invalida(std::string,int);
 
 void verificar_num_pokemon_valido(Treinador);
 Treinador tratamento_num_pokemon_invalido(Treinador);
+
+int verifica_inteiro(std::string);
 
 #endif // EXCECOES_H
