@@ -34,7 +34,7 @@ int escolher_pokemon(Treinador); //Fun��o que recebe um treinador e escolhe 
 
 int doar_pokemon(Treinador); //Fun��o que recebe um treinador e escolhe um de seus Pok�mon a ser doado.
 
-int escolher_habilidade(Pokemon *, int);
+int escolher_habilidade(Pokemon *, int, short int *);
 
 void print_ataque(std::string, std::string, std::string, int, int);
 //Printa quanto o dano de 1 foi tirado de 2 e mostra o nome da habilidade.

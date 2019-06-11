@@ -39,6 +39,13 @@ public:
     }
 };
 
+class Excpt_Limite_Habilidade : public std::exception{
+public:
+    const char *what(){
+        return "A habilidade escolhida esgotou! Escolha outra!\n";
+    }
+};
+
 class Excpt_Lideranca_Invalida : public std::exception{
 public:
     const char *what(){
@@ -60,6 +67,9 @@ void verificar_nocaute(Pokemon*,Pokemon*);
 
 void verificar_habilidade_valida(std::string,int);
 void tratamento_habilidade_invalida(std::string,int);
+
+void verificar_limite_habilidade(std::string, short int *);
+void tratamento_limite_habilidade(std::string &, short int *);
 
 void verificar_num_pokemon_valido(Treinador);
 Treinador tratamento_num_pokemon_invalido(Treinador);

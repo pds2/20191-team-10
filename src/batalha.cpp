@@ -131,9 +131,10 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     if((jogador.get_lideranca() + meu_poke->get_agilidade()) >= (dificuldade + inimigo->get_agilidade())){
         std::cout << meu_poke->get_apelido() << " e' mais veloz e inicia a batalha!" << std::endl;
         while(true){
-            habilidade_jogador = escolher_habilidade(meu_poke, jogador.get_lideranca());
+            habilidade_jogador = escolher_habilidade(meu_poke, jogador.get_lideranca(), limite_habilidade_jogador);
 
             meu_poke->atacar(inimigo, habilidade_jogador);
+            limite_habilidade_jogador[habilidade_jogador-1]--;
             dano_meu_poke -= inimigo->current_hp; //Para não mexermos com o método atacar, usamos esta artimanha
             print_ataque(meu_poke->get_apelido(), inimigo->get_apelido(),
                          meu_poke->get_habilidade(habilidade_jogador), dano_meu_poke, inimigo->current_hp);
@@ -177,8 +178,9 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
             if(meu_poke->current_hp<=0 || inimigo->current_hp<=0){
                 break;
             }
-            habilidade_jogador= escolher_habilidade(meu_poke, jogador.get_lideranca());
+            habilidade_jogador= escolher_habilidade(meu_poke, jogador.get_lideranca(), limite_habilidade_jogador);
             meu_poke->atacar(inimigo, habilidade_jogador);
+            limite_habilidade_jogador[habilidade_jogador-1]--;
             dano_meu_poke -= inimigo->current_hp;
             print_ataque(meu_poke->get_apelido(), inimigo->get_apelido(),
                          meu_poke->get_habilidade(habilidade_jogador), dano_meu_poke, inimigo->current_hp);

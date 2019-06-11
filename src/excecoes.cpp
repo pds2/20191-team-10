@@ -36,6 +36,25 @@ void tratamento_habilidade_invalida(std::string escolha, int lideranca){
     }
 }
 
+void verificar_limite_habilidade(std::string escolha, short int *limite){
+    int escolha_int = escolha[0] - '0';
+    if(escolha_int > 1){
+        if(limite[escolha_int - 1] == 0){
+            Excpt_Limite_Habilidade z;
+            throw z;
+        }
+    }
+}
+
+void tratamento_limite_habilidade(std::string &escolha, short int *limite){
+    do{
+        do{
+        std::cout << "A habilidade escolhida esgotou! Escolha outra: ";
+        std::cin >> escolha;
+        }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4');
+    }while(limite[(escolha[0]-'0')-1]<=0);
+}
+
 void verificar_lideranca_valida(int lideranca){
     if(lideranca<=0||lideranca>4){
         Excpt_Lideranca_Invalida z;

@@ -150,7 +150,7 @@ int escolher_pokemon(Treinador jogador){
     return (escolha[0] - '0') - 1;
 }
 
-int escolher_habilidade(Pokemon *meu_poke, int lideranca){
+int escolher_habilidade(Pokemon *meu_poke, int lideranca, short int *vetor_limite){
     std::string escolha;
     std::cout << "Qual habilidade você deseja usar?" << std::endl;
     meu_poke->print_habilidades(lideranca);
@@ -176,6 +176,13 @@ int escolher_habilidade(Pokemon *meu_poke, int lideranca){
     }
     catch(Excpt_Habilidade_Invalida &e){
         tratamento_habilidade_invalida(escolha, lideranca);
+    }
+
+    try{
+        verificar_limite_habilidade(escolha, vetor_limite);
+    }
+    catch(Excpt_Limite_Habilidade &e){
+        tratamento_limite_habilidade(escolha, vetor_limite);
     }
 
     return (escolha[0] - '0');
