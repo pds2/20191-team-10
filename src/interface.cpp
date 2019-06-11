@@ -117,11 +117,11 @@ int escolher_opcoes(Pokemon *meu_poke) {
 }
 
 int doar_pokemon(Treinador jogador){
-    std::cout<<"Escolha um Pokemon a ser doado.\n";
+    std::cout<<"Escolha um de seus antigos Pokemon a ser doado.\n";
     jogador.print_lista_pokemon();
     std::string escolha, confirmacao;
     do{
-        escolha = escolha_um_a_quatro();
+        escolha = escolha_um_a_nove();
 
         std::cout << "Tem certeza que deseja doar o pokemon apelidado : ";
         std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
@@ -133,23 +133,75 @@ int doar_pokemon(Treinador jogador){
     return (escolha[0] - '0') - 1;
 }
 
+std::string confirmar_escolha(Treinador jogador,std::string escolha,std::string confirmacao){
+    std::cout << "Tem certeza que quer usar o pokemon apelidado : ";
+    std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
+    std::getline(std::cin, confirmacao);
+    if(confirmacao[0] != 'S' && confirmacao[0] != 's')
+        std::cout << std::endl << "Ok, vamos selecionar outro Pokemon. Qual Pokemon deseja escolher? ";
+    return confirmacao;
+}
+
+
 int escolher_pokemon(Treinador jogador){
     std::cout << "Escolha um dos Pokemon abaixo." << std::endl;
     jogador.print_lista_pokemon();
     std::string escolha, confirmacao;
 
- //Criar uma exce��o aqui depois & pensar numa maneira de o c�digo n�o crashar caso tenha apenas 2
-
-    do{
+    if(jogador._lista_de_pokemon.size()==1){
+        do{
+        escolha = escolha_um_a_um();
+        confirmacao = confirmar_escolha(jogador,escolha,confirmacao);
+        }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    }
+    else if(jogador._lista_de_pokemon.size()==2){
+        do{
+        escolha = escolha_um_a_dois();
+        confirmacao = confirmar_escolha(jogador,escolha,confirmacao);
+        }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    }
+    else if(jogador._lista_de_pokemon.size()==3){
+        do{
         escolha = escolha_um_a_tres();
-
-        std::cout << "Tem certeza que quer usar o pokemon apelidado : ";
-        std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
-        std::getline(std::cin, confirmacao);
-        if(confirmacao[0] != 'S' && confirmacao[0] != 's')
-            std::cout << std::endl << "Ok, vamos selecionar outro Pokemon. Qual Pokemon deseja escolher? ";
-
-    }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+        confirmacao = confirmar_escolha(jogador,escolha,confirmacao);
+        }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    }
+    else if(jogador._lista_de_pokemon.size()==4){
+        do{
+        escolha = escolha_um_a_quatro();
+        confirmacao = confirmar_escolha(jogador,escolha,confirmacao);
+        }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    }
+    else if(jogador._lista_de_pokemon.size()==5){
+        do{
+        escolha = escolha_um_a_cinco();
+        confirmacao = confirmar_escolha(jogador,escolha,confirmacao);
+        }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    }
+    else if(jogador._lista_de_pokemon.size()==6){
+        do{
+        escolha = escolha_um_a_seis();
+        confirmacao = confirmar_escolha(jogador,escolha,confirmacao);
+        }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    }
+    else if(jogador._lista_de_pokemon.size()==7){
+        do{
+        escolha = escolha_um_a_sete();
+        confirmacao = confirmar_escolha(jogador,escolha,confirmacao);
+        }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    }
+    else if(jogador._lista_de_pokemon.size()==8){
+        do{
+        escolha = escolha_um_a_oito();
+        confirmacao = confirmar_escolha(jogador,escolha,confirmacao);
+        }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    }
+    else if(jogador._lista_de_pokemon.size()==9){
+        do{
+        escolha = escolha_um_a_nove();
+        confirmacao = confirmar_escolha(jogador,escolha,confirmacao);
+        }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    }
     return (escolha[0] - '0') - 1;
 }
 
@@ -201,14 +253,8 @@ void print_ataque(std::string poke1, std::string poke2, std::string habilidade, 
     }
 }
 
-void confirmar_escolha(Treinador jogador,std::string escolha,std::string confirmacao){
-    std::cout << "Tem certeza que quer usar o pokemon apelidado : ";
-    std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
-    std::getline(std::cin, confirmacao);
-    if(confirmacao[0] != 'S' && confirmacao[0] != 's')
-    std::cout << std::endl << "Ok, vamos selecionar outro Pokemon. Qual Pokemon quer levar? ";
-}
-
+//----------------------------------------------------------------------------------------------------------------
+//Abaixo temos métodos com lógica semelhante. Ler o primeiro já basta para entender os demais
 
 std::string escolha_um_a_um(){
     std::string escolha;
@@ -245,3 +291,53 @@ std::string escolha_um_a_quatro(){
     }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4');
     return escolha;
 };
+
+std::string escolha_um_a_cinco(){
+    std::string escolha;
+    do{
+        std::cout << "Digite o numero correspondente: ";
+        std::getline(std::cin, escolha);
+    }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4' && escolha[0] != '5');
+    return escolha;
+};
+
+std::string escolha_um_a_seis(){
+    std::string escolha;
+    do{
+        std::cout << "Digite o numero correspondente: ";
+        std::getline(std::cin, escolha);
+    }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4' && escolha[0] != '5'
+                             && escolha[0] != '6');
+    return escolha;
+};
+
+std::string escolha_um_a_sete(){
+    std::string escolha;
+    do{
+        std::cout << "Digite o numero correspondente: ";
+        std::getline(std::cin, escolha);
+    }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4' && escolha[0] != '5'
+                             && escolha[0] != '6' && escolha[0] != '7');
+    return escolha;
+};
+
+std::string escolha_um_a_oito(){
+    std::string escolha;
+    do{
+        std::cout << "Digite o numero correspondente: ";
+        std::getline(std::cin, escolha);
+    }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4' && escolha[0] != '5'
+                             && escolha[0] != '6' && escolha[0] != '7' && escolha[0] != '8');
+    return escolha;
+};
+
+std::string escolha_um_a_nove(){
+    std::string escolha;
+    do{
+        std::cout << "Digite o numero correspondente: ";
+        std::getline(std::cin, escolha);
+    }while(escolha[0] != '1' && escolha[0] != '2' && escolha[0] != '3' && escolha[0] != '4' && escolha[0] != '5'
+                             && escolha[0] != '6' && escolha[0] != '7' && escolha[0] != '8' && escolha[0] != '9');
+    return escolha;
+};
+

@@ -54,9 +54,9 @@ void Pokemon::print_atributos(){
 
 int Pokemon::critical_hit(){
     if((this->_crit + (rand() % 100 + 1)) > 90){
-        std::cout << "\tDANO CRITICO!!" << std::endl;
-        return 2; //Retorna dois para dobrar o dano
+        std::cout << "DANO CRITICO!!" << std::endl;
+        return 2;
     }else{
-        return 1; //Retorna um para manter o dano
+        return 1;
     }
 }

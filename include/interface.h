@@ -32,6 +32,8 @@ int escolher_opcoes(Pokemon *meu_poke);
 
 int escolher_pokemon(Treinador); //Fun��o que recebe um treinador e escolhe um de seus Pok�mon.
 
+std::string confirmar_escolha(Treinador,std::string,std::string); // Método auxiliar a escolher_pokemon
+
 int doar_pokemon(Treinador); //Fun��o que recebe um treinador e escolhe um de seus Pok�mon a ser doado.
 
 int escolher_habilidade(Pokemon *, int, short int *);
@@ -42,10 +44,14 @@ void print_ataque(std::string, std::string, std::string, int, int);
 
 // Exemplo de programação defensiva :
 // As seguintes funções estão retornando string para evitar loops infinitos devido a entradas impróprias.
-
-std::string escolha_um_a_quatro(); //Função que retorna uma string a qual representa uma escolha de 1 a 4 (Ex: escolher hab 4)
-std::string escolha_um_a_tres(); //Função que retorna uma string a qual representa uma escolha de 1 a 3.
-std::string escolha_um_a_dois(); //Função que retorna uma string a qual representa uma escolha entre 1 e 2.
+std::string escolha_um_a_nove(); //Função que retorna uma string a qual representa uma escolha de 1 a 9
+std::string escolha_um_a_oito();
+std::string escolha_um_a_sete();
+std::string escolha_um_a_seis();
+std::string escolha_um_a_cinco();
+std::string escolha_um_a_quatro();
+std::string escolha_um_a_tres();
+std::string escolha_um_a_dois();
 std::string escolha_um_a_um();
 
 #endif // INTERFACE_H

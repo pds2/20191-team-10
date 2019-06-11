@@ -68,7 +68,7 @@ int tratamento_lideranca_invalida(){
 }
 
 void verificar_num_pokemon_valido(Treinador jogador){
-    if(jogador._lista_de_pokemon.size()>=3){
+    if(jogador._lista_de_pokemon.size()>=9){
         Excpt_Num_Pokemon_Invalido z;
         throw z;
 	}
