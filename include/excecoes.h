@@ -60,6 +60,24 @@ public:
     }
 };
 
+class Excpt_Entrada_Inicial : public std::exception {
+public:
+    const char *what() {
+        return "Entrada Invalida! Digite 1, 2 ou 3!\n";
+    }
+};
+
+class Excpt_Dificuldade_Invalida : public std::exception{
+public:
+    const char *what(){
+        return "Dificuldade Invalida! Como padrão a dificuldade será colocada como Fácil!\n";
+    }
+};
+
+void verificar_dificuldade_valida(int);
+
+void verifica_entrada(std::string);
+
 void verificar_lideranca_valida(int);
 int tratamento_lideranca_invalida();
 

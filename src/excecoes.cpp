@@ -67,6 +67,13 @@ int tratamento_lideranca_invalida(){
     return (escolha[0] - '0');
 }
 
+void verificar_dificuldade_valida(int dificuldade){
+    if(dificuldade<=0||dificuldade>3){
+        Excpt_Dificuldade_Invalida z;
+        throw z;
+    }
+}
+
 void verificar_num_pokemon_valido(Treinador jogador){
     if(jogador._lista_de_pokemon.size()>=9){
         Excpt_Num_Pokemon_Invalido z;
@@ -96,3 +103,11 @@ int verifica_inteiro(std::string enunciado){
     }
   }
 }
+
+void verifica_entrada(std::string p) {
+    if ((p[0] != '1') || (p[0] != '2') || (p[0] != '3')) {
+        Excpt_Entrada_Inicial x;
+        throw x;
+    }
+}
+

@@ -33,7 +33,7 @@ void introducao(Treinador *jogador) {
         Bulbasauro *bulba = new Bulbasauro(bulbasaur);
         Charmander *charmander = new Charmander(charm);
         Squirtle *squirtle = new Squirtle(squir);
-        
+
         jogador->add_pokemon(bulba);
         jogador->add_pokemon(charmander);
         jogador->add_pokemon(squirtle);
@@ -76,13 +76,6 @@ void introducao(Treinador *jogador) {
             break;
         }
     }*/
-}
-
-void verifica_entrada(std::string p) {
-    if ((p[0] != '1') || (p[0] != '2') || (p[0] != '3')) {
-        Excpt_Entrada_Inicial x;
-        throw x;
-    }
 }
 
 /*void escolher_modo(Treinador jogador, Pokemon *meu_poke, int dificuldade) {

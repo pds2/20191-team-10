@@ -18,44 +18,6 @@ void reset_current_hp(Pokemon *meu_poke, Pokemon *inimigo){
     inimigo->current_hp = inimigo->get_hp();
 }
 
-
-void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador) {
-	int exit;
-	exit = escolher_opcoes(meu_poke);
-	switch (exit) {
-		case 1:
-			if(check_pokebola(jogador)){
-				if(deseja_capturar(inimigo))
-					capturar_pokemon(jogador, inimigo);
-				else std::cout << "Saindo da batalha..." << '\n';
-			}
-			break;
-		case 2:
-			batalha_x1(jogador, meu_poke, 2); //Mudei a dificuldade para testes
-			break;
-		case 3:
-			treinador_info(jogador);
-			break;
-	}
-}
-
-void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador, int dificuldade){
-    try{
-        verificar_nocaute(meu_poke,inimigo);
-    }
-    catch(Excpt_Nocaute &KO){
-        if(meu_poke->current_hp <= 0){
-            std::cout << meu_poke->get_apelido() << " esta' fora de combate!\n\n YOU LOSE!!!\n" << std::endl;
-						recompensar_treinador(meu_poke, jogador, dificuldade);
-        }else{
-            std::cout << inimigo->get_apelido() << " esta' fora de combate!\n\n YOU WIN!!!\n" << std::endl;
-						recompensar_treinador(meu_poke, jogador, dificuldade);
-        }
-        escolher_pos_batalha(meu_poke, inimigo, jogador);
-        reset_current_hp(meu_poke, inimigo);
-    }
-}
-
 Pokemon *gera_oponente_facil(){
     Pokemon *inimigo;
     int randomico = rola_dados(9);
@@ -112,11 +74,20 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     system("clear||cls"); //Limpa a tela
 
     Pokemon *inimigo;
-    if(dificuldade== 1 || dificuldade== 2){
+
+    try{
+        verificar_dificuldade_valida(dificuldade);
+    }
+    catch(Excpt_Dificuldade_Invalida &e){
+        std::cout<<e.what();
+        dificuldade = 1;
+    }
+
+    if(dificuldade == 1){
         inimigo = gera_oponente_facil();
-    }else if(dificuldade== 3){
+    }else if(dificuldade== 2){
         inimigo = gera_oponente_medio();
-    }else if(dificuldade== 4){
+    }else if(dificuldade== 3){
         inimigo = gera_oponente_dificil();
     }
 
@@ -192,4 +163,64 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     }
     encerrar_batalha(meu_poke,inimigo,jogador,dificuldade);
     delete inimigo;
+}
+
+void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador, int dificuldade){
+    try{
+        verificar_nocaute(meu_poke,inimigo);
+    }
+    catch(Excpt_Nocaute &KO){
+        if(meu_poke->current_hp <= 0){
+            std::cout << meu_poke->get_apelido() << " esta' fora de combate!\n\n YOU LOSE!!!\n" << std::endl;
+						recompensar_treinador(meu_poke, jogador, dificuldade);
+        }else{
+            std::cout << inimigo->get_apelido() << " esta' fora de combate!\n\n YOU WIN!!!\n" << std::endl;
+            if(jogador.get_lideranca()>=2&&jogador.get_lideranca()<4){
+                int exp = jogador.get_lideranca() + 1;
+                jogador.set_lideranca(exp);
+                std::cout << "Sua capacidade de liderança aumentou! Agora você tem acesso a " << jogador.get_lideranca()
+                          << " habilidades de seu Pokemon.\n";
+            }
+            recompensar_treinador(meu_poke, jogador, dificuldade);
+        }
+        escolher_pos_batalha(meu_poke, inimigo, jogador);
+        reset_current_hp(meu_poke, inimigo);
+    }
+}
+
+void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador) {
+	int exit;
+	exit = escolher_opcoes(meu_poke);
+	switch (exit) {
+		case 1:{
+			if(check_pokebola(jogador)){
+				if(deseja_capturar(inimigo))
+                    capturar_pokemon(jogador, inimigo);
+                /*
+                else if (deseja_continuar_jogando()){
+                    // continue no loop de jogo
+                }
+                */
+				else std::cout << "Saindo do jogo..." << '\n';
+			}
+			break;
+        }
+		case 2:{
+		    //int dif = método que retorna a dificuldade desejada;
+		    int escolha = escolher_pokemon(jogador);
+		    meu_poke = jogador._lista_de_pokemon.at(escolha);
+			batalha_x1(jogador, meu_poke, 2 /*dif entraria nesse parâmetro*/ );
+			break;
+        }
+		case 3:{
+			treinador_info(jogador);
+			/*
+			if(deseja_continuar_jogando()){
+                // continue no loop de jogo
+			}
+            */
+            std::cout << "Saindo do jogo..." << '\n';
+			break;
+        }
+	}
 }

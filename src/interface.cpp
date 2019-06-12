@@ -34,69 +34,17 @@ int escolher_pokebola(Treinador jogador, Pokemon *inimigo){
     }
 }
 
-bool check_pokebola(Treinador jogador){
-    if((jogador.get_pokeball() <= POKEBOLA_INVALIDO)&&(jogador.get_greatball() <= POKEBOLA_INVALIDO)&&(jogador.get_masterball() <= POKEBOLA_INVALIDO)){
-      return false;
-    } else return true;
-}
-
-void deseja_apelidar(Pokemon *inimigo) {
-  std::string escolha;
-  std::string apelido;
-  bool entrada_invalida = true;
-
-  std::cout << "\nVocê quer apelidar " << inimigo->get_apelido() << "? (s/n)\n";
-  while(entrada_invalida) {
-    std::cout << "Digite s para sim e n para nao: ";
-    std::getline(std::cin, escolha);
-    if(escolha == "s") {
-      entrada_invalida = false;
-      std::cout << "\nDigite o apelido desejado: ";
-      std::getline(std::cin, apelido);
-      inimigo->set_apelido(apelido);
-    }
-    else if(escolha == "n") {
-      entrada_invalida = false;
-      std::cout << "Como você não deseja apelidar " << inimigo->get_apelido() << ", o apelido dele ficará assim mesmo...";
-    }
-    else
-      entrada_invalida = true;
-  }
-}
-
-bool deseja_capturar(Pokemon *inimigo) {
-  std::string escolha;
-  bool entrada_invalida = true;
-
-  std::cout << "Deseja capturar " << inimigo->get_apelido() << "? (s/n)\n";
-  while(entrada_invalida) {
-    std::cout << "Digite s para sim e n para nao: ";
-    std::getline(std::cin, escolha);
-    if(escolha == "s") {
-      entrada_invalida = false;
-      deseja_apelidar(inimigo);
-      return true;
-    }
-    else if(escolha == "n") {
-      entrada_invalida = false;
-      return false;
-    }
-    else
-      entrada_invalida = true;
-  }
-}
-
 int escolher_opcoes(Pokemon *meu_poke) {
   int opcao_escolhida;
   bool run_input = true;
 
   std::cout << "\nO que deseja fazer agora? " << '\n';
   if(meu_poke->current_hp <= 0)
-    std::cout << "Não é possível capturar o pokemon inimigo pois o seu pokemon desmaiou devido à derrota ... :(\n\n";
+    std::cout << "Voce perdeu, logo nao tem a opcao de capturar o pokemon\n\n";
   else
     std::cout << "1- Capturar pokemon" << '\n';
-  std::cout << "2- Jogar outra batalha" << '\n';
-  std::cout << "3- Consultar pokedex" << '\n';
+    std::cout << "2- Jogar outra batalha" << '\n';
+    std::cout << "3- Consultar pokedex" << '\n';
   while (run_input) {
     opcao_escolhida = verifica_inteiro("Digite um número correspondente a umas das opções acima: ");
     if(opcao_escolhida >= 1 && opcao_escolhida <= 3) {
@@ -122,23 +70,6 @@ int escolher_opcoes(Pokemon *meu_poke) {
   }
 }
 
-int doar_pokemon(Treinador jogador){
-    std::cout<<"Escolha um de seus antigos Pokemon a ser doado.\n";
-    jogador.print_lista_pokemon();
-    std::string escolha, confirmacao;
-    do{
-        escolha = escolha_um_a_nove();
-
-        std::cout << "Tem certeza que deseja doar o pokemon apelidado : ";
-        std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
-        std::getline(std::cin, confirmacao);
-        if(confirmacao[0] != 'S' && confirmacao[0] != 's')
-            std::cout << std::endl << "Ok, vamos selecionar outro Pokemon. Qual Pokemon você deseja doar? ";
-
-    }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
-    return (escolha[0] - '0') - 1;
-}
-
 std::string confirmar_escolha(Treinador jogador,std::string escolha,std::string confirmacao){
     std::cout << "Tem certeza que quer usar o pokemon apelidado : ";
     std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
@@ -147,7 +78,6 @@ std::string confirmar_escolha(Treinador jogador,std::string escolha,std::string 
         std::cout << std::endl << "Ok, vamos selecionar outro Pokemon. Qual Pokemon deseja escolher? ";
     return confirmacao;
 }
-
 
 int escolher_pokemon(Treinador jogador){
     std::cout << "Escolha um dos Pokemon abaixo." << std::endl;
@@ -216,9 +146,6 @@ int escolher_habilidade(Pokemon *meu_poke, int lideranca, short int *vetor_limit
     std::cout << "Qual habilidade você deseja usar?" << std::endl;
     meu_poke->print_habilidades(lideranca);
 
-    //Criar mais exceções aqui.
-    //Além disso, pensar numa forma de saber se está no nível de usar habilidades lvl alto
-
     if(lideranca == 1){
         escolha = escolha_um_a_um();
     }
@@ -247,6 +174,98 @@ int escolher_habilidade(Pokemon *meu_poke, int lideranca, short int *vetor_limit
     }
 
     return (escolha[0] - '0');
+}
+
+bool check_pokebola(Treinador jogador){
+    if((jogador.get_pokeball() <= POKEBOLA_INVALIDO)&&(jogador.get_greatball() <= POKEBOLA_INVALIDO)&&(jogador.get_masterball() <= POKEBOLA_INVALIDO)){
+      return false;
+    } else return true;
+}
+
+void deseja_apelidar(Pokemon *inimigo) {
+  std::string escolha;
+  std::string apelido;
+  bool entrada_invalida = true;
+
+  std::cout << "\nVocê quer apelidar " << inimigo->get_apelido() << "? (s/n)\n";
+  while(entrada_invalida) {
+    std::cout << "Digite s para sim e n para nao: ";
+    std::getline(std::cin, escolha);
+    if(escolha == "s") {
+      entrada_invalida = false;
+      std::cout << "\nDigite o apelido desejado: ";
+      std::getline(std::cin, apelido);
+      inimigo->set_apelido(apelido);
+    }
+    else if(escolha == "n") {
+      entrada_invalida = false;
+      std::cout << "Como você não deseja apelidar " << inimigo->get_apelido() << ", o apelido dele ficará assim mesmo...";
+    }
+    else
+      entrada_invalida = true;
+  }
+}
+
+bool deseja_capturar(Pokemon *inimigo) {
+    std::string escolha;
+    bool entrada_invalida = true;
+
+    std::cout << "Deseja capturar " << inimigo->get_apelido() << "? (s/n)\n";
+    while(entrada_invalida) {
+        std::cout << "Digite s para sim e n para nao: ";
+        std::getline(std::cin, escolha);
+        if(escolha == "s" ||escolha == "S") {
+            entrada_invalida = false;
+            deseja_apelidar(inimigo);
+            return true;
+        }
+        else if(escolha == "n" || escolha == "N") {
+            entrada_invalida = false;
+            return false;
+        }
+        else {
+            entrada_invalida = true;
+        }
+    }
+}
+
+bool deseja_continuar_jogando(){
+    std::string escolha;
+    bool entrada_invalida = true;
+
+    std::cout<<"Deseja continuar jogando? (s/n)\n";
+    while(entrada_invalida) {
+        std::cout << "Digite s para sim e n para nao: ";
+        std::getline(std::cin, escolha);
+        if(escolha == "s" || escolha == "S") {
+            entrada_invalida = false;
+            return true;
+        }
+        else if(escolha == "n" || escolha == "N") {
+            entrada_invalida = false;
+            return false;
+        }
+        else {
+            entrada_invalida = true;
+        }
+    }
+}
+
+int doar_pokemon(Treinador jogador){
+    std::cout<<"Escolha um de seus antigos Pokemon a ser doado.\n";
+    jogador.print_lista_pokemon();
+    std::string escolha, confirmacao;
+    do{
+        escolha = escolha_um_a_nove();
+
+        std::cout << "Tem certeza que deseja doar o pokemon apelidado : ";
+        std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
+        std::getline(std::cin, confirmacao);
+        if(confirmacao[0] != 'S' && confirmacao[0] != 's')
+            std::cout << std::endl << "Ok, vamos selecionar outro Pokemon. Qual Pokemon você deseja doar? ";
+
+    }while((confirmacao[0] != 's') && (confirmacao[0] != 'S'));
+    return (escolha[0] - '0') - 1;
 }
 
 void print_ataque(std::string poke1, std::string poke2, std::string habilidade, int dano, int vida){

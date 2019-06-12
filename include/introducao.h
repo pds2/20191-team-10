@@ -12,13 +12,6 @@
 #include "pokedex_ascii.h"
 #include <stdexcept>
 
-class Excpt_Entrada_Inicial : public std::exception {
-public:
-    const char *what() {
-        return "Entrada invalida! Digite 1, 2 ou 3!\n";
-    }
-};
-
 std::string apelida_jogador();
 void introducao(Treinador *jogador); // Texto introdutório do jogo
 void verifica_entrada(std::string p);
