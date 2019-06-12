@@ -70,6 +70,18 @@ Pokemon *gera_oponente_dificil(){
     return inimigo;
 }
 
+void limite_nivel(short int *vet, int lideranca){
+    if(lideranca>=1 && lideranca<=4){
+        if(lideranca==1){
+            vet[1]= vet[2]= vet[3]= 0;
+        }else if(lideranca==2){
+            vet[2]= vet[3]= 0;
+        }else if(lideranca==3){
+            vet[3]= 0;
+        }
+    }
+}
+
 void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     system("clear||cls"); //Limpa a tela
 
@@ -97,6 +109,7 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     int dano_inimigo = meu_poke->get_hp();
 
     short int limite_habilidade_jogador[4] = {100, 5, 3, 1};
+    limite_nivel(limite_habilidade_jogador, jogador.get_lideranca());
     short int limite_habilidade_inimigo[4] = {100, 5, 3, 1};
 
     if((jogador.get_lideranca() + meu_poke->get_agilidade()) >= (dificuldade + inimigo->get_agilidade())){

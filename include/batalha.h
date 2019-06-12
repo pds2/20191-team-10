@@ -30,6 +30,8 @@ Pokemon *gera_oponente_medio();
 Pokemon *gera_oponente_dificil();
 // Funções que gera um adversário para batalhar dependendo do nivel de dificuldade.
 
+void limite_nivel(short int *, int); //Função que coloca zero nas habilidades acima do nível
+
 void encerrar_batalha(Pokemon *, Pokemon *, Treinador jogador, int Dificuldade);
 // Encerra a batalha e reseta o HP dos pokemons envolvidos (meu_poke,inimigo).
 // Sempre delete o inimigo após o uso dessa função caso ele não tiver mais serventia.

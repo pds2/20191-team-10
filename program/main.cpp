@@ -12,9 +12,9 @@
 #include <string>
 #include <ctime>
 
-#define dificuldade_facil 1
-#define dificuldade_medio 2
-#define deficuldade_dificil 3
+#define DIFICULDADE_FACIL 1
+#define DIFICULDADE_MEDIO 2
+#define DIFICULDADE_DIFICIL 3
 
 int main() {
 
@@ -35,7 +35,7 @@ int main() {
 	print_ascii_art("intro");
     print_ascii_art("blastoise+charizard");
 
-	Treinador uno = Treinador(apelida_jogador(),2);
+	Treinador uno = Treinador(apelida_jogador(),4);
 /*
 	uno.add_pokemon(&aguin); // add_pokemon(x) adiciona o pokemon x ao vetor de Pokemons presente na classe Jogador
     uno.add_pokemon(&aguin2);
@@ -50,7 +50,7 @@ int main() {
 	introducao(&uno);
 	treinador_info(uno);
 	int escolha = escolher_pokemon(uno);
-	batalha_x1(uno, (uno._lista_de_pokemon.at(escolha)), dificuldade_facil);
+	batalha_x1(uno, (uno._lista_de_pokemon.at(escolha)), DIFICULDADE_FACIL);
 
 	return 0;
 }
