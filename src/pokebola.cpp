@@ -1,4 +1,5 @@
 #include "../include/pokebola.h"
+#include "../include/batalha.h"
 #include "../include/excecoes.h"
 
 void recompensar_treinador(Pokemon *meu_poke, Treinador jogador, int dificuldade){
@@ -53,14 +54,32 @@ void pokemon_capturado(Treinador jogador, Pokemon *inimigo, int tipo_chance){
   if(tipo_chance == POKEBALL_CHANCE){
     std::cout << "\nVocê utilizou uma Pokebola do tipo Pokeball com sucesso!\nVocê agora possui os pokemon : " << '\n';
     jogador.print_lista_pokemon();
+    if(deseja_continuar_jogando()){
+      int escolha, dificuldade;
+      dificuldade = escolher_dificuldade();
+      escolha = escolher_pokemon(jogador);
+      batalha_x1(jogador, (jogador._lista_de_pokemon.at(escolha)), dificuldade);
+    } else std::cout << "Saindo do jogo..." << '\n';
   }
   else if(tipo_chance == GREATBALL_CHANCE){
     std::cout << "\nVocê utilizou uma Pokebola do tipo Greatball com sucesso!\nVocê agora possui os pokemon : " << '\n';
     jogador.print_lista_pokemon();
+    if(deseja_continuar_jogando()){
+      int escolha, dificuldade;
+      dificuldade = escolher_dificuldade();
+      escolha = escolher_pokemon(jogador);
+      batalha_x1(jogador, (jogador._lista_de_pokemon.at(escolha)), dificuldade);
+    } else std::cout << "Saindo do jogo..." << '\n';
   }
   else if(tipo_chance == MASTERBALL_CHANCE){
     std::cout << "\nVocê utilizou uma Pokebola do tipo Masterball com sucesso!\nVocê agora possui os pokemon : " << '\n';
     jogador.print_lista_pokemon();
+    if(deseja_continuar_jogando()){
+      int escolha, dificuldade;
+      dificuldade = escolher_dificuldade();
+      escolha = escolher_pokemon(jogador);
+      batalha_x1(jogador, (jogador._lista_de_pokemon.at(escolha)), dificuldade);
+    } else std::cout << "Saindo do jogo..." << '\n';
   }
 }
 
@@ -103,7 +122,13 @@ void utilizar_pokebola(Treinador jogador, Pokemon *inimigo, int tipo_chance){
                       run = false;
                   }
                 } else if(alternativa == "n"){
-                  std::cout << "\nVocê desistiu de capturar Wild " << inimigo->get_nome() << "!\n\n";
+                  std::cout << "\nVocê desistiu de capturar " << inimigo->get_apelido() << "!\n";
+                  if(deseja_continuar_jogando()){
+                  	int escolha, dificuldade;
+            				dificuldade = escolher_dificuldade();
+            				escolha = escolher_pokemon(jogador);
+            				batalha_x1(jogador, (jogador._lista_de_pokemon.at(escolha)), dificuldade);
+            			} else std::cout << "Saindo do jogo..." << '\n';
                   run = false;
                 }
               }

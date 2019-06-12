@@ -21,9 +21,7 @@ int escolher_pokebola(Treinador jogador, Pokemon *inimigo){
         return escolha;
       else {
         while (escolha < 1 || escolha > 3) {
-          std::cout << "Digite o número correspondente ao de uma das pokebolas acima: " << '\n';
-          //std::getline(std::cin, escolha); Mudar aqui para não ocorrer erros
-          std::cin >> escolha;
+          escolha = verifica_inteiro("Digite o número correspondente ao de uma das pokebolas acima: ");
           if(escolha >= 1 && escolha <= 3)
             return escolha;
         }
@@ -217,7 +215,7 @@ bool deseja_capturar(Pokemon *inimigo) {
     std::string escolha;
     bool entrada_invalida = true;
 
-    std::cout << "Deseja capturar " << inimigo->get_apelido() << "? (s/n)\n";
+    std::cout << "\nDeseja capturar " << inimigo->get_apelido() << "? (s/n)\n";
     while(entrada_invalida) {
         std::cout << "Digite s para sim e n para nao: ";
         std::getline(std::cin, escolha);
@@ -240,7 +238,7 @@ bool deseja_continuar_jogando(){
     std::string escolha;
     bool entrada_invalida = true;
 
-    std::cout<<"Deseja continuar jogando? (s/n)\n";
+    std::cout<<"\nDeseja continuar jogando? (s/n)\n";
     while(entrada_invalida) {
         std::cout << "Digite s para sim e n para nao: ";
         std::getline(std::cin, escolha);

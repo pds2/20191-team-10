@@ -208,32 +208,34 @@ void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador
 		case 1:{
 			if(check_pokebola(jogador)){
 				if(deseja_capturar(inimigo))
-                    capturar_pokemon(jogador, inimigo);
-                /*
-                else if (deseja_continuar_jogando()){
-                    // continue no loop de jogo
-                }
-                */
-				else std::cout << "Saindo do jogo..." << '\n';
+        	capturar_pokemon(jogador, inimigo);
+				else {
+					if(deseja_continuar_jogando()){
+		      	int escolha, dificuldade;
+						dificuldade = escolher_dificuldade();
+						escolha = escolher_pokemon(jogador);
+						batalha_x1(jogador, (jogador._lista_de_pokemon.at(escolha)), dificuldade);
+					} else std::cout << "Saindo do jogo..." << '\n';
+			 	}
 			}
 			break;
-        }
+    }
 		case 2:{
-		    int dif = escolher_dificuldade();
-		    int escolha = escolher_pokemon(jogador);
-		    meu_poke = jogador._lista_de_pokemon.at(escolha);
+		  int dif = escolher_dificuldade();
+		 	int escolha = escolher_pokemon(jogador);
+			meu_poke = jogador._lista_de_pokemon.at(escolha);
 			batalha_x1(jogador, meu_poke, dif );
 			break;
-        }
+    }
 		case 3:{
 			treinador_info(jogador);
-			/*
 			if(deseja_continuar_jogando()){
-                // continue no loop de jogo
-			}
-            */
-            std::cout << "Saindo do jogo..." << '\n';
+      	int escolha, dificuldade;
+				dificuldade = escolher_dificuldade();
+				escolha = escolher_pokemon(jogador);
+				batalha_x1(jogador, (jogador._lista_de_pokemon.at(escolha)), dificuldade);
+			} else std::cout << "Saindo do jogo..." << '\n';
 			break;
-        }
+    }
 	}
 }
