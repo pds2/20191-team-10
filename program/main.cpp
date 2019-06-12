@@ -15,7 +15,7 @@
 int main() {
 
     srand (time(NULL));
-
+/*
     Squirtle aguin = Squirtle("Tartaruga");
     Wartotle aguin2 = Wartotle("War Turtle");
     Blastoise aguin3 = Blastoise("Blast");
@@ -27,14 +27,14 @@ int main() {
 	Bulbasauro verdin = Bulbasauro("Alpiste");
 	Ivysaur verdin2 = Ivysaur("Trepadeira");
 	Venosauro verdin3 = Venosauro("Peçonhento");
-
+*/
 	print_ascii_art("intro");
     print_ascii_art("blastoise+charizard");
 
 	Treinador uno = Treinador(apelida_jogador(),4);
-
+/*
 	uno.add_pokemon(&aguin); // add_pokemon(x) adiciona o pokemon x ao vetor de Pokemons presente na classe Jogador
-	uno.add_pokemon(&aguin2);
+    uno.add_pokemon(&aguin2);
 	uno.add_pokemon(&aguin3);
     uno.add_pokemon(&foguin);
 	uno.add_pokemon(&foguin2);
@@ -42,8 +42,8 @@ int main() {
 	uno.add_pokemon(&verdin);
     uno.add_pokemon(&verdin2);
 	uno.add_pokemon(&verdin3);
-
-	//introducao(&uno);
+*/
+	introducao(&uno);
 	treinador_info(uno);
 	int escolha = escolher_pokemon(uno);
 	batalha_x1(uno, (uno._lista_de_pokemon.at(escolha)), 2);
