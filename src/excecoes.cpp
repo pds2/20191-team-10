@@ -68,7 +68,7 @@ int tratamento_lideranca_invalida(){
 }
 
 void verificar_dificuldade_valida(int dificuldade){
-    if(dificuldade<=0||dificuldade>3){
+    if(dificuldade<=0||dificuldade>4){
         Excpt_Dificuldade_Invalida z;
         throw z;
     }

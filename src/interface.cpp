@@ -178,8 +178,8 @@ int escolher_habilidade(Pokemon *meu_poke, int lideranca, short int *vetor_limit
 
 int escolher_dificuldade(){
     system("clear||cls");
-    std::cout<<"Escolha a dificuldade para a próxima batalha:\n1)Facil\n2)Medio\n3)Dificil\n";
-    std::string escolha = escolha_um_a_tres();
+    std::cout<<"Escolha a dificuldade para a próxima batalha:\n1)Facil\n2)Medio\n3)Dificil\n4)Mestre\n";
+    std::string escolha = escolha_um_a_quatro();
     return (escolha[0] - '0');
 }
 

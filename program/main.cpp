@@ -15,6 +15,7 @@
 #define DIFICULDADE_FACIL 1
 #define DIFICULDADE_MEDIO 2
 #define DIFICULDADE_DIFICIL 3
+#define DIFICULDADE_MESTRE 4
 
 int main() {
 
@@ -35,7 +36,7 @@ int main() {
 	print_ascii_art("intro");
     print_ascii_art("blastoise+charizard");
 
-	Treinador uno = Treinador(apelida_jogador(),4);
+	Treinador uno = Treinador(apelida_jogador(),1);
 /*
 	uno.add_pokemon(&aguin); // add_pokemon(x) adiciona o pokemon x ao vetor de Pokemons presente na classe Jogador
     uno.add_pokemon(&aguin2);

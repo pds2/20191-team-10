@@ -95,11 +95,11 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
         dificuldade = 1;
     }
 
-    if(dificuldade == 1){
+    if((dificuldade== 1) || (dificuldade== 2)){
         inimigo = gera_oponente_facil();
-    }else if(dificuldade== 2){
-        inimigo = gera_oponente_medio();
     }else if(dificuldade== 3){
+        inimigo = gera_oponente_medio();
+    }else if(dificuldade== 4){
         inimigo = gera_oponente_dificil();
     }
 
@@ -188,7 +188,7 @@ void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador, in
 						recompensar_treinador(meu_poke, jogador, dificuldade);
         }else{
             std::cout << inimigo->get_apelido() << " esta' fora de combate!\n\n YOU WIN!!!\n" << std::endl;
-            if(jogador.get_lideranca()>=2&&jogador.get_lideranca()<4){
+            if(jogador.get_lideranca()>=1&&jogador.get_lideranca()<4){
                 int exp = jogador.get_lideranca() + 1;
                 jogador.set_lideranca(exp);
                 std::cout << "Sua capacidade de liderança aumentou! Agora você tem acesso a " << jogador.get_lideranca()
