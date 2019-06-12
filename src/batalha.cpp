@@ -206,10 +206,10 @@ void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador
 			break;
         }
 		case 2:{
-		    //int dif = método que retorna a dificuldade desejada;
+		    int dif = escolher_dificuldade();
 		    int escolha = escolher_pokemon(jogador);
 		    meu_poke = jogador._lista_de_pokemon.at(escolha);
-			batalha_x1(jogador, meu_poke, 2 /*dif entraria nesse parâmetro*/ );
+			batalha_x1(jogador, meu_poke, dif );
 			break;
         }
 		case 3:{

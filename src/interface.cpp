@@ -176,6 +176,13 @@ int escolher_habilidade(Pokemon *meu_poke, int lideranca, short int *vetor_limit
     return (escolha[0] - '0');
 }
 
+int escolher_dificuldade(){
+    system("clear||cls");
+    std::cout<<"Escolha a dificuldade para a próxima batalha:\n1)Facil\n2)Medio\n3)Dificil\n";
+    std::string escolha = escolha_um_a_tres();
+    return (escolha[0] - '0');
+}
+
 bool check_pokebola(Treinador jogador){
     if((jogador.get_pokeball() <= POKEBOLA_INVALIDO)&&(jogador.get_greatball() <= POKEBOLA_INVALIDO)&&(jogador.get_masterball() <= POKEBOLA_INVALIDO)){
       return false;

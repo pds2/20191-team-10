@@ -20,6 +20,8 @@
 // 2) O n�mero de prints e inputs utilizado pelo m�todo � grande? Se sim, o implemente aqui.
 int escolher_pokebola(Treinador jogador, Pokemon *inimigo);
 
+int escolher_dificuldade();
+
 bool check_pokebola(Treinador jogador); //verifica se o treinador tem pokebolas
 
 void deseja_apelidar(Pokemon *inimigo);
