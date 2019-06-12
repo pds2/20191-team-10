@@ -98,16 +98,13 @@ int escolher_opcoes(Pokemon *meu_poke) {
   std::cout << "2- Jogar outra batalha" << '\n';
   std::cout << "3- Consultar pokedex" << '\n';
   while (run_input) {
-    //std::getline(std::cin, opcao_escolhida);Mudar aqui para não ocorrer erros
-    std::cin >> opcao_escolhida;
+    opcao_escolhida = verifica_inteiro("Digite um número correspondente a umas das opções acima: ");
     if(opcao_escolhida >= 1 && opcao_escolhida <= 3) {
       return opcao_escolhida;
       run_input = false;
     }
-    else {
-      std::cout << "Digite um número válido correspondente as opções mostradas acima: ";
-      std::cin >> opcao_escolhida;
-      //std::getline(std::cin, opcao_escolhida);Mudar aqui para não ocorrer erros
+    else {;
+      opcao_escolhida = verifica_inteiro("Digite um número válido correspondente as opções mostradas acima: ");
       if(opcao_escolhida >= 1 && opcao_escolhida <= 3) {
         return opcao_escolhida;
         run_input = false;
@@ -340,4 +337,3 @@ std::string escolha_um_a_nove(){
                              && escolha[0] != '6' && escolha[0] != '7' && escolha[0] != '8' && escolha[0] != '9');
     return escolha;
 };
-
