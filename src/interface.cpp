@@ -100,14 +100,23 @@ int escolher_opcoes(Pokemon *meu_poke) {
   while (run_input) {
     opcao_escolhida = verifica_inteiro("Digite um número correspondente a umas das opções acima: ");
     if(opcao_escolhida >= 1 && opcao_escolhida <= 3) {
-      return opcao_escolhida;
-      run_input = false;
-    }
-    else {;
-      opcao_escolhida = verifica_inteiro("Digite um número válido correspondente as opções mostradas acima: ");
-      if(opcao_escolhida >= 1 && opcao_escolhida <= 3) {
+      if(meu_poke->current_hp <= 0 && opcao_escolhida == 1) {
+        opcao_escolhida = 0;
+        continue;
+      } else {
         return opcao_escolhida;
         run_input = false;
+      }
+    } else {
+      opcao_escolhida = verifica_inteiro("Digite um número válido correspondente as opções mostradas acima: ");
+      if(opcao_escolhida >= 1 && opcao_escolhida <= 3) {
+        if(meu_poke->current_hp <= 0 && opcao_escolhida == 1) {
+          opcao_escolhida = 0;
+          continue;
+        } else {
+          run_input = false;
+          return opcao_escolhida;
+        }
       }
     }
   }
