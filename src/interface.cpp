@@ -8,7 +8,7 @@
 int escolher_pokebola(Treinador jogador, Pokemon *inimigo){
     int escolha;
 
-    std::cout << "Qual pokebola deseja utilizar para capturar esse pokemon?" << '\n';
+    std::cout << "\n\nQual pokebola deseja utilizar para capturar esse pokemon?" << '\n';
     if(jogador.get_pokeball() > POKEBOLA_INVALIDO)
       std::cout << "\t1- Pokeball" << '\n';
     if(jogador.get_greatball() > POKEBOLA_INVALIDO)
@@ -23,7 +23,11 @@ int escolher_pokebola(Treinador jogador, Pokemon *inimigo){
         while (escolha < 1 || escolha > 3) {
           escolha = verifica_inteiro("Digite o número correspondente ao de uma das pokebolas acima: ");
           if(escolha >= 1 && escolha <= 3)
-            return escolha;
+            if((escolha == 1 && jogador.get_pokeball() <= POKEBOLA_INVALIDO)||\
+            (escolha == 2 && jogador.get_greatball() <= POKEBOLA_INVALIDO)||\
+            (escolha == 3 && jogador.get_masterball() <= POKEBOLA_INVALIDO))
+              return 4;
+            else return escolha;
         }
       }
     } else {
@@ -238,7 +242,7 @@ bool deseja_continuar_jogando(){
     std::string escolha;
     bool entrada_invalida = true;
 
-    std::cout<<"\nDeseja continuar jogando? (s/n)\n";
+    std::cout<<"\n\nDeseja continuar jogando? (s/n)\n";
     while(entrada_invalida) {
         std::cout << "Digite s para sim e n para nao: ";
         std::getline(std::cin, escolha);
