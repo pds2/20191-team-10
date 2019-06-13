@@ -1,0 +1,16 @@
+var searchData=
+[
+  ['value',['value',['../structdoctest_1_1detail_1_1deferred__false.html#abc8eec7a8439ab592f76068cb408d106',1,'doctest::detail::deferred_false::value()'],['../structdoctest_1_1detail_1_1has__insertion__operator__impl_1_1has__insertion__operator.html#a8e8e9abdead07386f3d1f16bbca64986',1,'doctest::detail::has_insertion_operator_impl::has_insertion_operator::value()']]],
+  ['venosauro',['Venosauro',['../class_venosauro.html',1,'Venosauro'],['../class_venosauro.html#a117c275a0e5862e18d7f3bf6e6a507cd',1,'Venosauro::Venosauro()']]],
+  ['venosauro_2ecpp',['venosauro.cpp',['../venosauro_8cpp.html',1,'']]],
+  ['venosauro_2eh',['venosauro.h',['../venosauro_8h.html',1,'']]],
+  ['verifica_5fentrada',['verifica_entrada',['../excecoes_8h.html#ac4e6173df4fd0c058993c0a2da414280',1,'verifica_entrada(std::string):&#160;excecoes.cpp'],['../excecoes_8cpp.html#a4830295becc16e5e56a5dc0df1ef788d',1,'verifica_entrada(std::string p):&#160;excecoes.cpp']]],
+  ['verifica_5finteiro',['verifica_inteiro',['../excecoes_8h.html#a3e780a7df4a533e56e60aafaf9131b39',1,'verifica_inteiro(std::string):&#160;excecoes.cpp'],['../excecoes_8cpp.html#adcc03775de61b0a060811334c028149e',1,'verifica_inteiro(std::string enunciado):&#160;excecoes.cpp']]],
+  ['verificar_5fdificuldade_5fvalida',['verificar_dificuldade_valida',['../excecoes_8h.html#a2965a7bc8874c459d5c0d238d67974fc',1,'verificar_dificuldade_valida(int):&#160;excecoes.cpp'],['../excecoes_8cpp.html#a189d325ab0bffc09ee24b9f44e6902ce',1,'verificar_dificuldade_valida(int dificuldade):&#160;excecoes.cpp']]],
+  ['verificar_5fhabilidade_5fvalida',['verificar_habilidade_valida',['../excecoes_8h.html#a62d5fec93cdd4674b5660f497231bc65',1,'verificar_habilidade_valida(std::string, int):&#160;excecoes.cpp'],['../excecoes_8cpp.html#a4a19155f6c106f378de0b16c15f0f26a',1,'verificar_habilidade_valida(std::string escolha, int lideranca):&#160;excecoes.cpp']]],
+  ['verificar_5flideranca_5fvalida',['verificar_lideranca_valida',['../excecoes_8h.html#a13b430ab6902fefe9d7680db4b5e372e',1,'verificar_lideranca_valida(int):&#160;excecoes.cpp'],['../excecoes_8cpp.html#af1eabb432338b5cea5ff0f6b6f844053',1,'verificar_lideranca_valida(int lideranca):&#160;excecoes.cpp']]],
+  ['verificar_5flimite_5fhabilidade',['verificar_limite_habilidade',['../excecoes_8h.html#a61b153c32595535c177f5d2a21437733',1,'verificar_limite_habilidade(std::string, short int *):&#160;excecoes.cpp'],['../excecoes_8cpp.html#a7228ecea2369b9d4a04a28a310b30b0d',1,'verificar_limite_habilidade(std::string escolha, short int *limite):&#160;excecoes.cpp']]],
+  ['verificar_5fnocaute',['verificar_nocaute',['../excecoes_8h.html#a180f13b2f0ae19e3c55ee2f688e9590e',1,'verificar_nocaute(Pokemon *, Pokemon *):&#160;excecoes.cpp'],['../excecoes_8cpp.html#a83787b2403128a7dd2d07c8f3026350d',1,'verificar_nocaute(Pokemon *meu_poke, Pokemon *inimigo):&#160;excecoes.cpp']]],
+  ['verificar_5fnum_5fpokemon_5fvalido',['verificar_num_pokemon_valido',['../excecoes_8h.html#a89c8149354759154156ddd816380941a',1,'verificar_num_pokemon_valido(Treinador):&#160;excecoes.cpp'],['../excecoes_8cpp.html#ae9b125650d2c31bc70e8d245e14bbcc2',1,'verificar_num_pokemon_valido(Treinador jogador):&#160;excecoes.cpp']]],
+  ['version',['version',['../structdoctest_1_1_context_options.html#a08931527a9e5e634e64a336e5493a7c1',1,'doctest::ContextOptions']]]
+];

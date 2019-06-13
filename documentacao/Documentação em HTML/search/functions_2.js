@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['c_5fstr',['c_str',['../classdoctest_1_1_string.html#a607c6977b193fecf29622110e6081625',1,'doctest::String::c_str() const'],['../classdoctest_1_1_string.html#a35df67f11652bcc568ad3af470c344c0',1,'doctest::String::c_str()']]],
+  ['capacity',['capacity',['../classdoctest_1_1_string.html#adad8703f08950d173d2cb1426391fcdf',1,'doctest::String']]],
+  ['capturar_5fpokemon',['capturar_pokemon',['../pokebola_8h.html#a2cc8db3e418b3587bfa0ff7280f8ef34',1,'capturar_pokemon(Treinador jogador, Pokemon *inimigo):&#160;pokebola.cpp'],['../pokebola_8cpp.html#a2cc8db3e418b3587bfa0ff7280f8ef34',1,'capturar_pokemon(Treinador jogador, Pokemon *inimigo):&#160;pokebola.cpp']]],
+  ['charizard',['Charizard',['../class_charizard.html#a697b1c937a7f67e81c83a83575aad056',1,'Charizard']]],
+  ['charmander',['Charmander',['../class_charmander.html#a466d06c9e24364bfefd18ac0b13d1a13',1,'Charmander']]],
+  ['charmeleon',['Charmeleon',['../class_charmeleon.html#a9b57acb3260642130e8fd33c4b146519',1,'Charmeleon']]],
+  ['check_5fpokebola',['check_pokebola',['../interface_8h.html#ad947dead3e11a00d8737d289de113e00',1,'check_pokebola(Treinador jogador):&#160;interface.cpp'],['../interface_8cpp.html#ad947dead3e11a00d8737d289de113e00',1,'check_pokebola(Treinador jogador):&#160;interface.cpp']]],
+  ['checkifshouldthrow',['checkIfShouldThrow',['../namespacedoctest_1_1detail.html#acec9ff072dd86af95225a8beb9c57298',1,'doctest::detail']]],
+  ['clearfilters',['clearFilters',['../classdoctest_1_1_context.html#aaa878723e89310d5aa3f516bc7ab3165',1,'doctest::Context']]],
+  ['compare',['compare',['../classdoctest_1_1_string.html#aef87d1f106d32d8c31af87335b44164d',1,'doctest::String::compare(const char *other, bool no_case=false) const'],['../classdoctest_1_1_string.html#adb57becb56e054d981e7c2b967a7e359',1,'doctest::String::compare(const String &amp;other, bool no_case=false) const']]],
+  ['confirmar_5fescolha',['confirmar_escolha',['../interface_8h.html#a4774d65ee15fb9183322110cbffbf8f1',1,'confirmar_escolha(Treinador, std::string, std::string):&#160;interface.cpp'],['../interface_8cpp.html#ac32fb8a9b083b892c79de5e90dbc7502',1,'confirmar_escolha(Treinador jogador, std::string escolha, std::string confirmacao):&#160;interface.cpp']]],
+  ['context',['Context',['../classdoctest_1_1_context.html#a881bc2d0fe207d672e1debe830768a98',1,'doctest::Context']]],
+  ['contextbuilder',['ContextBuilder',['../classdoctest_1_1detail_1_1_context_builder.html#a09f995e093fef0787aeb1e7a44263e7b',1,'doctest::detail::ContextBuilder']]],
+  ['contextscope',['ContextScope',['../classdoctest_1_1detail_1_1_context_scope.html#a6a6632c2f0cabd781de5a07291ed8a75',1,'doctest::detail::ContextScope']]],
+  ['convert',['convert',['../structdoctest_1_1detail_1_1_string_maker_base.html#a67d29f2a5de9a522d8e8607c1a39db9b',1,'doctest::detail::StringMakerBase::convert()'],['../structdoctest_1_1detail_1_1_string_maker_base_3_01true_01_4.html#ae1a11dee413117f36e335677589b047f',1,'doctest::detail::StringMakerBase&lt; true &gt;::convert()'],['../structdoctest_1_1_string_maker_3_01_t_01_5_01_4.html#a79dfd2e72f48a1d9941b924d6ac23104',1,'doctest::StringMaker&lt; T * &gt;::convert()'],['../structdoctest_1_1_string_maker_3_01_r_01_c_1_1_5_01_4.html#a06144903aacd73ed31c2fb043be8abb0',1,'doctest::StringMaker&lt; R C::* &gt;::convert()'],['../structdoctest_1_1detail_1_1_string_stream_base.html#a0eca8e2711f17a565fea3696635a3833',1,'doctest::detail::StringStreamBase::convert(std::ostream *s, const T &amp;in)'],['../structdoctest_1_1detail_1_1_string_stream_base.html#a7c248639907b26e46344b91d7ab90be7',1,'doctest::detail::StringStreamBase::convert(std::ostream *s, const char *in)'],['../structdoctest_1_1detail_1_1_string_stream_base_3_01true_01_4.html#a3f86285d254474498065e6b70522e2b7',1,'doctest::detail::StringStreamBase&lt; true &gt;::convert()']]],
+  ['critical_5fhit',['critical_hit',['../class_pokemon.html#a21c715a662b33368b0334af529e0021f',1,'Pokemon']]]
+];

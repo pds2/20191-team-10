@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto - Batalha Pokemon: Código-Fonte de include/pokemon_grama.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto - Batalha Pokemon
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pokemon_grama.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pokemon__grama_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef POKEMON_GRAMA_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define POKEMON_GRAMA_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pokemon_8h.html">pokemon.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_pokemon___grama.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pokemon___grama.html">Pokemon_Grama</a> : <span class="keyword">public</span> <a class="code" href="class_pokemon.html">Pokemon</a> {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">protected</span>:</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_pokemon___grama.html#a417877ead1fcc2448c0283345f462e89">    8</a></span>&#160;  std::string <a class="code" href="class_pokemon___grama.html#a417877ead1fcc2448c0283345f462e89">_fraqueza</a> = {<span class="stringliteral">&quot;fogo&quot;</span>};</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_pokemon___grama.html#a8e44860febb57b7370b4e64361b1f180">    9</a></span>&#160;  std::string <a class="code" href="class_pokemon___grama.html#a8e44860febb57b7370b4e64361b1f180">_resistencia</a> = {<span class="stringliteral">&quot;agua&quot;</span>};</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_pokemon___grama.html#afeafd33b0d4f151fa499522bfd1910b1">   10</a></span>&#160;  std::string <a class="code" href="class_pokemon___grama.html#afeafd33b0d4f151fa499522bfd1910b1">_habilidades</a>[4] = {<span class="stringliteral">&quot;Investida&quot;</span>, <span class="stringliteral">&quot;Folha Navalha&quot;</span>, <span class="stringliteral">&quot;Chicote de Vinha&quot;</span>, <span class="stringliteral">&quot;Raio Solar&quot;</span>};</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="comment">//std::vector&lt;std::string&gt; _imunidade = {&quot;&quot;};</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="comment">/*_fraqueza = {&quot;fogo&quot;};</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">  _resistencia = {&quot;agua&quot;};*/</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <a class="code" href="class_pokemon___grama.html#aff7bb61e5b65d2e22da77070edbb771d">Pokemon_Grama</a>(std::string apelido, <span class="keywordtype">int</span> ataque, <span class="keywordtype">int</span> defesa, <span class="keywordtype">int</span> agilidade, <span class="keywordtype">int</span> hp, <span class="keywordtype">int</span> crit);</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_pokemon___grama.html#a665bf6a9dc875de9dd8a5b947056c856">   17</a></span>&#160;  <span class="keyword">virtual</span> <a class="code" href="class_pokemon___grama.html#a665bf6a9dc875de9dd8a5b947056c856">~Pokemon_Grama</a>(){};</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  std::string <a class="code" href="class_pokemon___grama.html#a405228f8336d77f4ac569fc04ebd60e6">get_fraqueza</a>();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  std::string <a class="code" href="class_pokemon___grama.html#a7a8126e84d0a9fc21049d82bbdf63745">get_resistencia</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  </div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_pokemon___grama.html#afd448e65aa619448385bca697e6213c4">print_habilidades</a>(<span class="keywordtype">int</span>) <span class="keyword">override</span>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">virtual</span> std::string <a class="code" href="class_pokemon___grama.html#a5132606f4b4d9aae63bffcb245e08d23">get_habilidade</a>(<span class="keywordtype">int</span>) <span class="keyword">override</span>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_pokemon___grama.html#a70445f2aa317da79b3b704d13afe1e03">atacar</a>(<a class="code" href="class_pokemon.html">Pokemon</a> *, <span class="keywordtype">int</span>) <span class="keyword">override</span>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="comment">//std::vector&lt;std::string&gt; get_imunidade();</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_pokemon___grama_html"><div class="ttname"><a href="class_pokemon___grama.html">Pokemon_Grama</a></div><div class="ttdef"><b>Definition:</b> pokemon_grama.h:6</div></div>
+<div class="ttc" id="class_pokemon___grama_html_a7a8126e84d0a9fc21049d82bbdf63745"><div class="ttname"><a href="class_pokemon___grama.html#a7a8126e84d0a9fc21049d82bbdf63745">Pokemon_Grama::get_resistencia</a></div><div class="ttdeci">std::string get_resistencia()</div><div class="ttdef"><b>Definition:</b> pokemon_grama.cpp:10</div></div>
+<div class="ttc" id="class_pokemon___grama_html_a405228f8336d77f4ac569fc04ebd60e6"><div class="ttname"><a href="class_pokemon___grama.html#a405228f8336d77f4ac569fc04ebd60e6">Pokemon_Grama::get_fraqueza</a></div><div class="ttdeci">std::string get_fraqueza()</div><div class="ttdef"><b>Definition:</b> pokemon_grama.cpp:6</div></div>
+<div class="ttc" id="class_pokemon___grama_html_a5132606f4b4d9aae63bffcb245e08d23"><div class="ttname"><a href="class_pokemon___grama.html#a5132606f4b4d9aae63bffcb245e08d23">Pokemon_Grama::get_habilidade</a></div><div class="ttdeci">virtual std::string get_habilidade(int) override</div><div class="ttdef"><b>Definition:</b> pokemon_grama.cpp:20</div></div>
+<div class="ttc" id="class_pokemon___grama_html_afd448e65aa619448385bca697e6213c4"><div class="ttname"><a href="class_pokemon___grama.html#afd448e65aa619448385bca697e6213c4">Pokemon_Grama::print_habilidades</a></div><div class="ttdeci">virtual void print_habilidades(int) override</div><div class="ttdef"><b>Definition:</b> pokemon_grama.cpp:14</div></div>
+<div class="ttc" id="class_pokemon___grama_html_a70445f2aa317da79b3b704d13afe1e03"><div class="ttname"><a href="class_pokemon___grama.html#a70445f2aa317da79b3b704d13afe1e03">Pokemon_Grama::atacar</a></div><div class="ttdeci">virtual void atacar(Pokemon *, int) override</div><div class="ttdef"><b>Definition:</b> pokemon_grama.cpp:24</div></div>
+<div class="ttc" id="class_pokemon___grama_html_afeafd33b0d4f151fa499522bfd1910b1"><div class="ttname"><a href="class_pokemon___grama.html#afeafd33b0d4f151fa499522bfd1910b1">Pokemon_Grama::_habilidades</a></div><div class="ttdeci">std::string _habilidades[4]</div><div class="ttdef"><b>Definition:</b> pokemon_grama.h:10</div></div>
+<div class="ttc" id="class_pokemon___grama_html_aff7bb61e5b65d2e22da77070edbb771d"><div class="ttname"><a href="class_pokemon___grama.html#aff7bb61e5b65d2e22da77070edbb771d">Pokemon_Grama::Pokemon_Grama</a></div><div class="ttdeci">Pokemon_Grama(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit)</div><div class="ttdef"><b>Definition:</b> pokemon_grama.cpp:3</div></div>
+<div class="ttc" id="class_pokemon___grama_html_a417877ead1fcc2448c0283345f462e89"><div class="ttname"><a href="class_pokemon___grama.html#a417877ead1fcc2448c0283345f462e89">Pokemon_Grama::_fraqueza</a></div><div class="ttdeci">std::string _fraqueza</div><div class="ttdef"><b>Definition:</b> pokemon_grama.h:8</div></div>
+<div class="ttc" id="pokemon_8h_html"><div class="ttname"><a href="pokemon_8h.html">pokemon.h</a></div></div>
+<div class="ttc" id="class_pokemon___grama_html_a665bf6a9dc875de9dd8a5b947056c856"><div class="ttname"><a href="class_pokemon___grama.html#a665bf6a9dc875de9dd8a5b947056c856">Pokemon_Grama::~Pokemon_Grama</a></div><div class="ttdeci">virtual ~Pokemon_Grama()</div><div class="ttdef"><b>Definition:</b> pokemon_grama.h:17</div></div>
+<div class="ttc" id="class_pokemon___grama_html_a8e44860febb57b7370b4e64361b1f180"><div class="ttname"><a href="class_pokemon___grama.html#a8e44860febb57b7370b4e64361b1f180">Pokemon_Grama::_resistencia</a></div><div class="ttdeci">std::string _resistencia</div><div class="ttdef"><b>Definition:</b> pokemon_grama.h:9</div></div>
+<div class="ttc" id="class_pokemon_html"><div class="ttname"><a href="class_pokemon.html">Pokemon</a></div><div class="ttdef"><b>Definition:</b> pokemon.h:14</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

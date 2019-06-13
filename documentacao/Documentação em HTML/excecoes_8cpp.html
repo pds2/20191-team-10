@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto - Batalha Pokemon: Referência do Arquivo src/excecoes.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto - Batalha Pokemon
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo excecoes.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="excecoes_8h_source.html">../include/excecoes.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pokemon_8h_source.html">../include/pokemon.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="interface_8h_source.html">../include/interface.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="treinador_8h_source.html">../include/treinador.h</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a83787b2403128a7dd2d07c8f3026350d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#a83787b2403128a7dd2d07c8f3026350d">verificar_nocaute</a> (<a class="el" href="class_pokemon.html">Pokemon</a> *meu_poke, <a class="el" href="class_pokemon.html">Pokemon</a> *inimigo)</td></tr>
+<tr class="separator:a83787b2403128a7dd2d07c8f3026350d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a19155f6c106f378de0b16c15f0f26a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#a4a19155f6c106f378de0b16c15f0f26a">verificar_habilidade_valida</a> (std::string escolha, int lideranca)</td></tr>
+<tr class="separator:a4a19155f6c106f378de0b16c15f0f26a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a28e6c8dccb5d3520a80a1a550e235"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#a93a28e6c8dccb5d3520a80a1a550e235">tratamento_habilidade_invalida</a> (std::string escolha, int lideranca)</td></tr>
+<tr class="separator:a93a28e6c8dccb5d3520a80a1a550e235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7228ecea2369b9d4a04a28a310b30b0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#a7228ecea2369b9d4a04a28a310b30b0d">verificar_limite_habilidade</a> (std::string escolha, short int *limite)</td></tr>
+<tr class="separator:a7228ecea2369b9d4a04a28a310b30b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1dc13f0523351dd15a87c0b9e7f4c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#a5e1dc13f0523351dd15a87c0b9e7f4c1">tratamento_limite_habilidade</a> (std::string &amp;escolha, short int *limite)</td></tr>
+<tr class="separator:a5e1dc13f0523351dd15a87c0b9e7f4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1eabb432338b5cea5ff0f6b6f844053"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#af1eabb432338b5cea5ff0f6b6f844053">verificar_lideranca_valida</a> (int lideranca)</td></tr>
+<tr class="separator:af1eabb432338b5cea5ff0f6b6f844053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8894daf7363ab23beb8547fe72591b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#a5e8894daf7363ab23beb8547fe72591b">tratamento_lideranca_invalida</a> ()</td></tr>
+<tr class="separator:a5e8894daf7363ab23beb8547fe72591b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a189d325ab0bffc09ee24b9f44e6902ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#a189d325ab0bffc09ee24b9f44e6902ce">verificar_dificuldade_valida</a> (int dificuldade)</td></tr>
+<tr class="separator:a189d325ab0bffc09ee24b9f44e6902ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9b125650d2c31bc70e8d245e14bbcc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#ae9b125650d2c31bc70e8d245e14bbcc2">verificar_num_pokemon_valido</a> (<a class="el" href="class_treinador.html">Treinador</a> jogador)</td></tr>
+<tr class="separator:ae9b125650d2c31bc70e8d245e14bbcc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c62b94f1e725b853ed0ed8fff0e326"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_treinador.html">Treinador</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#a43c62b94f1e725b853ed0ed8fff0e326">tratamento_num_pokemon_invalido</a> (<a class="el" href="class_treinador.html">Treinador</a> jogador)</td></tr>
+<tr class="separator:a43c62b94f1e725b853ed0ed8fff0e326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcc03775de61b0a060811334c028149e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#adcc03775de61b0a060811334c028149e">verifica_inteiro</a> (std::string enunciado)</td></tr>
+<tr class="separator:adcc03775de61b0a060811334c028149e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4830295becc16e5e56a5dc0df1ef788d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="excecoes_8cpp.html#a4830295becc16e5e56a5dc0df1ef788d">verifica_entrada</a> (std::string p)</td></tr>
+<tr class="separator:a4830295becc16e5e56a5dc0df1ef788d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Funções</h2>
+<a id="a93a28e6c8dccb5d3520a80a1a550e235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93a28e6c8dccb5d3520a80a1a550e235">&#9670;&nbsp;</a></span>tratamento_habilidade_invalida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tratamento_habilidade_invalida </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>escolha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lideranca</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                                                     {</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span>(lideranca == 3){</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Voc� s� tem lideran�a o suficiente para ter acesso �s habilidades 1,2 e 3.\n&quot;</span>;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        escolha = <a class="code" href="interface_8h.html#a21089920305411bafa408446d78935b0">escolha_um_a_tres</a>();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">if</span>(lideranca == 2){</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Voc� s� tem lideran�a o suficiente para ter acesso �s habilidades 1 e 2.\n&quot;</span>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        escolha = <a class="code" href="interface_8h.html#a64c274a902a5d0d3939353270a0d959c">escolha_um_a_dois</a>();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">else</span>{</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;Voc� � um novato! S� consegue utilizar a primeira habilidade.\n&quot;</span>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        escolha = <a class="code" href="interface_8h.html#aeaa0894366727f78407b378a863ad786">escolha_um_a_um</a>();</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div><div class="ttc" id="interface_8h_html_a64c274a902a5d0d3939353270a0d959c"><div class="ttname"><a href="interface_8h.html#a64c274a902a5d0d3939353270a0d959c">escolha_um_a_dois</a></div><div class="ttdeci">std::string escolha_um_a_dois()</div><div class="ttdef"><b>Definition:</b> interface.cpp:305</div></div>
+<div class="ttc" id="interface_8h_html_a21089920305411bafa408446d78935b0"><div class="ttname"><a href="interface_8h.html#a21089920305411bafa408446d78935b0">escolha_um_a_tres</a></div><div class="ttdeci">std::string escolha_um_a_tres()</div><div class="ttdef"><b>Definition:</b> interface.cpp:314</div></div>
+<div class="ttc" id="interface_8h_html_aeaa0894366727f78407b378a863ad786"><div class="ttname"><a href="interface_8h.html#aeaa0894366727f78407b378a863ad786">escolha_um_a_um</a></div><div class="ttdeci">std::string escolha_um_a_um()</div><div class="ttdef"><b>Definition:</b> interface.cpp:296</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5e8894daf7363ab23beb8547fe72591b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e8894daf7363ab23beb8547fe72591b">&#9670;&nbsp;</a></span>tratamento_lideranca_invalida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int tratamento_lideranca_invalida </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                   {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    std::string escolha = <a class="code" href="interface_8h.html#a9ee37b99f2f440e55d6d790663e48227">escolha_um_a_quatro</a>();</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> (escolha[0] - <span class="charliteral">&#39;0&#39;</span>);</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div><div class="ttc" id="interface_8h_html_a9ee37b99f2f440e55d6d790663e48227"><div class="ttname"><a href="interface_8h.html#a9ee37b99f2f440e55d6d790663e48227">escolha_um_a_quatro</a></div><div class="ttdeci">std::string escolha_um_a_quatro()</div><div class="ttdef"><b>Definition:</b> interface.cpp:323</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5e1dc13f0523351dd15a87c0b9e7f4c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e1dc13f0523351dd15a87c0b9e7f4c1">&#9670;&nbsp;</a></span>tratamento_limite_habilidade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tratamento_limite_habilidade </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>escolha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short int *&#160;</td>
+          <td class="paramname"><em>limite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                                                        {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">do</span>{</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">do</span>{</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;A habilidade escolhida esgotou! Escolha outra: &quot;</span>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        std::getline(std::cin, escolha);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }<span class="keywordflow">while</span>(escolha[0] != <span class="charliteral">&#39;1&#39;</span> &amp;&amp; escolha[0] != <span class="charliteral">&#39;2&#39;</span> &amp;&amp; escolha[0] != <span class="charliteral">&#39;3&#39;</span> &amp;&amp; escolha[0] != <span class="charliteral">&#39;4&#39;</span>);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }<span class="keywordflow">while</span>(limite[(escolha[0]-<span class="charliteral">&#39;0&#39;</span>)-1]&lt;=0);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a43c62b94f1e725b853ed0ed8fff0e326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c62b94f1e725b853ed0ed8fff0e326">&#9670;&nbsp;</a></span>tratamento_num_pokemon_invalido()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_treinador.html">Treinador</a> tratamento_num_pokemon_invalido </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_treinador.html">Treinador</a>&#160;</td>
+          <td class="paramname"><em>jogador</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                                            {</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> doacao = <a class="code" href="interface_8h.html#ad6dec67c3ae86bccbbccc880910d3ef8">doar_pokemon</a>(jogador);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    jogador.<a class="code" href="class_treinador.html#a951d6bb11b3913c867058fd6249ada41">_lista_de_pokemon</a>.erase(jogador.<a class="code" href="class_treinador.html#a951d6bb11b3913c867058fd6249ada41">_lista_de_pokemon</a>.begin()+doacao);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> jogador;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div><div class="ttc" id="class_treinador_html_a951d6bb11b3913c867058fd6249ada41"><div class="ttname"><a href="class_treinador.html#a951d6bb11b3913c867058fd6249ada41">Treinador::_lista_de_pokemon</a></div><div class="ttdeci">std::vector&lt; Pokemon * &gt; _lista_de_pokemon</div><div class="ttdef"><b>Definition:</b> treinador.h:24</div></div>
+<div class="ttc" id="interface_8h_html_ad6dec67c3ae86bccbbccc880910d3ef8"><div class="ttname"><a href="interface_8h.html#ad6dec67c3ae86bccbbccc880910d3ef8">doar_pokemon</a></div><div class="ttdeci">int doar_pokemon(Treinador)</div><div class="ttdef"><b>Definition:</b> interface.cpp:265</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4830295becc16e5e56a5dc0df1ef788d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4830295becc16e5e56a5dc0df1ef788d">&#9670;&nbsp;</a></span>verifica_entrada()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verifica_entrada </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                   {</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span> ((p[0] != <span class="charliteral">&#39;1&#39;</span>) || (p[0] != <span class="charliteral">&#39;2&#39;</span>) || (p[0] != <span class="charliteral">&#39;3&#39;</span>)) {</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="class_excpt___entrada___inicial.html">Excpt_Entrada_Inicial</a> x;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">throw</span> x;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;}</div><div class="ttc" id="class_excpt___entrada___inicial_html"><div class="ttname"><a href="class_excpt___entrada___inicial.html">Excpt_Entrada_Inicial</a></div><div class="ttdef"><b>Definition:</b> excecoes.h:63</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adcc03775de61b0a060811334c028149e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcc03775de61b0a060811334c028149e">&#9670;&nbsp;</a></span>verifica_inteiro()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int verifica_inteiro </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>enunciado</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                         {</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordtype">int</span> escolha;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::cout &lt;&lt; enunciado;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    std::cin &gt;&gt; escolha;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">if</span>(!std::cin) {</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;       std::cin.clear();</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;       std::cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(), <span class="charliteral">&#39;\n&#39;</span>);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;       std::cout &lt;&lt; <span class="stringliteral">&quot;\nPor favor, digite um número inteiro!\n\n&quot;</span>;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;       <span class="keywordflow">continue</span>;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">return</span> escolha;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a189d325ab0bffc09ee24b9f44e6902ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a189d325ab0bffc09ee24b9f44e6902ce">&#9670;&nbsp;</a></span>verificar_dificuldade_valida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verificar_dificuldade_valida </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dificuldade</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                                  {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span>(dificuldade&lt;=0||dificuldade&gt;4){</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="class_excpt___dificuldade___invalida.html">Excpt_Dificuldade_Invalida</a> z;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">throw</span> z;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div><div class="ttc" id="class_excpt___dificuldade___invalida_html"><div class="ttname"><a href="class_excpt___dificuldade___invalida.html">Excpt_Dificuldade_Invalida</a></div><div class="ttdef"><b>Definition:</b> excecoes.h:70</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4a19155f6c106f378de0b16c15f0f26a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a19155f6c106f378de0b16c15f0f26a">&#9670;&nbsp;</a></span>verificar_habilidade_valida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verificar_habilidade_valida </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>escolha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lideranca</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                                                                  {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> a = (escolha[0] - <span class="charliteral">&#39;0&#39;</span>);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span>(a&gt;lideranca){</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_excpt___habilidade___invalida.html">Excpt_Habilidade_Invalida</a> z;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">throw</span> z;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div><div class="ttc" id="class_excpt___habilidade___invalida_html"><div class="ttname"><a href="class_excpt___habilidade___invalida.html">Excpt_Habilidade_Invalida</a></div><div class="ttdef"><b>Definition:</b> excecoes.h:35</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af1eabb432338b5cea5ff0f6b6f844053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1eabb432338b5cea5ff0f6b6f844053">&#9670;&nbsp;</a></span>verificar_lideranca_valida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verificar_lideranca_valida </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lideranca</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                              {</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span>(lideranca&lt;=0||lideranca&gt;4){</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="class_excpt___lideranca___invalida.html">Excpt_Lideranca_Invalida</a> z;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">throw</span> z;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div><div class="ttc" id="class_excpt___lideranca___invalida_html"><div class="ttname"><a href="class_excpt___lideranca___invalida.html">Excpt_Lideranca_Invalida</a></div><div class="ttdef"><b>Definition:</b> excecoes.h:49</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7228ecea2369b9d4a04a28a310b30b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7228ecea2369b9d4a04a28a310b30b0d">&#9670;&nbsp;</a></span>verificar_limite_habilidade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verificar_limite_habilidade </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>escolha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short int *&#160;</td>
+          <td class="paramname"><em>limite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                                                      {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> escolha_int = escolha[0] - <span class="charliteral">&#39;0&#39;</span>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span>(escolha_int &gt; 1){</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span>(limite[escolha_int - 1] == 0){</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="class_excpt___limite___habilidade.html">Excpt_Limite_Habilidade</a> z;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">throw</span> z;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div><div class="ttc" id="class_excpt___limite___habilidade_html"><div class="ttname"><a href="class_excpt___limite___habilidade.html">Excpt_Limite_Habilidade</a></div><div class="ttdef"><b>Definition:</b> excecoes.h:42</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a83787b2403128a7dd2d07c8f3026350d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83787b2403128a7dd2d07c8f3026350d">&#9670;&nbsp;</a></span>verificar_nocaute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verificar_nocaute </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_pokemon.html">Pokemon</a> *&#160;</td>
+          <td class="paramname"><em>meu_poke</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_pokemon.html">Pokemon</a> *&#160;</td>
+          <td class="paramname"><em>inimigo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                                           {</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">if</span>( (meu_poke-&gt;<a class="code" href="class_pokemon.html#a1ac5f48b0b84728bfd1ad672b6e7737d">current_hp</a> &lt;= 0) || (inimigo-&gt;<a class="code" href="class_pokemon.html#a1ac5f48b0b84728bfd1ad672b6e7737d">current_hp</a> &lt;= 0)  ){</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="class_excpt___nocaute.html">Excpt_Nocaute</a> KO;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">throw</span> KO;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    };</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div><div class="ttc" id="class_excpt___nocaute_html"><div class="ttname"><a href="class_excpt___nocaute.html">Excpt_Nocaute</a></div><div class="ttdef"><b>Definition:</b> excecoes.h:28</div></div>
+<div class="ttc" id="class_pokemon_html_a1ac5f48b0b84728bfd1ad672b6e7737d"><div class="ttname"><a href="class_pokemon.html#a1ac5f48b0b84728bfd1ad672b6e7737d">Pokemon::current_hp</a></div><div class="ttdeci">int current_hp</div><div class="ttdef"><b>Definition:</b> pokemon.h:29</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae9b125650d2c31bc70e8d245e14bbcc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b125650d2c31bc70e8d245e14bbcc2">&#9670;&nbsp;</a></span>verificar_num_pokemon_valido()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verificar_num_pokemon_valido </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_treinador.html">Treinador</a>&#160;</td>
+          <td class="paramname"><em>jogador</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                                                    {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">if</span>(jogador.<a class="code" href="class_treinador.html#a951d6bb11b3913c867058fd6249ada41">_lista_de_pokemon</a>.size()&gt;=9){</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="class_excpt___num___pokemon___invalido.html">Excpt_Num_Pokemon_Invalido</a> z;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">throw</span> z;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div><div class="ttc" id="class_excpt___num___pokemon___invalido_html"><div class="ttname"><a href="class_excpt___num___pokemon___invalido.html">Excpt_Num_Pokemon_Invalido</a></div><div class="ttdef"><b>Definition:</b> excecoes.h:56</div></div>
+<div class="ttc" id="class_treinador_html_a951d6bb11b3913c867058fd6249ada41"><div class="ttname"><a href="class_treinador.html#a951d6bb11b3913c867058fd6249ada41">Treinador::_lista_de_pokemon</a></div><div class="ttdeci">std::vector&lt; Pokemon * &gt; _lista_de_pokemon</div><div class="ttdef"><b>Definition:</b> treinador.h:24</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
