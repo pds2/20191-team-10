@@ -36,6 +36,10 @@ void recompensar_treinador(Pokemon *meu_poke, Treinador jogador, int dificuldade
       jogador.set_masterball(jogador.get_masterball() + 1);
     }
   }
+  std::cout << "\nAgora você possui:" << '\n';
+  std::cout << "Pokeballs:   " << jogador.get_pokeball() << '\n';
+  std::cout << "Greatballs:  " << jogador.get_greatball() << '\n';
+  std::cout << "Masterballs: " << jogador.get_masterball() << '\n';
 }
 
 void pokemon_capturado(Treinador jogador, Pokemon *inimigo, int tipo_chance){
