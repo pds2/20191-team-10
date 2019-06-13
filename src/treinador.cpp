@@ -1,13 +1,28 @@
 #include "../include/treinador.h"
 #include "../include/pokemon.h"
 #include "../include/pokemon_agua.h"
+#include "../include/excecoes.h"
+#include "../include/interface.h"
 
 #include <iostream>
 #include <string>
 #include <vector>
 
 Treinador::Treinador(std::string nome, int lideranca):
-	_treinador(nome), _lideranca(lideranca){set_pokeball(5);set_capturas_efetivas(0);set_capturas_totais(0);};
+	_treinador(nome), _lideranca(lideranca)
+	{
+	    set_pokeball(5);set_greatball(0);set_masterball(0);set_capturas_efetivas(0);set_capturas_totais(0);
+
+	    try{
+            verificar_lideranca_valida(lideranca);
+        }
+        catch(Excpt_Lideranca_Invalida &e){
+            std::cout<<e.what();
+            lideranca = tratamento_lideranca_invalida();
+            set_lideranca(lideranca);
+        }
+
+    };
 
 std::string Treinador::get_treinador(){
 	return _treinador;
@@ -36,26 +51,27 @@ int Treinador::get_masterball(){
 void Treinador::set_masterball(int quantidade){
 	this->_masterball = quantidade;
 }
-int Treinador::get_capturas_efetivas(){
+double Treinador::get_capturas_efetivas(){
 	return _capturas_efetivas;
 }
 void Treinador::set_capturas_efetivas(int capturas){
 	this->_capturas_efetivas = capturas;
 }
-int Treinador::get_capturas_totais(){
+double Treinador::get_capturas_totais(){
 	return _capturas_totais;
 }
 void Treinador::set_capturas_totais(int capturas){
 	this->_capturas_totais = capturas;
+}
+double Treinador::get_taxa_sucesso(){
+	return (_capturas_efetivas/_capturas_totais)*100;
 }
 void Treinador::add_pokemon(Pokemon *novo_pokemon){
 	_lista_de_pokemon.push_back(novo_pokemon);
 }
 
 void Treinador::print_lista_pokemon(){
-	for(int i=0; i < this->_lista_de_pokemon.size(); i++){
-		//std::cout<<uno._lista_de_pokemons.at(i)->get_nome()<<"\n"; // Imprima o nome do pokemon na posição 'i' da _lista_de_pokemon do treinador uno
-		//std::cout << "\tO treinador "<<this->_jogador<<" possui o pokemon : ";
-		std::cout << "\t" << i+1 << " - " <<"Tipo: "<< _lista_de_pokemon.at(i)->get_nome()<<" - "<< _lista_de_pokemon.at(i)->get_apelido()<<"\n";
+	for(unsigned i=0; i < this->_lista_de_pokemon.size(); i++){
+		std::cout << "\t" << i+1 << " - " <<"Tipo: "<< _lista_de_pokemon.at(i)->get_nome()<<" - Apelidado : "<< _lista_de_pokemon.at(i)->get_apelido()<<"\n";
 	}
 }

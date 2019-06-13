@@ -13,14 +13,17 @@ protected:
 _resistencia = {"fogo"};*/
 
 public:
-  Pokemon_Agua(int ataque, int defesa, int agilidade, int hp, int crit);
   Pokemon_Agua(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
-  Pokemon_Agua(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit,
-               std::string fraqueza, std::string resistencia);
+  virtual ~Pokemon_Agua(){};
 
   std::string get_fraqueza();
   std::string get_resistencia();
+
   virtual void print_habilidades(int) override;
+
+  virtual std::string get_habilidade(int) override;
+
+  virtual void atacar(Pokemon *, int) override;
   //std::vector<std::string> get_imunidade();
 
 };

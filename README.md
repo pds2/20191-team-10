@@ -25,7 +25,11 @@ Critérios para aceitação:
  - Batalhas com um nível de dificuldade considerável: nada muito fácil nem muito impossível;
  - Os tipos de cada monstro precisam dar vantagens ou desvantagens quando forem lutar;
  - No caso de batalhas competitivas, o vencedor receberá recompensas relativas à dificuldade;
+<<<<<<< HEAD
  - No caso de batalhas com monstrinhos selvagens, teremos a chance de capturá-los;
+=======
+ - No caso de batalhas com monstrinhos selvagens, teremos a chance de capturá-los.
+>>>>>>> testes
  
  ### Story 3:
 

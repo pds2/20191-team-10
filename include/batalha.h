@@ -3,20 +3,36 @@
 
 #include "pokemon.h"
 #include "treinador.h"
-#include "../include/pokemon_include/charmander.h"
-#include "../include/pokemon_include/bulbasauro.h"
-#include "../include/pokemon_include/squirtle.h"
+#include "interface.h"
+#include "pokebola.h"
 
-int rola_dados();
-// Gera um número aleatório entre 1 e 10. Utilizado para calcular a chance de crit, por exemplo.
+#include "pokemon_include/charmander.h"
+#include "pokemon_include/charmeleon.h"
+#include "pokemon_include/charizard.h"
+#include "pokemon_include/bulbasauro.h"
+#include "pokemon_include/ivysaur.h"
+#include "pokemon_include/venosauro.h"
+#include "pokemon_include/squirtle.h"
+#include "pokemon_include/wartotle.h"
+#include "pokemon_include/blastoise.h"
 
-void reset_current_hp(Pokemon *,Pokemon *);
+int rola_dados(int);
+// Gera um número aleatório entre 1 e int. Utilizado para calcular a chance de crit, por exemplo.
+
+void reset_current_hp(Pokemon *);
 // Função que reseta a vida dos pokemons dados como parâmetro
 
-void gera_oponente_facil(Pokemon *);
-// Função que gera um adversário para batalhar.
+void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador);
+// Função para escolher o que fazer depois da batalha
 
-void encerrar_batalha(Pokemon *, Pokemon *);
+Pokemon *gera_oponente_facil();
+Pokemon *gera_oponente_medio();
+Pokemon *gera_oponente_dificil();
+// Funções que gera um adversário para batalhar dependendo do nivel de dificuldade.
+
+void limite_nivel(short int *, int); //Função que coloca zero nas habilidades acima do nível
+
+void encerrar_batalha(Pokemon *, Pokemon *, Treinador jogador, int Dificuldade);
 // Encerra a batalha e reseta o HP dos pokemons envolvidos (meu_poke,inimigo).
 // Sempre delete o inimigo após o uso dessa função caso ele não tiver mais serventia.
 

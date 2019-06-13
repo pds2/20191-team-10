@@ -7,14 +7,7 @@
 
 class Squirtle : public Pokemon_Agua{
 public:
-		Squirtle(int ataque, int defesa, int agilidade, int hp, int crit);
-		Squirtle(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit);
-		Squirtle(std::string apelido, int ataque, int defesa, int agilidade, int hp, int crit,
-				 std::string fraqueza, std::string resistencia);
-
-		virtual void atacar(Pokemon *) override;
-
-		// Habilidades....
+		Squirtle(std::string apelido);
 };
 
 #endif // SQUIRTLE_H

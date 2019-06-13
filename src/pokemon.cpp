@@ -7,13 +7,6 @@
 
 Pokemon::Pokemon(std::string apelido,int ataque,int defesa,int agilidade ,int hp,int crit):
 	_apelido(apelido), _ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){
-		srand(time(0));
-		this->_iv = (rand() % 100) + 1;
-	};
-
-Pokemon::Pokemon(int ataque, int defesa, int agilidade, int hp, int crit):
-	_ataque(ataque),_defesa(defesa),_agilidade(agilidade),_hp(hp),_crit(crit),current_hp(hp){
-		srand(time(0));
 		this->_iv = (rand() % 100) + 1;
 	};
 
@@ -37,7 +30,7 @@ int Pokemon::get_iv(){
 }
 
 void Pokemon::set_nome(std::string nome){
-		this->_nome = nome;
+    this->_nome = nome;
 }
 
 std::string Pokemon::get_nome(){
@@ -45,9 +38,25 @@ std::string Pokemon::get_nome(){
 }
 
 void Pokemon::set_apelido(std::string apelido){
-		this->_apelido = apelido;
+    this->_apelido = apelido;
 }
 
 std::string Pokemon::get_apelido(){
-		return this->_apelido;
+    return this->_apelido;
+}
+
+void Pokemon::print_atributos(){
+    std::cout<<"HP: \t\t"<<this->get_hp()<<"\n";
+    std::cout<<"Ataque: \t"<<this->get_ataque()<<"\n";
+    std::cout<<"Defesa: \t"<<this->get_defesa()<<"\n";
+    std::cout<<"Agilidade: \t"<<this->get_agilidade()<<"\n";
+}
+
+int Pokemon::critical_hit(){
+    if((this->_crit + (rand() % 100 + 1)) > 90){
+        std::cout << "DANO CRITICO!!" << std::endl;
+        return 2;
+    }else{
+        return 1;
+    }
 }

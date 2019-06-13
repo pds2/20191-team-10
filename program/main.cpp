@@ -1,42 +1,57 @@
 // #include "../include/pokemon.h"
-// #include "../include/introducao.h"
-#include "../include/pokemon_include/charmander.h"
-#include "../include/pokemon_include/bulbasauro.h"
-#include "../include/pokemon_include/squirtle.h"
+
+#include "../include/introducao.h"
 #include "../include/treinador.h"
 #include "../include/excecoes.h"
 #include "../include/batalha.h"
 #include "../include/interface.h"
+#include "../include/pokebola.h"
+#include "../include/pokedex.h"
 
 #include <iostream>
 #include <string>
+#include <ctime>
+
+#define DIFICULDADE_FACIL 1
+#define DIFICULDADE_MEDIO 2
+#define DIFICULDADE_DIFICIL 3
+#define DIFICULDADE_MESTRE 4
 
 int main() {
-	Squirtle aguin = Squirtle("aguin",15,10,10,50,5);
-	Charmander foguin = Charmander("foguin",15,10,10,50,5);
-	Bulbasauro verdin = Bulbasauro("verdin",15,10,10,50,5);
 
-	std::cout << "Resistência: " << aguin.get_resistencia() << std::endl;
-	std::cout << "Fraqueza: " << aguin.get_fraqueza() << std::endl;
+    srand (time(NULL));
+/*
+    Squirtle aguin = Squirtle("Tartaruga");
+    Wartotle aguin2 = Wartotle("War Turtle");
+    Blastoise aguin3 = Blastoise("Blast");
 
-	Treinador uno = Treinador("Leandro",4);
+	Charmander foguin = Charmander("Chama");
+	Charmeleon foguin2 = Charmeleon("Lagartixa de Fogo");
+	Charizard foguin3  = Charizard("Dragão");
 
+	Bulbasauro verdin = Bulbasauro("Alpiste");
+	Ivysaur verdin2 = Ivysaur("Trepadeira");
+	Venosauro verdin3 = Venosauro("Peçonhento");
+*/
+	print_ascii_art("intro");
+    print_ascii_art("blastoise+charizard");
+
+	Treinador uno = Treinador(apelida_jogador(),1);
+/*
 	uno.add_pokemon(&aguin); // add_pokemon(x) adiciona o pokemon x ao vetor de Pokemons presente na classe Jogador
-	uno.add_pokemon(&foguin);
+    uno.add_pokemon(&aguin2);
+	uno.add_pokemon(&aguin3);
+    uno.add_pokemon(&foguin);
+	uno.add_pokemon(&foguin2);
+	uno.add_pokemon(&foguin3);
 	uno.add_pokemon(&verdin);
-
-	//Abaixo temos um exemplo de como acessar elementos específicos dos pokemons pertencentes a um treinador
-
-	std::cout<<"Segue a lista dos pokemon desse treinador:\n";
-	uno.print_lista_pokemon();
-
-	std::cout<<"Atributos :\n";
-	std::cout<<"Ataque : = "<<uno._lista_de_pokemon.at(1)->get_ataque()<<"\n";
-	std::cout<<"Defesa : = "<<uno._lista_de_pokemon.at(1)->get_defesa()<<"\n";
-	std::cout<<"Agilidade : = "<<uno._lista_de_pokemon.at(1)->get_agilidade()<<"\n";
-
+    uno.add_pokemon(&verdin2);
+	uno.add_pokemon(&verdin3);
+*/
+	introducao(&uno);
+	treinador_info(uno);
 	int escolha = escolher_pokemon(uno);
-	batalha_x1(uno, (uno._lista_de_pokemon.at(escolha)), 1);
+	batalha_x1(uno, (uno._lista_de_pokemon.at(escolha)), DIFICULDADE_FACIL);
 
 	return 0;
 }

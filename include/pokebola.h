@@ -9,13 +9,16 @@
 #include "pokemon.h"
 #include "treinador.h"
 #include "interface.h"
-#include "../include/pokemon_include/charmander.h"
-#include "../include/pokemon_include/bulbasauro.h"
-#include "../include/pokemon_include/squirtle.h"
+#include "pokemon_include/charmander.h"
+#include "pokemon_include/bulbasauro.h"
+#include "pokemon_include/squirtle.h"
+
+//função responsável por pokebolas recompensadas na batalha
+void recompensar_treinador(Pokemon *meu_poke, Treinador &jogador, int dificuldade);
 
 //funções complementares da capturar_pokemon (nao utilizar na batalha)
-void pokemon_capturado(Treinador jogador, Pokemon *inimigo);
-void utilizar_pokebola(Treinador jogador, Pokemon *inimigo);
+void pokemon_capturado(Treinador jogador, Pokemon *inimigo, int tipo_chance);
+void utilizar_pokebola(Treinador jogador, Pokemon *inimigo, int tipo_chance);
 
 void capturar_pokemon(Treinador jogador, Pokemon *inimigo); // <-- utilizar essa função para capturar pokemon
 // Função para capturar pokemon utilizando as pokebolas implementadas no treinador
