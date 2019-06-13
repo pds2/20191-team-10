@@ -69,8 +69,8 @@ int escolher_opcoes(Pokemon *meu_poke) {
 }
 
 std::string confirmar_escolha(Treinador jogador,std::string escolha,std::string confirmacao){
-    std::cout << "Tem certeza que quer usar o pokemon apelidado : ";
-    std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
+    std::cout << "Tem certeza que quer levar para a batalha o Pokemon apelidado : ";
+    std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? (S/N) ";
     std::getline(std::cin, confirmacao);
     if(confirmacao[0] != 'S' && confirmacao[0] != 's')
         std::cout << std::endl << "Ok, vamos selecionar outro Pokemon. Qual Pokemon deseja escolher? ";

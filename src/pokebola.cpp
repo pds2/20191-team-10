@@ -87,7 +87,7 @@ void utilizar_pokebola(Treinador jogador, Pokemon *inimigo, int tipo_chance){
   int escolha;
   int num_sorte;
   std::string alternativa;
-  bool run;
+  bool run = true;
 
   if(tipo_chance == POKEBALL_CHANCE || tipo_chance == GREATBALL_CHANCE) {
       if((jogador.get_pokeball() > POKEBOLA_INVALIDO)||(jogador.get_masterball() > POKEBOLA_INVALIDO)) {
