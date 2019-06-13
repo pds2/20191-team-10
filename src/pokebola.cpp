@@ -138,8 +138,15 @@ void utilizar_pokebola(Treinador jogador, Pokemon *inimigo, int tipo_chance){
                       if(deseja_continuar_jogando() && (jogador.get_masterball() > POKEBOLA_INVALIDO)) {
                         std::cout << "\n\nEntão escolha uma pokebola da lista abaixo: " << '\n';
                         capturar_pokemon(jogador, inimigo);
-                      } else std::cout << "Saindo do jogo..." << '\n';
-                  }
+                      } else {
+                          if(deseja_continuar_jogando()){
+                            int escolha, dificuldade;
+                            dificuldade = escolher_dificuldade();
+                            escolha = escolher_pokemon(jogador);
+                            batalha_x1(jogador, (jogador._lista_de_pokemon.at(escolha)), dificuldade);
+                          } else std::cout << "Saindo do jogo..." << '\n';
+                        }
+                    }
                 } else if(alternativa == "n"){
                   std::cout << "\nVocê desistiu de capturar " << inimigo->get_apelido() << "!\n";
                   if(deseja_continuar_jogando()){
@@ -208,7 +215,7 @@ void capturar_pokemon(Treinador jogador, Pokemon *inimigo) {
             utilizar_pokebola(jogador, inimigo, MASTERBALL_CHANCE);
             break;
           case 4:
-            std::cout << "\nVocê não possui a pokebolas do tipo escolhido.";
+            std::cout << "\nVocê não possui a pokebola do tipo escolhido.";
             if(deseja_continuar_jogando()) {
               std::cout << "\n\nEntão escolha uma pokebola da lista abaixo: " << '\n';
               capturar_pokemon(jogador, inimigo);
