@@ -2,7 +2,7 @@
 #include "../include/batalha.h"
 #include "../include/excecoes.h"
 
-void recompensar_treinador(Pokemon *meu_poke, Treinador jogador, int dificuldade){
+void recompensar_treinador(Pokemon *meu_poke, Treinador &jogador, int dificuldade){
   if(meu_poke->current_hp <= 0) {
     if (dificuldade == 1 || dificuldade == 2) {
       std::cout << "\nVocê ganhou 2 pokebolas do tipo Pokeball!" << '\n';
