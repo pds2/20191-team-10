@@ -48,7 +48,7 @@ Como um admirador de jogos de RPG por turno, eu gostaria que fosse desenvolvido 
 Critérios para aceitação:
 
 - Descrição sobre os acontecimentos da batalha, possíveis frases ligadas aos treinadores;
-- Opções nas batalhas semelhantes aos jogos como fugir de Pokémon selvagens;
+- Batalhas semelhantes aos jogos com a opção de escolher entre habilidades diferentes para serem utilizadas;
 - Possibilidade de apelidar os Pokémon.
 
  ### Story 5:
