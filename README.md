@@ -7,16 +7,13 @@ modos de jogo (torneios,deathmatch,exploração?).
 
 ### Story 1:
 
-Como jogador, eu gostaria de visualizar as habilidades,atributos e características especiais de meu pokemon 
+Como jogador, eu gostaria de visualizar as habilidades,atributos, fraquezas e resistências de meu pokemon 
 para decidir se ele é ou não efetivo contra outro pokemon.
 
 Critérios de Aceitação:
 
 - Interface (textual ou gráfica) capaz de mostrar todas as informações necessárias na mesma tela.
 - Necessário uma funcionalidade que permita selecionar qual pokemon levar à batalha.
-- Cada Habilidade deve possuir uma descrição concisa.
-- Cada Característica Especial também  deve possuir uma descrição.
-- Necessário que o usuário tenha familiaridade com as mecânicas do jogo (talvez seja necessário um tutorial).
 
 ### Story 2:
 
@@ -29,7 +26,6 @@ Critérios para aceitação:
  - Os tipos de cada monstro precisam dar vantagens ou desvantagens quando forem lutar;
  - No caso de batalhas competitivas, o vencedor receberá recompensas relativas à dificuldade;
  - No caso de batalhas com monstrinhos selvagens, teremos a chance de capturá-los;
- - Possibilidade de usar itens durante as batalhas.
  
  ### Story 3:
 
