@@ -39,7 +39,6 @@ void recompensar_treinador(Pokemon *meu_poke, Treinador jogador, int dificuldade
 }
 
 void pokemon_capturado(Treinador jogador, Pokemon *inimigo, int tipo_chance){
-  jogador.add_pokemon(inimigo);
   try{
     verificar_num_pokemon_valido(jogador);
   }
@@ -48,6 +47,7 @@ void pokemon_capturado(Treinador jogador, Pokemon *inimigo, int tipo_chance){
         Treinador copia = tratamento_num_pokemon_invalido(jogador);
         jogador = copia;
   }
+  jogador.add_pokemon(inimigo);
   jogador.set_capturas_efetivas(jogador.get_capturas_efetivas() + 1);
   jogador.set_capturas_totais(jogador.get_capturas_totais() + 1);
 

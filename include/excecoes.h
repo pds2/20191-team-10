@@ -56,7 +56,7 @@ public:
 class Excpt_Num_Pokemon_Invalido : public std::exception{
 public:
     const char *what(){
-        return "Você só pode ter 3 pokemon! ";
+        return "Você pode ter apenas 9 pokemon! Escolha um de seus Pokemons antigos para doar :\n ";
     }
 };
 
