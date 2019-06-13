@@ -51,20 +51,20 @@ int Treinador::get_masterball(){
 void Treinador::set_masterball(int quantidade){
 	this->_masterball = quantidade;
 }
-int Treinador::get_capturas_efetivas(){
+double Treinador::get_capturas_efetivas(){
 	return _capturas_efetivas;
 }
 void Treinador::set_capturas_efetivas(int capturas){
 	this->_capturas_efetivas = capturas;
 }
-int Treinador::get_capturas_totais(){
+double Treinador::get_capturas_totais(){
 	return _capturas_totais;
 }
 void Treinador::set_capturas_totais(int capturas){
 	this->_capturas_totais = capturas;
 }
-int Treinador::get_taxa_sucesso(){
-	return (_capturas_efetivas/_capturas_totais);
+double Treinador::get_taxa_sucesso(){
+	return (_capturas_efetivas/_capturas_totais)*100;
 }
 void Treinador::add_pokemon(Pokemon *novo_pokemon){
 	_lista_de_pokemon.push_back(novo_pokemon);

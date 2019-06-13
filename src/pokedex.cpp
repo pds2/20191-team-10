@@ -13,7 +13,7 @@ void treinador_info(Treinador jogador) {
   if(jogador.get_masterball() > POKEBOLA_INVALIDO)
     std::cout << "Masterballs: " << jogador.get_masterball() << '\n';
   if(jogador.get_capturas_totais() > 0) {
-    std::cout << "\n\nTaxa de sucesso na captura de pokemons: " << jogador.get_taxa_sucesso() << '\n';
+    std::cout << "\n\nTaxa de sucesso na captura de pokemons: " << jogador.get_taxa_sucesso() << "%\n";
   } else {
     std::cout << "\n\nVocê ainda não tentou capturar pokemons, por isso sua taxa de sucesso na captura\
     de pokemons está indisponível." << '\n';

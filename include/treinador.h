@@ -15,8 +15,8 @@ class Treinador{
 		int _masterball;
 
 		//serão utilizadas para armazenar a taxa de captura dos treinadores.
-		int _capturas_efetivas;
-		int _capturas_totais;
+		double _capturas_efetivas;
+		double _capturas_totais;
 
 	public:
 		int _lideranca; // Atributo Liderança do Treinador deve ser alterado logo está no escopo público
@@ -40,13 +40,13 @@ class Treinador{
 		int get_masterball();
 		void set_masterball(int);
 
-		int get_capturas_efetivas();
+		double get_capturas_efetivas();
 		void set_capturas_efetivas(int);
 
-		int get_capturas_totais();
+		double get_capturas_totais();
 		void set_capturas_totais(int);
 
-		int get_taxa_sucesso();
+		double get_taxa_sucesso();
 
 		void add_pokemon(Pokemon*);
 		void print_lista_pokemon();

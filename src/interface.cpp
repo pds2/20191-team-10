@@ -45,8 +45,8 @@ int escolher_opcoes(Pokemon *meu_poke) {
     std::cout << "Voce perdeu, logo nao tem a opcao de capturar o pokemon\n\n";
   else
     std::cout << "1- Capturar pokemon" << '\n';
-    std::cout << "2- Jogar outra batalha" << '\n';
-    std::cout << "3- Consultar pokedex" << '\n';
+  std::cout << "2- Jogar outra batalha" << '\n';
+  std::cout << "3- Consultar pokedex" << '\n';
   while (run_input) {
     opcao_escolhida = verifica_inteiro("Digite um número correspondente a umas das opções acima: ");
     if(opcao_escolhida >= 1 && opcao_escolhida <= 3) {
@@ -73,6 +73,7 @@ int escolher_opcoes(Pokemon *meu_poke) {
 }
 
 std::string confirmar_escolha(Treinador jogador,std::string escolha,std::string confirmacao){
+    print_ascii_art(jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_nome());
     std::cout << "Tem certeza que quer levar para a batalha o Pokemon apelidado : ";
     std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? (S/N) ";
     std::getline(std::cin, confirmacao);
@@ -202,6 +203,7 @@ void deseja_apelidar(Pokemon *inimigo) {
     std::getline(std::cin, escolha);
     if(escolha == "s") {
       entrada_invalida = false;
+      print_ascii_art(inimigo->get_nome());
       std::cout << "\nDigite o apelido desejado: ";
       std::getline(std::cin, apelido);
       inimigo->set_apelido(apelido);
@@ -267,6 +269,7 @@ int doar_pokemon(Treinador jogador){
     do{
         escolha = escolha_um_a_nove();
 
+        print_ascii_art(jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_nome());
         std::cout << "Tem certeza que deseja doar o pokemon apelidado : ";
         std::cout << jogador._lista_de_pokemon.at((escolha[0] - '0')-1)->get_apelido() << "? ";
         std::getline(std::cin, confirmacao);

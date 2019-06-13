@@ -3,6 +3,7 @@
 
 #include "pokemon.h"
 #include "pokedex.h"
+#include "pokedex_ascii.h"
 #include "treinador.h"
 #include "pokebola.h"
 #include "../include/pokemon_include/charmander.h"
