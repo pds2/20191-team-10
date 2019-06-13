@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto - Batalha Pokemon: Código-Fonte de include/treinador.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto - Batalha Pokemon
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">treinador.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="treinador_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TREINADOR_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TREINADOR_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pokemon_8h.html">pokemon.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_treinador.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_treinador.html">Treinador</a>{</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">private</span>:</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        std::string _treinador;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">int</span> _pokeball;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">int</span> _greatball;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">int</span> _masterball;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="comment">//serão utilizadas para armazenar a taxa de captura dos treinadores.</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordtype">double</span> _capturas_efetivas;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordtype">double</span> _capturas_totais;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_treinador.html#a627d0f4ef8e757c94cfe760d03a774e3">   22</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_treinador.html#a627d0f4ef8e757c94cfe760d03a774e3">_lideranca</a>; <span class="comment">// Atributo Liderança do Treinador deve ser alterado logo está no escopo público</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_treinador.html#a951d6bb11b3913c867058fd6249ada41">   24</a></span>&#160;        std::vector&lt;Pokemon*&gt; <a class="code" href="class_treinador.html#a951d6bb11b3913c867058fd6249ada41">_lista_de_pokemon</a>;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_treinador.html#ad33a798685f43a70f94f15b13c528d93">Treinador</a>(std::string nome, <span class="keywordtype">int</span> lideranca); <span class="comment">// Construtor : Nome, Nível de lideranca</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// Métodos para manipulação do TAD :</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        std::string <a class="code" href="class_treinador.html#a59a6f00fd12ce4dfcc7d59f1e9ae1f0c">get_treinador</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_treinador.html#a1b516aa5e91297836fa4bdd49d8018e6">get_lideranca</a>();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_treinador.html#ad4cc1d74cae70b694be44044d3a28b22">set_lideranca</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_treinador.html#ac8f6eaef0ec292b3625029cd6655a6cf">get_pokeball</a>();</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_treinador.html#a5cd1a85168346eee7cab9f6a8d29e650">set_pokeball</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_treinador.html#abced34e1ecebc6ad028b0c188a79ace9">get_greatball</a>();</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_treinador.html#a46701137b63ea3cf2e114fe78e675436">set_greatball</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_treinador.html#a35aa1389ab4ba636d8a9916d5a14717b">get_masterball</a>();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_treinador.html#afe7c07ca850c27d72a64974f264c9b50">set_masterball</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_treinador.html#a7b3693aa5269f8586daffffbae04d0fc">get_capturas_efetivas</a>();</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_treinador.html#afc5759f2c597ed573ddb4642c9a2efb7">set_capturas_efetivas</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_treinador.html#abe6f3ea3663f985516120b560123a4e4">get_capturas_totais</a>();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_treinador.html#add881c8d63dd9bd76d0793b384ccf760">set_capturas_totais</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_treinador.html#a57c811f42dbbde7043cc0ff6b20e9752">get_taxa_sucesso</a>();</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_treinador.html#a1e29a7f4e576c2b0ad734c945bd80dee">add_pokemon</a>(<a class="code" href="class_pokemon.html">Pokemon</a>*);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_treinador.html#a96cda0b81335164561539509df619c03">print_lista_pokemon</a>();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_treinador_html_a46701137b63ea3cf2e114fe78e675436"><div class="ttname"><a href="class_treinador.html#a46701137b63ea3cf2e114fe78e675436">Treinador::set_greatball</a></div><div class="ttdeci">void set_greatball(int)</div><div class="ttdef"><b>Definition:</b> treinador.cpp:45</div></div>
+<div class="ttc" id="class_treinador_html_ad4cc1d74cae70b694be44044d3a28b22"><div class="ttname"><a href="class_treinador.html#ad4cc1d74cae70b694be44044d3a28b22">Treinador::set_lideranca</a></div><div class="ttdeci">void set_lideranca(int)</div><div class="ttdef"><b>Definition:</b> treinador.cpp:33</div></div>
+<div class="ttc" id="class_treinador_html_abe6f3ea3663f985516120b560123a4e4"><div class="ttname"><a href="class_treinador.html#abe6f3ea3663f985516120b560123a4e4">Treinador::get_capturas_totais</a></div><div class="ttdeci">double get_capturas_totais()</div><div class="ttdef"><b>Definition:</b> treinador.cpp:60</div></div>
+<div class="ttc" id="class_treinador_html_a59a6f00fd12ce4dfcc7d59f1e9ae1f0c"><div class="ttname"><a href="class_treinador.html#a59a6f00fd12ce4dfcc7d59f1e9ae1f0c">Treinador::get_treinador</a></div><div class="ttdeci">std::string get_treinador()</div><div class="ttdef"><b>Definition:</b> treinador.cpp:27</div></div>
+<div class="ttc" id="class_treinador_html_a57c811f42dbbde7043cc0ff6b20e9752"><div class="ttname"><a href="class_treinador.html#a57c811f42dbbde7043cc0ff6b20e9752">Treinador::get_taxa_sucesso</a></div><div class="ttdeci">double get_taxa_sucesso()</div><div class="ttdef"><b>Definition:</b> treinador.cpp:66</div></div>
+<div class="ttc" id="class_treinador_html_a627d0f4ef8e757c94cfe760d03a774e3"><div class="ttname"><a href="class_treinador.html#a627d0f4ef8e757c94cfe760d03a774e3">Treinador::_lideranca</a></div><div class="ttdeci">int _lideranca</div><div class="ttdef"><b>Definition:</b> treinador.h:22</div></div>
+<div class="ttc" id="class_treinador_html_afe7c07ca850c27d72a64974f264c9b50"><div class="ttname"><a href="class_treinador.html#afe7c07ca850c27d72a64974f264c9b50">Treinador::set_masterball</a></div><div class="ttdeci">void set_masterball(int)</div><div class="ttdef"><b>Definition:</b> treinador.cpp:51</div></div>
+<div class="ttc" id="class_treinador_html_abced34e1ecebc6ad028b0c188a79ace9"><div class="ttname"><a href="class_treinador.html#abced34e1ecebc6ad028b0c188a79ace9">Treinador::get_greatball</a></div><div class="ttdeci">int get_greatball()</div><div class="ttdef"><b>Definition:</b> treinador.cpp:42</div></div>
+<div class="ttc" id="class_treinador_html_a5cd1a85168346eee7cab9f6a8d29e650"><div class="ttname"><a href="class_treinador.html#a5cd1a85168346eee7cab9f6a8d29e650">Treinador::set_pokeball</a></div><div class="ttdeci">void set_pokeball(int)</div><div class="ttdef"><b>Definition:</b> treinador.cpp:39</div></div>
+<div class="ttc" id="class_treinador_html"><div class="ttname"><a href="class_treinador.html">Treinador</a></div><div class="ttdef"><b>Definition:</b> treinador.h:9</div></div>
+<div class="ttc" id="class_treinador_html_a1b516aa5e91297836fa4bdd49d8018e6"><div class="ttname"><a href="class_treinador.html#a1b516aa5e91297836fa4bdd49d8018e6">Treinador::get_lideranca</a></div><div class="ttdeci">int get_lideranca()</div><div class="ttdef"><b>Definition:</b> treinador.cpp:30</div></div>
+<div class="ttc" id="class_treinador_html_ad33a798685f43a70f94f15b13c528d93"><div class="ttname"><a href="class_treinador.html#ad33a798685f43a70f94f15b13c528d93">Treinador::Treinador</a></div><div class="ttdeci">Treinador(std::string nome, int lideranca)</div><div class="ttdef"><b>Definition:</b> treinador.cpp:11</div></div>
+<div class="ttc" id="class_treinador_html_a1e29a7f4e576c2b0ad734c945bd80dee"><div class="ttname"><a href="class_treinador.html#a1e29a7f4e576c2b0ad734c945bd80dee">Treinador::add_pokemon</a></div><div class="ttdeci">void add_pokemon(Pokemon *)</div><div class="ttdef"><b>Definition:</b> treinador.cpp:69</div></div>
+<div class="ttc" id="pokemon_8h_html"><div class="ttname"><a href="pokemon_8h.html">pokemon.h</a></div></div>
+<div class="ttc" id="class_treinador_html_a951d6bb11b3913c867058fd6249ada41"><div class="ttname"><a href="class_treinador.html#a951d6bb11b3913c867058fd6249ada41">Treinador::_lista_de_pokemon</a></div><div class="ttdeci">std::vector&lt; Pokemon * &gt; _lista_de_pokemon</div><div class="ttdef"><b>Definition:</b> treinador.h:24</div></div>
+<div class="ttc" id="class_treinador_html_a35aa1389ab4ba636d8a9916d5a14717b"><div class="ttname"><a href="class_treinador.html#a35aa1389ab4ba636d8a9916d5a14717b">Treinador::get_masterball</a></div><div class="ttdeci">int get_masterball()</div><div class="ttdef"><b>Definition:</b> treinador.cpp:48</div></div>
+<div class="ttc" id="class_treinador_html_a96cda0b81335164561539509df619c03"><div class="ttname"><a href="class_treinador.html#a96cda0b81335164561539509df619c03">Treinador::print_lista_pokemon</a></div><div class="ttdeci">void print_lista_pokemon()</div><div class="ttdef"><b>Definition:</b> treinador.cpp:73</div></div>
+<div class="ttc" id="class_treinador_html_a7b3693aa5269f8586daffffbae04d0fc"><div class="ttname"><a href="class_treinador.html#a7b3693aa5269f8586daffffbae04d0fc">Treinador::get_capturas_efetivas</a></div><div class="ttdeci">double get_capturas_efetivas()</div><div class="ttdef"><b>Definition:</b> treinador.cpp:54</div></div>
+<div class="ttc" id="class_treinador_html_add881c8d63dd9bd76d0793b384ccf760"><div class="ttname"><a href="class_treinador.html#add881c8d63dd9bd76d0793b384ccf760">Treinador::set_capturas_totais</a></div><div class="ttdeci">void set_capturas_totais(int)</div><div class="ttdef"><b>Definition:</b> treinador.cpp:63</div></div>
+<div class="ttc" id="class_pokemon_html"><div class="ttname"><a href="class_pokemon.html">Pokemon</a></div><div class="ttdef"><b>Definition:</b> pokemon.h:14</div></div>
+<div class="ttc" id="class_treinador_html_ac8f6eaef0ec292b3625029cd6655a6cf"><div class="ttname"><a href="class_treinador.html#ac8f6eaef0ec292b3625029cd6655a6cf">Treinador::get_pokeball</a></div><div class="ttdeci">int get_pokeball()</div><div class="ttdef"><b>Definition:</b> treinador.cpp:36</div></div>
+<div class="ttc" id="class_treinador_html_afc5759f2c597ed573ddb4642c9a2efb7"><div class="ttname"><a href="class_treinador.html#afc5759f2c597ed573ddb4642c9a2efb7">Treinador::set_capturas_efetivas</a></div><div class="ttdeci">void set_capturas_efetivas(int)</div><div class="ttdef"><b>Definition:</b> treinador.cpp:57</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

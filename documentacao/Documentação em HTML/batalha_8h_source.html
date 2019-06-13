@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto - Batalha Pokemon: Código-Fonte de include/batalha.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto - Batalha Pokemon
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">batalha.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="batalha_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef BATALHA_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define BATALHA_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pokemon_8h.html">pokemon.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="treinador_8h.html">treinador.h</a>&quot;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="interface_8h.html">interface.h</a>&quot;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pokebola_8h.html">pokebola.h</a>&quot;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="charmander_8h.html">pokemon_include/charmander.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="charmeleon_8h.html">pokemon_include/charmeleon.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="charizard_8h.html">pokemon_include/charizard.h</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bulbasauro_8h.html">pokemon_include/bulbasauro.h</a>&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ivysaur_8h.html">pokemon_include/ivysaur.h</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="venosauro_8h.html">pokemon_include/venosauro.h</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="squirtle_8h.html">pokemon_include/squirtle.h</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="wartotle_8h.html">pokemon_include/wartotle.h</a>&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="blastoise_8h.html">pokemon_include/blastoise.h</a>&quot;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> <a class="code" href="batalha_8h.html#ad732acf71b8ab664c0c84aaabb3074da">rola_dados</a>(<span class="keywordtype">int</span>);</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// Gera um número aleatório entre 1 e int. Utilizado para calcular a chance de crit, por exemplo.</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> <a class="code" href="batalha_8h.html#add9e7d11c0bc667f7f9dd64b8d81808b">reset_current_hp</a>(<a class="code" href="class_pokemon.html">Pokemon</a> *);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Função que reseta a vida dos pokemons dados como parâmetro</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="batalha_8h.html#a404166c67a27d487b398ae37c9c97ec2">escolher_pos_batalha</a>(<a class="code" href="class_pokemon.html">Pokemon</a> *meu_poke, <a class="code" href="class_pokemon.html">Pokemon</a> *inimigo, <a class="code" href="class_treinador.html">Treinador</a> jogador);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// Função para escolher o que fazer depois da batalha</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="class_pokemon.html">Pokemon</a> *<a class="code" href="batalha_8h.html#a0204979f40bc835fb18522f1287df6e5">gera_oponente_facil</a>();</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="class_pokemon.html">Pokemon</a> *<a class="code" href="batalha_8h.html#a9360b93ac20ed14e263c9e692a96193c">gera_oponente_medio</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="class_pokemon.html">Pokemon</a> *<a class="code" href="batalha_8h.html#a3ba0d1fba3db36a961e27c10bc4d4d8c">gera_oponente_dificil</a>();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Funções que gera um adversário para batalhar dependendo do nivel de dificuldade.</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="batalha_8h.html#ad504094245bda3ab218432e217e02c89">limite_nivel</a>(<span class="keywordtype">short</span> <span class="keywordtype">int</span> *, <span class="keywordtype">int</span>); <span class="comment">//Função que coloca zero nas habilidades acima do nível</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> <a class="code" href="batalha_8h.html#a0eae2217f5c6a08f53f7634c78a3daa4">encerrar_batalha</a>(<a class="code" href="class_pokemon.html">Pokemon</a> *, <a class="code" href="class_pokemon.html">Pokemon</a> *, <a class="code" href="class_treinador.html">Treinador</a> jogador, <span class="keywordtype">int</span> Dificuldade);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// Encerra a batalha e reseta o HP dos pokemons envolvidos (meu_poke,inimigo).</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// Sempre delete o inimigo após o uso dessa função caso ele não tiver mais serventia.</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="batalha_8h.html#a6df6ae44a53d886f07dcf0dabaa9f2b6">batalha_x1</a>(<a class="code" href="class_treinador.html">Treinador</a>, <a class="code" href="class_pokemon.html">Pokemon</a> *, <span class="keywordtype">int</span>);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// Função que faz dois Pokémon lutarem.</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// Recebe como parâmetro o jogador, seu Pokémon escolhido e a dificuldade ( representada como inteiro).</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif // BATALHA_H</span></div><div class="ttc" id="batalha_8h_html_a404166c67a27d487b398ae37c9c97ec2"><div class="ttname"><a href="batalha_8h.html#a404166c67a27d487b398ae37c9c97ec2">escolher_pos_batalha</a></div><div class="ttdeci">void escolher_pos_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador)</div><div class="ttdef"><b>Definition:</b> batalha.cpp:204</div></div>
+<div class="ttc" id="batalha_8h_html_a3ba0d1fba3db36a961e27c10bc4d4d8c"><div class="ttname"><a href="batalha_8h.html#a3ba0d1fba3db36a961e27c10bc4d4d8c">gera_oponente_dificil</a></div><div class="ttdeci">Pokemon * gera_oponente_dificil()</div><div class="ttdef"><b>Definition:</b> batalha.cpp:55</div></div>
+<div class="ttc" id="blastoise_8h_html"><div class="ttname"><a href="blastoise_8h.html">blastoise.h</a></div></div>
+<div class="ttc" id="batalha_8h_html_a6df6ae44a53d886f07dcf0dabaa9f2b6"><div class="ttname"><a href="batalha_8h.html#a6df6ae44a53d886f07dcf0dabaa9f2b6">batalha_x1</a></div><div class="ttdeci">void batalha_x1(Treinador, Pokemon *, int)</div><div class="ttdef"><b>Definition:</b> batalha.cpp:85</div></div>
+<div class="ttc" id="batalha_8h_html_a9360b93ac20ed14e263c9e692a96193c"><div class="ttname"><a href="batalha_8h.html#a9360b93ac20ed14e263c9e692a96193c">gera_oponente_medio</a></div><div class="ttdeci">Pokemon * gera_oponente_medio()</div><div class="ttdef"><b>Definition:</b> batalha.cpp:38</div></div>
+<div class="ttc" id="batalha_8h_html_a0204979f40bc835fb18522f1287df6e5"><div class="ttname"><a href="batalha_8h.html#a0204979f40bc835fb18522f1287df6e5">gera_oponente_facil</a></div><div class="ttdeci">Pokemon * gera_oponente_facil()</div><div class="ttdef"><b>Definition:</b> batalha.cpp:21</div></div>
+<div class="ttc" id="venosauro_8h_html"><div class="ttname"><a href="venosauro_8h.html">venosauro.h</a></div></div>
+<div class="ttc" id="batalha_8h_html_a0eae2217f5c6a08f53f7634c78a3daa4"><div class="ttname"><a href="batalha_8h.html#a0eae2217f5c6a08f53f7634c78a3daa4">encerrar_batalha</a></div><div class="ttdeci">void encerrar_batalha(Pokemon *, Pokemon *, Treinador jogador, int Dificuldade)</div><div class="ttdef"><b>Definition:</b> batalha.cpp:181</div></div>
+<div class="ttc" id="bulbasauro_8h_html"><div class="ttname"><a href="bulbasauro_8h.html">bulbasauro.h</a></div></div>
+<div class="ttc" id="class_treinador_html"><div class="ttname"><a href="class_treinador.html">Treinador</a></div><div class="ttdef"><b>Definition:</b> treinador.h:9</div></div>
+<div class="ttc" id="pokebola_8h_html"><div class="ttname"><a href="pokebola_8h.html">pokebola.h</a></div></div>
+<div class="ttc" id="batalha_8h_html_ad504094245bda3ab218432e217e02c89"><div class="ttname"><a href="batalha_8h.html#ad504094245bda3ab218432e217e02c89">limite_nivel</a></div><div class="ttdeci">void limite_nivel(short int *, int)</div><div class="ttdef"><b>Definition:</b> batalha.cpp:73</div></div>
+<div class="ttc" id="interface_8h_html"><div class="ttname"><a href="interface_8h.html">interface.h</a></div></div>
+<div class="ttc" id="wartotle_8h_html"><div class="ttname"><a href="wartotle_8h.html">wartotle.h</a></div></div>
+<div class="ttc" id="ivysaur_8h_html"><div class="ttname"><a href="ivysaur_8h.html">ivysaur.h</a></div></div>
+<div class="ttc" id="charmander_8h_html"><div class="ttname"><a href="charmander_8h.html">charmander.h</a></div></div>
+<div class="ttc" id="charmeleon_8h_html"><div class="ttname"><a href="charmeleon_8h.html">charmeleon.h</a></div></div>
+<div class="ttc" id="pokemon_8h_html"><div class="ttname"><a href="pokemon_8h.html">pokemon.h</a></div></div>
+<div class="ttc" id="batalha_8h_html_add9e7d11c0bc667f7f9dd64b8d81808b"><div class="ttname"><a href="batalha_8h.html#add9e7d11c0bc667f7f9dd64b8d81808b">reset_current_hp</a></div><div class="ttdeci">void reset_current_hp(Pokemon *)</div></div>
+<div class="ttc" id="charizard_8h_html"><div class="ttname"><a href="charizard_8h.html">charizard.h</a></div></div>
+<div class="ttc" id="squirtle_8h_html"><div class="ttname"><a href="squirtle_8h.html">squirtle.h</a></div></div>
+<div class="ttc" id="batalha_8h_html_ad732acf71b8ab664c0c84aaabb3074da"><div class="ttname"><a href="batalha_8h.html#ad732acf71b8ab664c0c84aaabb3074da">rola_dados</a></div><div class="ttdeci">int rola_dados(int)</div><div class="ttdef"><b>Definition:</b> batalha.cpp:11</div></div>
+<div class="ttc" id="class_pokemon_html"><div class="ttname"><a href="class_pokemon.html">Pokemon</a></div><div class="ttdef"><b>Definition:</b> pokemon.h:14</div></div>
+<div class="ttc" id="treinador_8h_html"><div class="ttname"><a href="treinador_8h.html">treinador.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
