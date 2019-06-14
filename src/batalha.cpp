@@ -1,6 +1,7 @@
 #include "../include/batalha.h"
 #include "../include/excecoes.h"
 #include "../include/interface.h"
+#include "../include/pokedex_ascii.h"
 
 #include <iostream>
 #include <stdexcept>
@@ -31,6 +32,7 @@ Pokemon *gera_oponente_facil(){
 
     std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
     inimigo->print_atributos();
+    print_ascii_art(inimigo->get_nome());
 
     return inimigo;
 }
@@ -48,6 +50,7 @@ Pokemon *gera_oponente_medio(){
 
     std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
     inimigo->print_atributos();
+    print_ascii_art(inimigo->get_nome());
 
     return inimigo;
 }
@@ -66,6 +69,7 @@ Pokemon *gera_oponente_dificil(){
 
     std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
     inimigo->print_atributos();
+    print_ascii_art(inimigo->get_nome());
 
     return inimigo;
 }
