@@ -83,7 +83,7 @@ std::string confirmar_escolha(Treinador jogador,std::string escolha,std::string 
 }
 
 int escolher_pokemon(Treinador jogador){
-    std::cout << "Escolha um dos Pokemon abaixo." << std::endl;
+    std::cout << "Escolha um dos Pokemon abaixo para leva'-lo para a batalha!" << std::endl;
     jogador.print_lista_pokemon();
     std::string escolha, confirmacao;
 
