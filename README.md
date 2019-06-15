@@ -8,8 +8,7 @@ modos de jogo (torneios,deathmatch,exploração?).
 
 ### Story 1:
 
-Como jogador, eu gostaria de visualizar as habilidades,atributos, fraquezas e resistências de meu pokemon
-para decidir se ele é ou não efetivo contra outro pokemon.
+Como jogador, eu gostaria de visualizar as habilidades,atributos, fraquezas e resistências de meu pokemon para decidir se ele é ou não efetivo contra outro pokemon.
 
 Critérios de Aceitação:
 
@@ -26,11 +25,7 @@ Critérios para aceitação:
  - Batalhas com um nível de dificuldade considerável: nada muito fácil nem muito impossível;
  - Os tipos de cada monstro precisam dar vantagens ou desvantagens quando forem lutar;
  - No caso de batalhas competitivas, o vencedor receberá recompensas relativas à dificuldade;
-<<<<<<< HEAD
- - No caso de batalhas com monstrinhos selvagens, teremos a chance de capturá-los;
-=======
  - No caso de batalhas com monstrinhos selvagens, teremos a chance de capturá-los.
->>>>>>> testes
 
  ### Story 3:
 
