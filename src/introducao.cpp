@@ -17,7 +17,7 @@ std::string apelida_jogador() {
 void introducao(Treinador *jogador) {
     std::string escolha;
 
-    std::cout << "Voce ganhou seus Pokemons iniciais! Bulbasauro, Charmander e Squirtle." << std::endl;
+    std::cout << "Voce ganhou seus Pokemon iniciais! Bulbasauro, Charmander e Squirtle." << std::endl;
     std::cout << "Deseja apelida-los? (S/N) ";
     
     while (escolha[0] != 'S' != 's' != 'N' != 'n') {

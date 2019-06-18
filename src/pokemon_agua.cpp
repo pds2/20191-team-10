@@ -23,12 +23,20 @@ std::string Pokemon_Agua::get_habilidade(int indice){
 
 void Pokemon_Agua::atacar(Pokemon *adv, int habilidade){
 	if(habilidade == 1){
-		adv->current_hp -= this->get_ataque() - adv->get_defesa();
+		if((this->get_ataque() - adv->get_defesa())<=0){
+			adv->current_hp -= DANO_MINIMO;
+		}else{
+			adv->current_hp -= (this->get_ataque()*this->critical_hit()) - adv->get_defesa() + DANO_MINIMO;
+		}
 	}else{
 		if(adv->get_fraqueza() == "agua"){
 			adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade)) * AUMENTO) - adv->get_defesa();
 		}else if(adv->get_resistencia() == "agua"){
-			adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade)) * REDUCAO) - adv->get_defesa();
+			if((this->get_ataque() - adv->get_defesa())<=0){
+			adv->current_hp -= DANO_MINIMO;
+			}else{
+				adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade)) * REDUCAO) - adv->get_defesa();
+			}
 		}else{
 			adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade))) - adv->get_defesa();
 		}

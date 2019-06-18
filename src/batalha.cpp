@@ -1,6 +1,8 @@
 #include "../include/batalha.h"
 #include "../include/excecoes.h"
 #include "../include/interface.h"
+#include "../include/pokedex_ascii.h"
+
 
 #include <iostream>
 #include <stdexcept>
@@ -30,6 +32,7 @@ Pokemon *gera_oponente_facil(){
     }
 
     std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
+    print_ascii_art(inimigo->get_nome());
     inimigo->print_atributos();
 
     return inimigo;
@@ -47,6 +50,8 @@ Pokemon *gera_oponente_medio(){
     }
 
     std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
+    std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
+    print_ascii_art(inimigo->get_nome());
     inimigo->print_atributos();
 
     return inimigo;
@@ -65,6 +70,8 @@ Pokemon *gera_oponente_dificil(){
     }
 
     std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
+    std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
+    print_ascii_art(inimigo->get_nome());
     inimigo->print_atributos();
 
     return inimigo;
@@ -84,7 +91,7 @@ void limite_nivel(short int *vet, int lideranca){
 
 void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
     system("clear||cls"); //Limpa a tela
-
+    int dificuldade_inicial = dificuldade;
     Pokemon *inimigo;
 
     try{
@@ -174,27 +181,27 @@ void batalha_x1(Treinador jogador, Pokemon *meu_poke, int dificuldade){
             }
         }
     }
-    encerrar_batalha(meu_poke,inimigo,jogador,dificuldade);
+    encerrar_batalha(meu_poke,inimigo,jogador,dificuldade_inicial);
     delete inimigo;
 }
 
-void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador, int dificuldade){
+void encerrar_batalha(Pokemon *meu_poke, Pokemon *inimigo, Treinador jogador, int dificuldade_inicial){
     try{
         verificar_nocaute(meu_poke,inimigo);
     }
     catch(Excpt_Nocaute &KO){
         if(meu_poke->current_hp <= 0){
             std::cout << meu_poke->get_apelido() << " esta' fora de combate!\n\n YOU LOSE!!!\n" << std::endl;
-						recompensar_treinador(meu_poke, jogador, dificuldade);
+						recompensar_treinador(meu_poke, jogador, dificuldade_inicial);
         }else{
             std::cout << inimigo->get_apelido() << " esta' fora de combate!\n\n YOU WIN!!!\n" << std::endl;
-            if(jogador.get_lideranca()>=1&&jogador.get_lideranca()<4){
+            if(jogador.get_lideranca()>=1 && jogador.get_lideranca()<4 && jogador.get_lideranca()<=dificuldade_inicial){
                 int exp = jogador.get_lideranca() + 1;
                 jogador.set_lideranca(exp);
                 std::cout << "Sua capacidade de liderança aumentou! Agora você tem acesso a " << jogador.get_lideranca()
                           << " habilidades de seu Pokemon.\n";
             }
-            recompensar_treinador(meu_poke, jogador, dificuldade);
+            recompensar_treinador(meu_poke, jogador, dificuldade_inicial);
         }
         escolher_pos_batalha(meu_poke, inimigo, jogador);
         reset_current_hp(meu_poke, inimigo);

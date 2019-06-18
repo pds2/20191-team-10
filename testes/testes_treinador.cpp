@@ -34,7 +34,7 @@ TEST_CASE("Testando getters e setters do Treinador"){
     CHECK(Leandro.get_treinador() == "Leandro");
     Leandro.set_lideranca(3);
     CHECK(Leandro.get_lideranca() == 3);
-    
+
     //Pokebolas
     Leandro.set_pokeball(17);
     CHECK(Leandro.get_pokeball() == 17); //Quantidade predefinida no construtor
@@ -48,7 +48,7 @@ TEST_CASE("Testando getters e setters do Treinador"){
     CHECK(Leandro.get_capturas_efetivas() == 10);
     Leandro.set_capturas_totais(10);
     CHECK(Leandro.get_capturas_totais() == 10);
-    CHECK(Leandro.get_taxa_sucesso() == 1); // 10/10 = 1
+    CHECK(Leandro.get_taxa_sucesso() == 100);
 
 }
 
