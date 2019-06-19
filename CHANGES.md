@@ -5,3 +5,6 @@
 
 ## Mudança 2:
   **testes_treinador.cpp:** O teste que verifica se a get_taxa_sucesso está funcionando corretamente foi atualizado para o valor 100 (agora em porcentagem, antes era numa escala de 0 a 1).
+  
+## Mudança 3:
+  A documentação foi atualizada com os compiladores e sistemas operacionais onde o projeto foi compilado e executado sem problemas.
