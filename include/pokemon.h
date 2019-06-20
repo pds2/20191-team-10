@@ -7,7 +7,7 @@
 
 #define AUMENTO 1.6
 #define REDUCAO 0.63
-#define DANO_HABILIDADE 8
+#define DANO_HABILIDADE 10
 #define DANO_MINIMO 5
 
 // Pokemon não será uma interface. Motivo : Ao refatorar o código percebi muita repetição desnecessária.
