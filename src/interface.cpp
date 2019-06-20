@@ -34,6 +34,7 @@ int escolher_pokebola(Treinador jogador, Pokemon *inimigo){
       std::cout << "Você não possui nenhum tipo de pokebola. Jogue mais batalhas para conseguir novas pokebolas!" << '\n';
       return 0;
     }
+    return 0;
 }
 
 int escolher_opcoes(Pokemon *meu_poke) {
@@ -70,6 +71,7 @@ int escolher_opcoes(Pokemon *meu_poke) {
       }
     }
   }
+  return opcao_escolhida;
 }
 
 std::string confirmar_escolha(Treinador jogador,std::string escolha,std::string confirmacao){
@@ -238,6 +240,7 @@ bool deseja_capturar(Pokemon *inimigo) {
             entrada_invalida = true;
         }
     }
+    return false;
 }
 
 bool deseja_continuar_jogando(){
@@ -260,6 +263,7 @@ bool deseja_continuar_jogando(){
             entrada_invalida = true;
         }
     }
+    return false;
 }
 
 int doar_pokemon(Treinador jogador){

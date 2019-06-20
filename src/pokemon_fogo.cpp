@@ -33,8 +33,8 @@ void Pokemon_Fogo::atacar(Pokemon *adv, int habilidade){
 		if(adv->get_fraqueza() == "fogo"){
 			adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade)) * AUMENTO) - adv->get_defesa();
 		}else if(adv->get_resistencia() == "fogo"){
-			if((this->get_ataque() - adv->get_defesa())<=0){
-			adv->current_hp -= DANO_MINIMO;
+			if((((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade)) * REDUCAO) - adv->get_defesa())<=0) {
+				adv->current_hp -= DANO_MINIMO;
 			}else{
 				adv->current_hp -= int ((this->critical_hit() * (this->get_ataque() + DANO_HABILIDADE * habilidade)) * REDUCAO) - adv->get_defesa();
 			}

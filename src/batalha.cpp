@@ -25,7 +25,7 @@ Pokemon *gera_oponente_facil(){
     int randomico = rola_dados(9);
     if((randomico<=3) && (randomico>0)){
         inimigo = new Bulbasauro("Wild Bulbasauro");
-    }else if((randomico<=7) && (randomico>3)){
+    }else if((randomico<=6) && (randomico>3)){
         inimigo = new Charmander("Wild Charmander");
     }else{
         inimigo = new Squirtle("Wild Squirtle");
@@ -43,13 +43,12 @@ Pokemon *gera_oponente_medio(){
     int randomico = rola_dados(9);
     if((randomico<=3) && (randomico>0)){
         inimigo = new Ivysaur("Wild Ivysaur");
-    }else if((randomico<=7) && (randomico>3)){
+    }else if((randomico<=6) && (randomico>3)){
         inimigo = new Charmeleon("Wild Charmeleon");
     }else{
         inimigo = new Wartotle("Wild Wartotle");
     }
 
-    std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
     std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
     print_ascii_art(inimigo->get_nome());
     inimigo->print_atributos();
@@ -63,13 +62,12 @@ Pokemon *gera_oponente_dificil(){
     int randomico = rola_dados(9);
     if((randomico<=3) && (randomico>0)){
         inimigo = new Venosauro("Wild Venosauro");
-    }else if((randomico<=7) && (randomico>3)){
+    }else if((randomico<=6) && (randomico>3)){
         inimigo = new Charizard("Wild Charizard");
     }else{
         inimigo = new Blastoise("Wild Blastoise");
     }
 
-    std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
     std::cout << "SEU OPONENTE SERÁ... " << inimigo->get_apelido() << "!!!" << std::endl;
     print_ascii_art(inimigo->get_nome());
     inimigo->print_atributos();
