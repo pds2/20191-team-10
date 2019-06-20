@@ -8,3 +8,6 @@
 
 ## Mudança 3:
   A documentação foi atualizada com os compiladores e sistemas operacionais onde o projeto foi compilado e executado sem problemas(pode ser encontrado na seção **Compilação e execução** da documentação em pdf).
+  
+## Mudança 4:
+  Warnings corrigidos.
